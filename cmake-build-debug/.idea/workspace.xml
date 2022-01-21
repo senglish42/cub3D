@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cccbe139-0400-4eb7-8b7e-ae185e92ec46" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.obj/srcs/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.20.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.20.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.20.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/3.20.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/cub3d.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/cub3d.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/cub3d.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/cub3d.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/cub3d.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/cub3d.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/cub3d.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cub3d.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cub3D" beforeDir="false" afterPath="$PROJECT_DIR$/../cub3D" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../includes/cub3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/../includes/cub3D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../libft/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_atoi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_bzero.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_calloc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_isalnum.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_isalpha.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_isascii.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_isdigit.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_isprint.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_itoa.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_memccpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_memchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_memcmp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_memcpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_memmove.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_memset.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_putchar_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_putcharlen_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_putendl_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_putnbr_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_putstr_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_putstrlen_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_split.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_strchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_strdup.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_strjoin.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_strlcat.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_strlcpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_strlen.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_strmapi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_strncmp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_strnstr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_strrchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_strtrim.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_substr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_tolower.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/ft_toupper.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../libft/libft.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srcs/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../srcs/main.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2413XJyGKAFyxWPAQFPFWAspAXj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cccbe139-0400-4eb7-8b7e-ae185e92ec46" name="Changes" comment="" />
+      <created>1642784303921</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642784303921</updated>
+      <workItem from="1642784307317" duration="16000" />
+    </task>
+    <servers />
+  </component>
+</project>

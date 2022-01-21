@@ -46,6 +46,10 @@
 				<Compiler>
 					<Add directory="/Users/senglish/cub3d/includes"/>
 					<Add directory="/Users/senglish/cub3d/mlx"/>
+					<Add directory="/Users/senglish/cub3d/libft"/>
+					<Add directory="/Users/senglish/cub3d/srcs"/>
+					<Add directory="/Users/senglish/cub3d/.obj"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -68,6 +72,10 @@
 				<Compiler>
 					<Add directory="/Users/senglish/cub3d/includes"/>
 					<Add directory="/Users/senglish/cub3d/mlx"/>
+					<Add directory="/Users/senglish/cub3d/libft"/>
+					<Add directory="/Users/senglish/cub3d/srcs"/>
+					<Add directory="/Users/senglish/cub3d/.obj"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -82,10 +90,118 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/senglish/cub3d/includes/cub3D.h">
+		<Unit filename="/Users/senglish/cub3d/libft/ft_atoi.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_bzero.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_calloc.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_isalnum.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_isalpha.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_isascii.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_isdigit.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_isprint.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_itoa.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_memchr.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_memcmp.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_memcpy.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_memmove.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_memset.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_putchar_fd.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_putcharlen_fd.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_putendl_fd.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_putnbr_fd.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_putstr_fd.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_putstrlen_fd.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_split.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_strchr.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_strdup.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_strjoin.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_strlcat.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_strlcpy.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_strlen.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_strmapi.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_strncmp.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_strnstr.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_strrchr.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_strtrim.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_substr.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_tolower.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_toupper.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/srcs/error.c">
 			<Option target="cub3d"/>
 		</Unit>
 		<Unit filename="/Users/senglish/cub3d/srcs/main.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/srcs/parse.c">
 			<Option target="cub3d"/>
 		</Unit>
 		<Unit filename="/Users/senglish/cub3d/CMakeLists.txt">

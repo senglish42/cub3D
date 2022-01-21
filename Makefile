@@ -2,13 +2,15 @@ NAME	=	cub3D
 
 INCL	=	includes
 
+MAKE	=	make
+
 OBJ_DIR	=	.obj
 
 LIB		=	libft/libft.a
 
 SRCS_DIR=	srcs
 
-SRCS	=	$(SRCS_DIR)/main.c
+SRCS	=	$(SRCS_DIR)/main.c	$(SRCS_DIR)/error.c	$(SRCS_DIR)/parse.c
 
 #B_DIR	=	$(B_DIR)/
 #
@@ -22,7 +24,13 @@ CFLAGS	=	-g -Wall -Wextra -Werror -I $(INCL) -Imlx
 
 CC		=	gcc
 
+RM		=	rm -f
+
 HEADER	=	$(INCL)/cub3D.h
+
+#DBGDIR = debug
+#DBGOBJS = $(addprefix $(DBGDIR)/, $(OBJS))
+#DBGCFLAGS = -g -O0 -DDEBUG
 
 .PHONY	:	all bonus clean fclean re
 
@@ -37,6 +45,11 @@ bonus	:	$(BOBJS)
 				$(MAKE) -C $(dir $(LIB))
 				$(CC) $(CFLAGS) $(BOBJS) $(LIB) -o $(NAME)
 
+#debug: $(DBGEXE)
+#
+#$(DBGDIR)/%.o: %.c
+#	$(CC) -c $(CFLAGS) $(DBGCFLAGS) -o $@ $<
+
 $(NAME)	:	$(OBJS) $(LIB)
 	$(CC) $(CFLAGS) $(OBJS) $(LIB) -o $(NAME)
 
@@ -47,7 +60,8 @@ $(LIB)	:
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean	:
-	$(MAKE) clean -C ./libft
+	$(MAKE) clean -C ./libft/
+	$(RM) -rf $(OBJ_DIR)
 
 fclean	:	clean
 	$(MAKE) fclean -C ./libft

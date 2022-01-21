@@ -4,7 +4,7 @@
 # compile C with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/senglish/cub3d/includes -I/Users/senglish/cub3d/mlx
+C_INCLUDES = -I/Users/senglish/cub3d/includes -I/Users/senglish/cub3d/mlx -I/Users/senglish/cub3d/libft -I/Users/senglish/cub3d/srcs -I/Users/senglish/cub3d/.obj
 
-C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
+C_FLAGS = -g -gdwarf-3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
 

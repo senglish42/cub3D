@@ -1,6 +1,9 @@
+
 NAME	=	libft.a
 
 CC		=	gcc
+
+OBJ_DIR	=	.obj
 
 INCL	=	../includes
 
@@ -22,20 +25,25 @@ SRC		=	ft_memset.c		ft_bzero.c		ft_memcpy.c \
 			ft_itoa.c		ft_split.c		ft_putcharlen_fd.c\
 			ft_putstrlen_fd.c
 
-OBJ		=	$(patsubst %.c,%.o,$(SRC))
+OBJS	= 	$(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
 
 .PHONY	:	all clean fclean re
 
 all		:	$(NAME)
 
-$(NAME)	:	$(OBJ)
+$(NAME)	:	$(OBJS)
 	@ar rsc $(NAME) $?
 
 %.o		: 	%.c
 	@$(CC) $(CFLAGS) -o $@ -c $<
 
+$(OBJ_DIR)/%.o:%.c $(HEADER)
+	mkdir -p $(OBJ_DIR)
+	mkdir -p $(OBJ_DIR)/$(SRCS_DIR)
+	$(CC) -c $(CFLAGS) $< -o $@
+
 clean	:
-	@$(RM) $(OBJ)
+	@$(RM) -rf $(OBJ_DIR)
 
 fclean	:	clean
 	@$(RM) $(NAME)
