@@ -6,7 +6,7 @@
 /*   By: senglish <senglish@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:14:36 by senglish          #+#    #+#             */
-/*   Updated: 2022/01/21 20:55:46 by senglish         ###   ########.fr       */
+/*   Updated: 2022/01/22 10:47:09 by senglish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "cub3D.h"
@@ -33,7 +33,8 @@ int main(int argc, char **argv)
 {
 	t_game	game;
 
-	parse(&game.map, if_invalid(argc, argv));
+	init_param(&game);
+	parse(&game, if_invalid(argc, argv));
 	printf("%d %d %d %d\n", game.map.compas.east, game.map.compas.north,
 		   game.map.compas.west, game.map.compas.east);
 	return 0;

@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   error.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: senglish <senglish@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/22 10:59:59 by senglish          #+#    #+#             */
+/*   Updated: 2022/01/22 11:00:07 by senglish         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "cub3D.h"
 
 void	error(int num)
@@ -17,5 +28,9 @@ void	error(int num)
 		ft_putstr_fd("ERROR: map is not fully surrounded by walls.\n", 2);
 	else if (num == 7)
 		ft_putstr_fd("ERROR: map should contain one player.\n", 2);
+	else if (num == 8)
+		ft_putstr_fd("ERROR: structure identification is already set\n", 2);
+	else if (num == 9)
+		ft_putstr_fd("ERROR: structure identification is invalid\n", 2);
 	exit (1);
 }

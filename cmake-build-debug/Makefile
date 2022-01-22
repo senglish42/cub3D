@@ -345,6 +345,30 @@ libft/ft_itoa.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/libft/ft_itoa.c.s
 .PHONY : libft/ft_itoa.c.s
 
+libft/ft_memccpy.o: libft/ft_memccpy.c.o
+.PHONY : libft/ft_memccpy.o
+
+# target to build an object file
+libft/ft_memccpy.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/libft/ft_memccpy.c.o
+.PHONY : libft/ft_memccpy.c.o
+
+libft/ft_memccpy.i: libft/ft_memccpy.c.i
+.PHONY : libft/ft_memccpy.i
+
+# target to preprocess a source file
+libft/ft_memccpy.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/libft/ft_memccpy.c.i
+.PHONY : libft/ft_memccpy.c.i
+
+libft/ft_memccpy.s: libft/ft_memccpy.c.s
+.PHONY : libft/ft_memccpy.s
+
+# target to generate assembly for a file
+libft/ft_memccpy.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/libft/ft_memccpy.c.s
+.PHONY : libft/ft_memccpy.c.s
+
 libft/ft_memchr.o: libft/ft_memchr.c.o
 .PHONY : libft/ft_memchr.o
 
@@ -993,6 +1017,30 @@ srcs/error.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/error.c.s
 .PHONY : srcs/error.c.s
 
+srcs/ident.o: srcs/ident.c.o
+.PHONY : srcs/ident.o
+
+# target to build an object file
+srcs/ident.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/ident.c.o
+.PHONY : srcs/ident.c.o
+
+srcs/ident.i: srcs/ident.c.i
+.PHONY : srcs/ident.i
+
+# target to preprocess a source file
+srcs/ident.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/ident.c.i
+.PHONY : srcs/ident.c.i
+
+srcs/ident.s: srcs/ident.c.s
+.PHONY : srcs/ident.s
+
+# target to generate assembly for a file
+srcs/ident.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/ident.c.s
+.PHONY : srcs/ident.c.s
+
 srcs/main.o: srcs/main.c.o
 .PHONY : srcs/main.o
 
@@ -1077,6 +1125,9 @@ help:
 	@echo "... libft/ft_itoa.o"
 	@echo "... libft/ft_itoa.i"
 	@echo "... libft/ft_itoa.s"
+	@echo "... libft/ft_memccpy.o"
+	@echo "... libft/ft_memccpy.i"
+	@echo "... libft/ft_memccpy.s"
 	@echo "... libft/ft_memchr.o"
 	@echo "... libft/ft_memchr.i"
 	@echo "... libft/ft_memchr.s"
@@ -1158,6 +1209,9 @@ help:
 	@echo "... srcs/error.o"
 	@echo "... srcs/error.i"
 	@echo "... srcs/error.s"
+	@echo "... srcs/ident.o"
+	@echo "... srcs/ident.i"
+	@echo "... srcs/ident.s"
 	@echo "... srcs/main.o"
 	@echo "... srcs/main.i"
 	@echo "... srcs/main.s"

@@ -6,7 +6,7 @@
 /*   By: senglish <senglish@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:21:40 by senglish          #+#    #+#             */
-/*   Updated: 2022/01/21 15:33:12 by senglish         ###   ########.fr       */
+/*   Updated: 2022/01/22 20:06:46 by senglish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef CUB3D_H
@@ -16,6 +16,17 @@
 # include "mlx.h"
 # include <fcntl.h>
 # include <stdio.h>
+
+typedef struct s_ident
+{
+	char	*no;
+	char	*so;
+	char	*we;
+	char	*ea;
+	char	*f;
+	char	*c;
+	int 	count;
+}	t_ident;
 
 typedef struct s_flag
 {
@@ -27,7 +38,7 @@ typedef struct s_flag
 
 typedef struct s_map
 {
-	char	**map;
+	char	**size;
 	size_t	width;
 	size_t	height;
 	t_flag	compas;
@@ -38,7 +49,9 @@ typedef struct s_map
 typedef struct s_game
 {
 //	t_vars	vars;
+	char 	**parse;
 	t_map	map;
+	t_ident	ident;
 //	t_img	img;
 //	t_char	character;
 //	t_pos	pos;
@@ -47,6 +60,10 @@ typedef struct s_game
 //	error.c	//
 void	error(int num);
 
+//	ident.c	//
+void 	init_param(t_game *game);
+void 	fill_ident(t_ident *ident, const char *orient, const char *str, int no);
+
 //	main.c	//
 int		if_invalid(int argc, char **argv);
 int		main(int argc, char **argv);
@@ -54,8 +71,8 @@ int		main(int argc, char **argv);
 //	parse.c	//
 void 	init_location(t_map *map);
 void	player_direction(t_map *map);
-void	check_map(t_map *map);
-void	width_height(t_map *map, int fd, char *str);
-void	parse(t_map *map, int fd);
+void	check_map(t_game *game);
+void	read_line(t_game *game, int fd, char *str);
+void	parse(t_game *game, int fd);
 
 #endif

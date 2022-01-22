@@ -28,6 +28,9 @@ CMakeFiles/cub3d.dir/libft/ft_isprint.c.o
 CMakeFiles/cub3d.dir/libft/ft_itoa.c.o
  ../includes/libft.h
  /Users/senglish/cub3d/libft/ft_itoa.c
+CMakeFiles/cub3d.dir/libft/ft_memccpy.c.o
+ ../includes/libft.h
+ /Users/senglish/cub3d/libft/ft_memccpy.c
 CMakeFiles/cub3d.dir/libft/ft_memchr.c.o
  ../includes/libft.h
  /Users/senglish/cub3d/libft/ft_memchr.c
@@ -111,6 +114,11 @@ CMakeFiles/cub3d.dir/srcs/error.c.o
  ../includes/libft.h
  ../mlx/mlx.h
  /Users/senglish/cub3d/srcs/error.c
+CMakeFiles/cub3d.dir/srcs/ident.c.o
+ ../includes/cub3D.h
+ ../includes/libft.h
+ ../mlx/mlx.h
+ /Users/senglish/cub3d/srcs/ident.c
 CMakeFiles/cub3d.dir/srcs/main.c.o
  ../includes/cub3D.h
  ../includes/libft.h

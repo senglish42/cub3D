@@ -117,6 +117,9 @@
 		<Unit filename="/Users/senglish/cub3d/libft/ft_itoa.c">
 			<Option target="cub3d"/>
 		</Unit>
+		<Unit filename="/Users/senglish/cub3d/libft/ft_memccpy.c">
+			<Option target="cub3d"/>
+		</Unit>
 		<Unit filename="/Users/senglish/cub3d/libft/ft_memchr.c">
 			<Option target="cub3d"/>
 		</Unit>
@@ -196,6 +199,9 @@
 			<Option target="cub3d"/>
 		</Unit>
 		<Unit filename="/Users/senglish/cub3d/srcs/error.c">
+			<Option target="cub3d"/>
+		</Unit>
+		<Unit filename="/Users/senglish/cub3d/srcs/ident.c">
 			<Option target="cub3d"/>
 		</Unit>
 		<Unit filename="/Users/senglish/cub3d/srcs/main.c">

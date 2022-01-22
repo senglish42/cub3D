@@ -10,7 +10,8 @@ LIB		=	libft/libft.a
 
 SRCS_DIR=	srcs
 
-SRCS	=	$(SRCS_DIR)/main.c	$(SRCS_DIR)/error.c	$(SRCS_DIR)/parse.c
+SRCS	=	$(SRCS_DIR)/main.c	$(SRCS_DIR)/error.c	$(SRCS_DIR)/ident.c\
+			$(SRCS_DIR)/parse.c
 
 #B_DIR	=	$(B_DIR)/
 #
@@ -28,10 +29,6 @@ RM		=	rm -f
 
 HEADER	=	$(INCL)/cub3D.h
 
-#DBGDIR = debug
-#DBGOBJS = $(addprefix $(DBGDIR)/, $(OBJS))
-#DBGCFLAGS = -g -O0 -DDEBUG
-
 .PHONY	:	all bonus clean fclean re
 
 $(OBJ_DIR)/%.o:%.c $(HEADER)
@@ -44,11 +41,6 @@ all		:	$(NAME)
 bonus	:	$(BOBJS)
 				$(MAKE) -C $(dir $(LIB))
 				$(CC) $(CFLAGS) $(BOBJS) $(LIB) -o $(NAME)
-
-#debug: $(DBGEXE)
-#
-#$(DBGDIR)/%.o: %.c
-#	$(CC) -c $(CFLAGS) $(DBGCFLAGS) -o $@ $<
 
 $(NAME)	:	$(OBJS) $(LIB)
 	$(CC) $(CFLAGS) $(OBJS) $(LIB) -o $(NAME)

@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/senglish/cub3d/libft/ft_isdigit.c" "/Users/senglish/cub3d/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_isdigit.c.o"
   "/Users/senglish/cub3d/libft/ft_isprint.c" "/Users/senglish/cub3d/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_isprint.c.o"
   "/Users/senglish/cub3d/libft/ft_itoa.c" "/Users/senglish/cub3d/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_itoa.c.o"
+  "/Users/senglish/cub3d/libft/ft_memccpy.c" "/Users/senglish/cub3d/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_memccpy.c.o"
   "/Users/senglish/cub3d/libft/ft_memchr.c" "/Users/senglish/cub3d/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_memchr.c.o"
   "/Users/senglish/cub3d/libft/ft_memcmp.c" "/Users/senglish/cub3d/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_memcmp.c.o"
   "/Users/senglish/cub3d/libft/ft_memcpy.c" "/Users/senglish/cub3d/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_memcpy.c.o"
@@ -44,6 +45,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/senglish/cub3d/libft/ft_tolower.c" "/Users/senglish/cub3d/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_tolower.c.o"
   "/Users/senglish/cub3d/libft/ft_toupper.c" "/Users/senglish/cub3d/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_toupper.c.o"
   "/Users/senglish/cub3d/srcs/error.c" "/Users/senglish/cub3d/cmake-build-debug/CMakeFiles/cub3d.dir/srcs/error.c.o"
+  "/Users/senglish/cub3d/srcs/ident.c" "/Users/senglish/cub3d/cmake-build-debug/CMakeFiles/cub3d.dir/srcs/ident.c.o"
   "/Users/senglish/cub3d/srcs/main.c" "/Users/senglish/cub3d/cmake-build-debug/CMakeFiles/cub3d.dir/srcs/main.c.o"
   "/Users/senglish/cub3d/srcs/parse.c" "/Users/senglish/cub3d/cmake-build-debug/CMakeFiles/cub3d.dir/srcs/parse.c.o"
   )
