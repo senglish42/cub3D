@@ -10,8 +10,8 @@ LIB		=	libft/libft.a
 
 SRCS_DIR=	srcs
 
-SRCS	=	$(SRCS_DIR)/main.c	$(SRCS_DIR)/error.c	$(SRCS_DIR)/ident.c\
-			$(SRCS_DIR)/parse.c
+SRCS	=	$(SRCS_DIR)/error.c	$(SRCS_DIR)/ident.c	$(SRCS_DIR)/init.c\
+			$(SRCS_DIR)/main.c $(SRCS_DIR)/map.c	$(SRCS_DIR)/parse.c
 
 #B_DIR	=	$(B_DIR)/
 #

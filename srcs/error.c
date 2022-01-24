@@ -32,5 +32,9 @@ void	error(int num)
 		ft_putstr_fd("ERROR: structure identification is already set\n", 2);
 	else if (num == 9)
 		ft_putstr_fd("ERROR: structure identification is invalid\n", 2);
-	exit (1);
+    else if (num == 10)
+        ft_putstr_fd("ERROR: structure identification id duplicated\n", 2);
+    else if (num == 11)
+        ft_putstr_fd("ERROR: floor and ceiling should be different color\n", 2);
+    exit (1);
 }

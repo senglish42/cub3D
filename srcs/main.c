@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 
 	init_param(&game);
 	parse(&game, if_invalid(argc, argv));
-	printf("%d %d %d %d\n", game.map.compas.east, game.map.compas.north,
-		   game.map.compas.west, game.map.compas.east);
+	printf("%d %d %d %d\n", game.player.east, game.player.north,
+		   game.player.west, game.player.east);
 	return 0;
 }
