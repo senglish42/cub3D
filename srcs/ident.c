@@ -11,6 +11,34 @@
 /* ************************************************************************** */
 #include "cub3D.h"
 
+void    rgb_ident(t_ident *ident, char sep)
+{
+    int     count;
+    char    *floor;
+    char    *ceiling;
+
+    floor = ident->orient[4];
+    ceiling = ident->orient[5];
+    count = -1;
+    while (++count < 3)
+    {
+        ident->f_rgb[count] = (int)ft_atoi(floor);
+        ident->c_rgb[count] = (int)ft_atoi(ceiling);
+        if (ident->f_rgb[count] < 0 || ident->c_rgb[count] < 0)
+            error(14);
+        if (ident->f_rgb[count] > 255 || ident->c_rgb[count] > 255)
+            error(14);
+        floor = floor + ft_strlen(ft_itoa(ident->f_rgb[count])) + 1;
+        if (sep == '0')
+            sep = *(floor - 1);
+        else if (*floor && sep != *(floor - 1))
+            error(13);
+        ceiling = ceiling + ft_strlen(ft_itoa(ident->c_rgb[count])) + 1;
+        if (*ceiling && sep != *(ceiling - 1))
+            error(13);
+    }
+}
+
 void    compare_ident(const char *str1, const char *str2, int errno)
 {
     size_t  len1;
@@ -38,10 +66,10 @@ void    while_ident(char *orient[6])
         {
             if (num <= count)
                 continue;
-            compare_ident(orient[count], orient[num], 10);
+            compare_ident(orient[count], orient[num], 11);
         }
     }
-    compare_ident(orient[4], orient[5], 11);
+    compare_ident(orient[4], orient[5], 12);
 }
 
 void 	fill_ident(char **turn, const char *orient, const char *str, int no)
@@ -52,9 +80,14 @@ void 	fill_ident(char **turn, const char *orient, const char *str, int no)
 	while (*(str + a) == ' ')
 		a++;
 	if (!ft_strncmp(str, orient, no))
-        *turn = (char *) (str + a);
+    {
+        if (!*turn)
+            *turn = (char *) (str + a);
+        else
+            error(9);
+    }
 	else
-		error(8);
+		error(10);
 }
 
 void    check_ident(t_game *game, short height, short width)
@@ -64,20 +97,20 @@ void    check_ident(t_game *game, short height, short width)
 
     str = &game->parse[height][width];
     printf("***%c\n", str[0]);
-    if (*str == 'N' && !game->ident.orient[0])
+    if (*str == 'N')
         fill_ident(&game->ident.orient[0], orient[0], str, 3);
-    else if (*str == 'S' && !game->ident.orient[1])
+    else if (*str == 'S')
         fill_ident(&game->ident.orient[1], orient[1], str, 3);
-    else if (*str == 'W' && !game->ident.orient[2])
+    else if (*str == 'W')
         fill_ident(&game->ident.orient[2], orient[2], str, 3);
-    else if (*str == 'E' && !game->ident.orient[3])
+    else if (*str == 'E')
         fill_ident(&game->ident.orient[3], orient[3], str, 3);
-    else if (*str == 'F' && !game->ident.orient[4])
+    else if (*str == 'F')
         fill_ident(&game->ident.orient[4], orient[4], str, 2);
-    else if (*str == 'C' && !game->ident.orient[5])
+    else if (*str == 'C')
         fill_ident(&game->ident.orient[5], orient[5], str, 2);
     else
-        error(9);
+        error(10);
 }
 
 short parse_ident(t_game *game)
@@ -97,5 +130,6 @@ short parse_ident(t_game *game)
         check_ident(game, height, width);
     }
     while_ident(game->ident.orient);
+    rgb_ident(&game->ident, '0');
     return (height);
 }

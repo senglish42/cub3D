@@ -11,33 +11,45 @@
 /* ************************************************************************** */
 #include "cub3D.h"
 
+//void    if_emptiness(t_game *game, short height, short width)
+//{
+//    if (game->map.size[height][width - 1] != '1')
+//        error(6);
+//    if (game->map.size[height][width + 1] != '1')
+//        error(6);
+//    if (game->map.size[height - 1][width] != '1')
+//        error(6);
+//    if (game->map.size[height + 1][width] != '1')
+//        error(6);
+//}
+
 void    check_walls(t_game *game, short height, short width)
 {
     if (!height || (height == game->map.height - 1))
-        error(6);
+        error(7);
     if (!width || width == game->map.width - 1)
-        error(6);
+        error(7);
     if (game->map.size[height][width - 1] == ' ')
-        error(6);
+        error(7);
     if (game->map.size[height - 1][width] == ' ')
-        error(6);
+        error(7);
     if (width + 1 < game->map.width && game->map.size[height][width + 1] == ' ')
-        error(6);
+        error(7);
     if (height + 1 < game->map.height &&
         game->map.size[height + 1][width] == ' ')
-        error (6);
+        error(7);
     if (width - 1 >= 0 && height - 1 >= 0 &&
         game->map.size[height - 1][width - 1] == ' ')
-        error(6);
+        error(7);
     if (width - 1 >= 0 && height + 1 < game->map.height &&
         game->map.size[height + 1][width - 1] == ' ')
-        error(6);
+        error(7);
     if (width + 1 < game->map.width && height - 1 >= 0 &&
         game->map.size[height - 1][width + 1] == ' ')
-        error(6);
+        error(7);
     if (width + 1 < game->map.width && height + 1 < game->map.height
         && game->map.size[height + 1][width + 1] == ' ')
-        error(6);
+        error(7);
 }
 
 void check_player(t_game *game, short height, short width)
@@ -49,7 +61,7 @@ void check_player(t_game *game, short height, short width)
         if (!game->player.pos)
             game->player.pos = &game->map.size[height][width];
         else
-            error(7);
+            error(8);
         if (game->map.size[height][width] == 'N')
             game->player.north = 1;
         else if (game->map.size[height][width] == 'S')
@@ -67,10 +79,10 @@ void check_map(t_game *game)
     short       width;
 
     height = -1;
-    while (game->map.size[++height])
+    while (++height < game->map.height)
     {
         width = -1;
-        while (game->map.size[height][++width])
+        while (++width < game->map.width)
         {
             if (game->map.size[height][width] != '1'
                 && game->map.size[height][width] != ' ')
@@ -120,7 +132,7 @@ void parse_map(t_game *game, short num)
         while (game->parse[height][++count])
         {
             if (!ft_strchr(valid, game->parse[height][count]))
-                error(5);
+                error(6);
         }
         if (game->map.width < count)
             game->map.width = count;

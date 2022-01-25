@@ -20,13 +20,8 @@
 typedef struct s_ident
 {
     char    *orient[6];
-	char	*no;
-	char	*so;
-	char	*we;
-	char	*ea;
-	char	*f;
-	char	*c;
-	int 	count;
+	int     f_rgb[3];
+    int     c_rgb[3];
 }	t_ident;
 
 typedef struct s_player
@@ -69,6 +64,7 @@ void 	init_map(t_game *game);
 void 	init_player(t_game *game);
 
 //	ident.c	//
+void    rgb_ident(t_ident *ident, char sep);
 void    compare_ident(const char *str1, const char *str2, int errno);
 void    while_ident(char *orient[6]);
 void 	fill_ident(char **turn, const char *orient, const char *str, int no);
