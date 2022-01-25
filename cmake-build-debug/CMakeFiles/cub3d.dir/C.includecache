@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../includes/cub3D.h
+libft.h
+../includes/libft.h
+mlx.h
+../includes/mlx.h
+fcntl.h
+-
+stdio.h
+-
+string.h
+-
+sys/errno.h
+-
+
+../includes/libft.h
+unistd.h
+-
+stdlib.h
+-
+
+../mlx/mlx.h
+
+/Users/senglish/projects/cub3D/srcs/ident.c
+cub3D.h
+/Users/senglish/projects/cub3D/srcs/cub3D.h
+

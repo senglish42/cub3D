@@ -6,40 +6,12 @@
 /*   By: senglish <senglish@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 10:59:45 by senglish          #+#    #+#             */
-/*   Updated: 2022/01/22 20:26:38 by senglish         ###   ########.fr       */
+/*   Updated: 2022/01/25 17:27:54 by senglish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "cub3D.h"
 
-void    rgb_ident(t_ident *ident, char sep)
-{
-    int     count;
-    char    *floor;
-    char    *ceiling;
-
-    floor = ident->orient[4];
-    ceiling = ident->orient[5];
-    count = -1;
-    while (++count < 3)
-    {
-        ident->f_rgb[count] = (int)ft_atoi(floor);
-        ident->c_rgb[count] = (int)ft_atoi(ceiling);
-        if (ident->f_rgb[count] < 0 || ident->c_rgb[count] < 0)
-            error(14);
-        if (ident->f_rgb[count] > 255 || ident->c_rgb[count] > 255)
-            error(14);
-        floor = floor + ft_strlen(ft_itoa(ident->f_rgb[count])) + 1;
-        if (sep == '0')
-            sep = *(floor - 1);
-        else if (*floor && sep != *(floor - 1))
-            error(13);
-        ceiling = ceiling + ft_strlen(ft_itoa(ident->c_rgb[count])) + 1;
-        if (*ceiling && sep != *(ceiling - 1))
-            error(13);
-    }
-}
-
-void    compare_ident(const char *str1, const char *str2, int errno)
+void    compare_ident(const char *str1, const char *str2, int errnum)
 {
     size_t  len1;
     size_t  len2;
@@ -49,19 +21,29 @@ void    compare_ident(const char *str1, const char *str2, int errno)
     if (len1 == len2)
     {
         if (!ft_strncmp(str1, str2, len1))
-            error(errno);
+            error(errnum);
     }
 }
 
 void    while_ident(char *orient[6])
 {
+	int 	fd[4];
     int     num;
     int     count;
+	char 	*path;
 
+	path = NULL;
     count = -1;
     while (++count < 3)
     {
-        num = -1;
+        path = ft_strjoin("../images", &orient[count][1]);
+		if (!path)
+			printf_error(NULL, strerror(errno), fd, count);
+		fd[count] = open(path, O_RDONLY);
+		if (fd[count] < 0)
+			printf_error(path, strerror(errno), fd, count);
+		free(path);
+		num = -1;
         while (++num <= 3)
         {
             if (num <= count)
@@ -69,7 +51,6 @@ void    while_ident(char *orient[6])
             compare_ident(orient[count], orient[num], 11);
         }
     }
-    compare_ident(orient[4], orient[5], 12);
 }
 
 void 	fill_ident(char **turn, const char *orient, const char *str, int no)
@@ -87,6 +68,8 @@ void 	fill_ident(char **turn, const char *orient, const char *str, int no)
             error(9);
     }
 	else
+		error(10);
+	if (no == 3 && ft_strncmp(*turn, "./", 2))
 		error(10);
 }
 
@@ -130,6 +113,6 @@ short parse_ident(t_game *game)
         check_ident(game, height, width);
     }
     while_ident(game->ident.orient);
-    rgb_ident(&game->ident, '0');
-    return (height);
+    rgb_ident(&game->ident);
+	return (height);
 }

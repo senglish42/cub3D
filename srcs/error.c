@@ -6,7 +6,7 @@
 /*   By: senglish <senglish@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 10:59:59 by senglish          #+#    #+#             */
-/*   Updated: 2022/01/22 11:00:07 by senglish         ###   ########.fr       */
+/*   Updated: 2022/01/25 17:04:46 by senglish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "cub3D.h"
@@ -26,6 +26,10 @@ void    error_identifier(int num)
         ft_putstr_fd("ERROR: invalid sign of an identifier's separator\n",num);
     else if (num == 14)
         ft_putstr_fd("ERROR: invalid value of the RGB identifier\n", num);
+	else if (num == 15)
+		ft_putstr_fd("ERROR: invalid amount of the RGB identifier\n", num);
+	else if (num == 16)
+		ft_putstr_fd("ERROR: wrong location of the RGB separator\n", num);
 }
 
 void	error(int num)
@@ -47,4 +51,21 @@ void	error(int num)
 		ft_putstr_fd("ERROR: map should contain one player.\n", num);
     else if (num >= 9)
         error_identifier(num);
+}
+
+void	printf_error(char *str1, const char *str2, int *fd, int count)
+{
+	if (!str1)
+	{
+		printf("Error: %s\n", str2);
+		count--;
+	}
+	else
+	{
+		printf("Error: %s: %s\n", str1, str2);
+		free(str1);
+	}
+	while (count >= 0)
+		close(fd[count--]);
+	exit (EXIT_FAILURE);
 }

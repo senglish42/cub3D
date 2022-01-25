@@ -36,6 +36,12 @@ void init_ident(t_ident *ident)
     ident->orient[3] = NULL;
     ident->orient[4] = NULL;
     ident->orient[5] = NULL;
+	ident->f_rgb[0] = -1;
+	ident->f_rgb[1] = -1;
+	ident->f_rgb[2] = -1;
+	ident->c_rgb[0] = -1;
+	ident->c_rgb[1] = -1;
+	ident->c_rgb[2] = -1;
 }
 
 void init_param(t_game *game)

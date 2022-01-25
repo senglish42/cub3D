@@ -6,22 +6,10 @@
 /*   By: senglish <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 14:42:00 by senglish          #+#    #+#             */
-/*   Updated: 2022/01/24 14:42:00 by senglish         ###   ########.fr       */
+/*   Updated: 2022/01/25 14:15:01 by senglish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "cub3D.h"
-
-//void    if_emptiness(t_game *game, short height, short width)
-//{
-//    if (game->map.size[height][width - 1] != '1')
-//        error(6);
-//    if (game->map.size[height][width + 1] != '1')
-//        error(6);
-//    if (game->map.size[height - 1][width] != '1')
-//        error(6);
-//    if (game->map.size[height + 1][width] != '1')
-//        error(6);
-//}
 
 void    check_walls(t_game *game, short height, short width)
 {
@@ -96,22 +84,26 @@ void check_map(t_game *game)
 
 void fill_map(t_game *game, short num)
 {
-    short count;
-    short a;
+	short	count;
+    short	a;
+	short	flag;
 
     count = -1;
     game->map.size = (char **) malloc(sizeof(char *) * game->map.height);
     while (++count < game->map.height)
     {
+		flag = 0;
         game->map.size[count] = NULL;
         game->map.size[count] = ft_calloc(game->map.width, sizeof(char *));
         a = -1;
         while (++a < game->map.width)
         {
-            if (game->parse[num][a])
+            if (game->parse[num][a] && !flag)
                 game->map.size[count][a] = game->parse[num][a];
             else
                 game->map.size[count][a] = ' ';
+			if (!game->parse[num][a])
+				flag = 1;
         }
         game->map.size[count][a] = '\0';
         num++;
