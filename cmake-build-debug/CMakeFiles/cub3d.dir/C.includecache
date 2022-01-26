@@ -9,8 +9,16 @@
 ../includes/cub3D.h
 libft.h
 ../includes/libft.h
-mlx.h
-../includes/mlx.h
+../mlx/mlx.h
+../mlx/mlx.h
+keys_macos.h
+../includes/keys_macos.h
+unistd.h
+-
+stdlib.h
+-
+math.h
+-
 fcntl.h
 -
 stdio.h
@@ -20,6 +28,8 @@ string.h
 sys/errno.h
 -
 
+../includes/keys_macos.h
+
 ../includes/libft.h
 unistd.h
 -
@@ -28,7 +38,47 @@ stdlib.h
 
 ../mlx/mlx.h
 
+/Users/senglish/projects/cub3D/srcs/draw.c
+cub3D.h
+/Users/senglish/projects/cub3D/srcs/cub3D.h
+
+/Users/senglish/projects/cub3D/srcs/error.c
+cub3D.h
+/Users/senglish/projects/cub3D/srcs/cub3D.h
+
 /Users/senglish/projects/cub3D/srcs/ident.c
+cub3D.h
+/Users/senglish/projects/cub3D/srcs/cub3D.h
+
+/Users/senglish/projects/cub3D/srcs/init.c
+cub3D.h
+/Users/senglish/projects/cub3D/srcs/cub3D.h
+
+/Users/senglish/projects/cub3D/srcs/key_handler.c
+cub3D.h
+/Users/senglish/projects/cub3D/srcs/cub3D.h
+
+/Users/senglish/projects/cub3D/srcs/main.c
+cub3D.h
+/Users/senglish/projects/cub3D/srcs/cub3D.h
+
+/Users/senglish/projects/cub3D/srcs/map.c
+cub3D.h
+/Users/senglish/projects/cub3D/srcs/cub3D.h
+
+/Users/senglish/projects/cub3D/srcs/parse.c
+cub3D.h
+/Users/senglish/projects/cub3D/srcs/cub3D.h
+
+/Users/senglish/projects/cub3D/srcs/ray.c
+cub3D.h
+/Users/senglish/projects/cub3D/srcs/cub3D.h
+
+/Users/senglish/projects/cub3D/srcs/rgb.c
+cub3D.h
+/Users/senglish/projects/cub3D/srcs/cub3D.h
+
+/Users/senglish/projects/cub3D/srcs/vectors.c
 cub3D.h
 /Users/senglish/projects/cub3D/srcs/cub3D.h
 

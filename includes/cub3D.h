@@ -6,18 +6,64 @@
 /*   By: senglish <senglish@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:21:40 by senglish          #+#    #+#             */
-/*   Updated: 2022/01/25 17:34:37 by senglish         ###   ########.fr       */
+/*   Updated: 2022/01/26 15:38:01 by senglish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef CUB3D_H
 # define CUB3D_H
 
 # include "libft.h"
-# include "mlx.h"
+//# include "/usr/local/include/mlx.h"
+# include "../mlx/mlx.h"
+# include "keys_macos.h"
+//# include "keys.h"
+# include <unistd.h>
+# include <stdlib.h>
+# include <math.h>
 # include <fcntl.h>
 # include <stdio.h>
 # include <string.h>
 # include <sys/errno.h>
+
+# define CLRSCR	"\e[1;1H\e[2J"
+
+# define ABS(X) (((X) < 0) ? (-(X)) : (X))
+# define MAX(A , B) ((A > B) ? A : B)
+
+# define PI		3.1415926
+
+# define TRUE	1
+# define FALSE	0
+
+# define RED	0x00FF0000
+# define GREEN	0x0000FF00
+# define BLUE	0x000000FF
+# define YELLOW	0x00FFFF00
+# define WHITE	0x00FFFFFF
+# define BLACK	0x00000000
+# define GRAY	0x00c9c0bb
+
+# define X_EVENT_KEY_PRESS		2
+# define X_EVENT_KEY_RELEASE	3
+# define X_EVENT_MOUSE_PRESS	4
+# define X_EVENT_MOUSE_RELEASE	5
+# define X_EVENT_MOUSE_MOVE		6
+# define X_EVENT_EXIT			17
+
+typedef struct s_vars
+{
+	void	*mlx;
+	void	*win;
+}				t_vars;
+
+typedef struct	s_img
+{
+	void	*img;
+	char	*addr;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
+}				t_img;
 
 typedef struct s_ident
 {
@@ -33,6 +79,12 @@ typedef struct s_player
 	short   south;
 	short   east;
 	short   west;
+	double	posx;
+	double	posy;
+	double	dx;
+	double	dy;
+	double	da;
+	double	step;
 }				t_player;
 
 typedef struct s_map
@@ -40,16 +92,42 @@ typedef struct s_map
 	char	**size;
 	short	width;
 	short	height;
+	short	scale;
 }				t_map;
 
 typedef struct s_game
 {
-//	t_vars	vars;
-	char        **parse;
+	t_img		image;
+	t_vars		vars;
 	t_map       map;
 	t_ident     ident;
     t_player    player;
+	char        **parse;
+	int			screen_w;
+	int			screen_h;
 }				t_game;
+
+typedef struct s_vec
+{
+	double	x;
+	double	y;
+	double	z;
+}	t_vec;
+
+////	dbg.c	//
+//void	draw_debug_map(t_game *game);
+
+//	draw.c	//
+void	my_mlx_pixel_put(t_img *img, int x, int y, int color);
+void	my_clear_window(t_game *game);
+void	draw_quad(t_game *game, int x, int y, int x0, int y0, int color);
+void	draw_minimap(t_game *game);
+void 	draw_scaled_point(t_game *game, double x, double y, int color);
+void	draw_miniplayer(t_game *game, double x, double y);
+int 	check_values(int x, int y, int x1, int y1);
+void    draw_line(t_game *game, double x, double y, double x1, double y1, int
+color);
+
 
 //	error.c	//
 void    error_identifier(int num);
@@ -69,6 +147,10 @@ void 	fill_ident(char **turn, const char *orient, const char *str, int no);
 void    check_ident(t_game *game, short height, short width);
 short 	parse_ident(t_game *game);
 
+//	key_handler.c	//
+void	key_handler(int key, t_game *game);
+int		key_pressed(int key, t_game *game);
+
 //	main.c	//
 int		if_invalid(int argc, char **argv);
 int		main(int argc, char **argv);
@@ -84,10 +166,26 @@ void    parse_map(t_game *game, short num);
 void	read_line(t_game *game, int fd);
 void	parse(t_game *game, int fd);
 
+//	ray.c	//
+int		is_valid(int x, int y);
+int		get_yray_dir(t_game *game);
+int		get_xray_dir(t_game *game);
+void	find_intersection_horizontal(t_game *game, double *x, double *y);
+void	find_intersection_vertical(t_game *game, double *x, double *y);
+
 //	rgb.c	//
 char	*rgb_digit(char *str);
 char 	*rgb_sep(char *str, char sep, int count);
 void 	check_rgb(t_ident *ident);
 void    rgb_ident(t_ident *ident);
+
+//	vectors.c	//
+t_vec	add_vec(t_vec a, t_vec b);
+double	vec_length(t_vec vec);
+t_vec	normilize_vec(t_vec vec);
+t_vec	multipleByScalar(t_vec vec, double value);
+double	round_down(double x);
+double	round_up(double x);
+void	find_min_vec(t_vec a, t_vec b, t_vec *res);
 
 #endif

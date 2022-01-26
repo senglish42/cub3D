@@ -6,7 +6,7 @@
 /*   By: senglish <senglish@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 10:59:45 by senglish          #+#    #+#             */
-/*   Updated: 2022/01/25 17:27:54 by senglish         ###   ########.fr       */
+/*   Updated: 2022/01/26 13:50:34 by senglish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "cub3D.h"
@@ -27,22 +27,22 @@ void    compare_ident(const char *str1, const char *str2, int errnum)
 
 void    while_ident(char *orient[6])
 {
-	int 	fd[4];
+//	int 	fd[4];
     int     num;
     int     count;
-	char 	*path;
+//	char 	*path;
 
-	path = NULL;
+//	path = NULL;
     count = -1;
     while (++count < 3)
     {
-        path = ft_strjoin("../images", &orient[count][1]);
-		if (!path)
-			printf_error(NULL, strerror(errno), fd, count);
-		fd[count] = open(path, O_RDONLY);
-		if (fd[count] < 0)
-			printf_error(path, strerror(errno), fd, count);
-		free(path);
+//        path = ft_strjoin("../images", &orient[count][1]);
+//		if (!path)
+//			printf_error(NULL, strerror(errno), fd, count);
+//		fd[count] = open(path, O_RDONLY);
+//		if (fd[count] < 0)
+//			printf_error(path, strerror(errno), fd, count);
+//		free(path);
 		num = -1;
         while (++num <= 3)
         {

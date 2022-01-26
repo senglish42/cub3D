@@ -45,5 +45,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/cub3d.dir/DependInfo.cmake"
+  "CMakeFiles/cub3D.dir/DependInfo.cmake"
   )

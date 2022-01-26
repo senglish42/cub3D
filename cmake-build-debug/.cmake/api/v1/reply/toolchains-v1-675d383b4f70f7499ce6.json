@@ -24,7 +24,7 @@
 					],
 					"linkLibraries" : []
 				},
-				"path" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc",
+				"path" : "/usr/bin/gcc",
 				"version" : "11.0.0.11000033"
 			},
 			"language" : "C",

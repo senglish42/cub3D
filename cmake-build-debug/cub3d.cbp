@@ -37,18 +37,18 @@
 					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/senglish/projects/cub3D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="cub3d">
-				<Option output="/Users/senglish/projects/cub3D/cmake-build-debug/cub3d" prefix_auto="0" extension_auto="0"/>
+			<Target title="cub3D">
+				<Option output="/Users/senglish/projects/cub3D/cmake-build-debug/cub3D" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/senglish/projects/cub3D/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/senglish/projects/cub3D/includes"/>
-					<Add directory="/Users/senglish/projects/cub3D/mlx"/>
 					<Add directory="/Users/senglish/projects/cub3D/libft"/>
 					<Add directory="/Users/senglish/projects/cub3D/srcs"/>
 					<Add directory="/Users/senglish/projects/cub3D/.obj"/>
+					<Add directory="/Users/senglish/projects/cub3D/mlx"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -56,24 +56,24 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/senglish/projects/cub3D/cmake-build-debug/Makefile&quot;  VERBOSE=1 cub3d"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/senglish/projects/cub3D/cmake-build-debug/Makefile&quot;  VERBOSE=1 cub3D"/>
 					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/senglish/projects/cub3D/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j6 -f &quot;/Users/senglish/projects/cub3D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/senglish/projects/cub3D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="cub3d/fast">
-				<Option output="/Users/senglish/projects/cub3D/cmake-build-debug/cub3d" prefix_auto="0" extension_auto="0"/>
+			<Target title="cub3D/fast">
+				<Option output="/Users/senglish/projects/cub3D/cmake-build-debug/cub3D" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/senglish/projects/cub3D/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/senglish/projects/cub3D/includes"/>
-					<Add directory="/Users/senglish/projects/cub3D/mlx"/>
 					<Add directory="/Users/senglish/projects/cub3D/libft"/>
 					<Add directory="/Users/senglish/projects/cub3D/srcs"/>
 					<Add directory="/Users/senglish/projects/cub3D/.obj"/>
+					<Add directory="/Users/senglish/projects/cub3D/mlx"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -81,141 +81,168 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/senglish/projects/cub3D/cmake-build-debug/Makefile&quot;  VERBOSE=1 cub3d/fast"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/senglish/projects/cub3D/cmake-build-debug/Makefile&quot;  VERBOSE=1 cub3D/fast"/>
 					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/senglish/projects/cub3D/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j6 -f &quot;/Users/senglish/projects/cub3D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/senglish/projects/cub3D/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/senglish/projects/cub3D/includes/cub3D.h">
+			<Option target="cub3D"/>
+		</Unit>
+		<Unit filename="/Users/senglish/projects/cub3D/includes/keys.h">
+			<Option target="cub3D"/>
+		</Unit>
+		<Unit filename="/Users/senglish/projects/cub3D/includes/keys_macos.h">
+			<Option target="cub3D"/>
+		</Unit>
+		<Unit filename="/Users/senglish/projects/cub3D/includes/libft.h">
+			<Option target="cub3D"/>
+		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_atoi.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_bzero.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_calloc.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_isalnum.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_isalpha.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_isascii.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_isdigit.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_isprint.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_itoa.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_memccpy.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_memchr.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_memcmp.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_memcpy.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_memmove.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_memset.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_putchar_fd.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_putcharlen_fd.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_putendl_fd.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_putnbr_fd.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_putstr_fd.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_putstrlen_fd.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_split.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_strchr.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_strdup.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_strjoin.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_strlcat.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_strlcpy.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_strlen.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_strmapi.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_strncmp.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_strnstr.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_strrchr.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_strtrim.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_substr.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_tolower.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/libft/ft_toupper.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
+		</Unit>
+		<Unit filename="/Users/senglish/projects/cub3D/srcs/dbg.c">
+			<Option target="cub3D"/>
+		</Unit>
+		<Unit filename="/Users/senglish/projects/cub3D/srcs/draw.c">
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/srcs/error.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/srcs/ident.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/srcs/init.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
+		</Unit>
+		<Unit filename="/Users/senglish/projects/cub3D/srcs/key_handler.c">
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/srcs/main.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/srcs/map.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/srcs/parse.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
+		</Unit>
+		<Unit filename="/Users/senglish/projects/cub3D/srcs/ray.c">
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/srcs/rgb.c">
-			<Option target="cub3d"/>
+			<Option target="cub3D"/>
+		</Unit>
+		<Unit filename="/Users/senglish/projects/cub3D/srcs/vectors.c">
+			<Option target="cub3D"/>
 		</Unit>
 		<Unit filename="/Users/senglish/projects/cub3D/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
