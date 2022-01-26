@@ -15,8 +15,8 @@
 # include "libft.h"
 //# include "/usr/local/include/mlx.h"
 # include "../mlx/mlx.h"
-# include "keys_macos.h"
-//# include "keys.h"
+//# include "keys_macos.h"
+# include "keys.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <math.h>

@@ -15,88 +15,129 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6099bb2f-26df-4dd1-9836-4ed65dd5a301" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/error.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/error.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/ident.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/ident.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/init.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/init.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/map.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/map.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/parse.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/parse.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/rgb.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/rgb.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/dbg.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/draw.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/error.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/ident.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/init.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/key_handler.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/map.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/parse.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/ray.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/rgb.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/vectors.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-79f1d6a21497111ad5b5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-f9213d040af6b406874a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-25T16-44-54-0832.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-cub3d-Debug-f89151cc6b1a9c9ef8c5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-501b304f510d0e4af5c7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-d9b11da7fba1fddb1d27.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-048255280a8869e0df66.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-71c5f35c37c94f92d588.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-26T18-23-54-0029.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-cub3D-Debug-229777c37c56935a21e2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-675d383b4f70f7499ce6.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OPENGL_FRAMEWORK.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OPENGL_FRAMEWORK.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OPENGL_FRAMEWORK.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OPENGL_FRAMEWORK.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OPENGL_FRAMEWORK.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OPENGL_FRAMEWORK.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/srcs/error.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/srcs/ident.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/srcs/init.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/srcs/main.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/srcs/map.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/srcs/parse.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/srcs/rgb.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_atoi.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_bzero.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_calloc.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_isalnum.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_isalpha.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_isascii.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_isdigit.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_isprint.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_itoa.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_memccpy.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_memchr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_memcmp.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_memcpy.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_memmove.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_memset.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_putchar_fd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_putcharlen_fd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_putendl_fd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_putnbr_fd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_putstr_fd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_putstrlen_fd.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_split.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_strchr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_strdup.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_strjoin.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_strlcat.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_strlcpy.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_strlen.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_strmapi.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_strncmp.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_strnstr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_strrchr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_strtrim.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_substr.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_tolower.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/libft/ft_toupper.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/mlx/font.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/mlx/mlx_int_str_to_wordtab.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/mlx/mlx_png.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/mlx/mlx_shaders.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/mlx/mlx_xpm.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/srcs/dbg.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mlx.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mlx.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mlx.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mlx.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mlx.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mlx.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mlx.h.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mlx.h.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mlx.h.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mlx.h.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mlx.h.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mlx.h.dir/progress.make" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cub3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cub3d.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cub3d.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cub3D" beforeDir="false" afterPath="$PROJECT_DIR$/cub3D" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/cub3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/cub3D.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_atoi.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_bzero.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_calloc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_isalnum.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_isalpha.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_isascii.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_isdigit.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_isprint.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_itoa.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_memccpy.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_memchr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_memcmp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_memcpy.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_memmove.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_memset.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_putchar_fd.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_putcharlen_fd.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_putendl_fd.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_putnbr_fd.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_putstr_fd.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_putstrlen_fd.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_split.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strchr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strdup.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strjoin.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strlcat.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strlcpy.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strlen.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strmapi.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strncmp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strnstr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strrchr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strtrim.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_substr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_tolower.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_toupper.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libft/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/ident.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/ident.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map1.cub" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map1.cub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/draw.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/init.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/init.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/map.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/map.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +170,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="240n4wlgS9vCUy0vHp7uZrGeerj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -171,9 +213,9 @@
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="cub3D" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cub3d" TARGET_NAME="cub3D" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cub3d" RUN_TARGET_NAME="cub3D">
@@ -228,6 +270,7 @@
       <workItem from="1643129091584" duration="344000" />
       <workItem from="1643189682287" duration="8193000" />
       <workItem from="1643202526156" duration="15285000" />
+      <workItem from="1643226527966" duration="3896000" />
     </task>
     <servers />
   </component>
@@ -250,17 +293,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/map.c</url>
-          <line>69</line>
+          <line>75</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/map.c</url>
-          <line>109</line>
+          <line>115</line>
           <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/map.c</url>
-          <line>100</line>
+          <line>106</line>
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">

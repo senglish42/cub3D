@@ -2,8 +2,8 @@
 cmake_minimum_required(VERSION 3.20)
 project(cub3d C)
 
-find_library(OPENGL_FRAMEWORK OpenGL)
-find_library(APPKIT_FRAMEWORK AppKit)
+#find_library(OPENGL_FRAMEWORK OpenGL)
+#find_library(APPKIT_FRAMEWORK AppKit)
 #find_library(SDL2_FRAMEWORK SDL2)
 include_directories(includes)
 include_directories(libft)
@@ -16,11 +16,10 @@ include_directories(.obj)
 include_directories(mlx)
 
 set(CMAKE_C_STANDARD 99)
-set(CMAKE_C_COMPILER /usr/bin/gcc)
+#set(CMAKE_C_COMPILER /usr/bin/gcc)
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -gdwarf-3")
 set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -gdwarf-3")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -lmlx -L/mlx/ -framework OpenGL -framework
-AppKit")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -lXext -lX11 -lm")
 set(SRC srcs)
 set(LIB libft)
 set(INC includes)
@@ -28,10 +27,10 @@ set(INC includes)
 
 file(GLOB SRCS "${SRC}/*.c")
 file(GLOB LIBFT "${LIB}/*.c")
-#file(GLOB MLXX "${MLX}/*.c")
+file(GLOB MLXX "${MLX}/*.c")
 file(GLOB INCL "${INC}/*.h")
 
-add_executable(cub3D ${SRCS} ${LIBFT} ${INCL})
+add_executable(cub3D ${SRCS} ${LIBFT} ${INCL} ${MLXX})
 
-target_link_libraries(cub3D -framework ${OPENGL_FRAMEWORK} ${APPKIT_FRAMEWORK})
+#target_link_libraries(cub3D -framework ${OPENGL_FRAMEWORK} ${APPKIT_FRAMEWORK})
 #target_link_libraries(cub3d ")

@@ -46,8 +46,14 @@ void check_player(t_game *game, short height, short width)
 
     if (ft_memchr(player, game->map.size[height][width], ft_strlen(player) + 1))
     {
+        printf("***%f %f\n", game->player.posx, game->player.posy);
         if (!game->player.pos)
+        {
             game->player.pos = &game->map.size[height][width];
+            game->player.posx = (double)width;
+            game->player.posy = (double)height;
+            printf("***%f %f\n", game->player.posx, game->player.posy);
+        }
         else
             error(8);
         if (game->map.size[height][width] == 'N')

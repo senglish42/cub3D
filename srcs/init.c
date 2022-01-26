@@ -20,11 +20,11 @@ void 	init_screen(t_game *game)
 
 void    init_player(t_game *game)
 {
-	game->player.posx = 1;
-	game->player.posy = 1;
+	game->player.posx = -1;
+	game->player.posy = -1;
 	game->player.da = 0;
-	game->player.dx = cos (game->player.da) * 5;
-	game->player.dy = sin (game->player.da) * 5;
+	game->player.dx = cos(game->player.da) * 5;
+	game->player.dy = sin(game->player.da) * 5;
 	game->player.step = 0.5f;
     game->player.pos = NULL;
     game->player.north = 0;

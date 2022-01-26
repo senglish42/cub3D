@@ -26,11 +26,32 @@ OBJS	= 	$(addprefix $(OBJ_DIR)/,$(SRCS:.c=.o))
 
 BOBJS	=	$(addprefix) $(OBJ_DIR)/,$(BONUS:.c=.o))
 
-CFLAGS	=	-g -Wall -Wextra -Werror -I $(INCL) -Imlx
+CFLAGS	=	-g -Wall -Wextra -Werror -I $(INCL) -I $(I_MLX) -Imlx
 
-CC		=	clang
+#CC		=	clang
 
-MLX		=	-lmlx -L./mlx/ -framework OpenGL -framework AppKit
+#MLX		=	-lmlx -L./mlx/ -framework OpenGL -framework AppKit
+UNAME = $(shell uname)
+
+ifeq ($(UNAME),Darwin)
+
+I_MLX = mlx
+
+LFLAGS = -framework OpenGL -framework AppKit
+
+CC = gcc
+
+else
+
+CC = clang
+
+I_MLX = minilibx_linux
+
+LFLAGS = -lXext -lX11 -lm
+
+endif
+
+MLX_NAME= $(I_MLX)/libmlx.a
 
 RM		=	rm -f
 
@@ -47,14 +68,16 @@ all		:	$(NAME)
 
 bonus	:	$(BOBJS)
 				$(MAKE) -C $(dir $(LIB))
-				$(CC) $(CFLAGS) $(BOBJS) $(LIB) $(MLX) -o $(NAME)
+				$(CC) $(CFLAGS) $(BOBJS) $(LIB) $(LFLAGS) -o $(NAME)
 
-$(NAME)	:	$(OBJS) $(LIB)
-	$(CC) $(CFLAGS) $(OBJS) $(LIB) ./libft/libft.a $(MLX) -o $(NAME)
+$(NAME)	:	$(OBJS) $(LIB) $(MLX_NAME)
+	$(CC) $(CFLAGS) $(OBJS) $(LIB) ./libft/libft.a $(MLX_NAME) $(LFLAGS) -o $(NAME)
 
 $(LIB)	:
 	$(MAKE) -C ./libft
 
+$(MLX_NAME):
+	make -C $(I_MLX)
 #$(LIBMLX):
 #	$(MAKE) -C ./mlx
 

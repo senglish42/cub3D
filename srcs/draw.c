@@ -118,7 +118,8 @@ void	draw_miniplayer(t_game *game, double x, double y)
 
 int check_values(int x, int y, int x1, int y1)
 {
-	if (x >= 0 && x < 800 & y >= 0 && y < 600 && x1 >= 0 && x1 < 800 && y1 >= 0 && y1 < 600)
+	if (x >= 0 && x < 800 && y >= 0 && y < 600 && x1 >= 0 && x1 < 800 && y1
+    >= 0 && y1 < 600)
 		return 1;
 	return 0;
 }

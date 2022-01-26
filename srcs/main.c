@@ -43,15 +43,15 @@ int main(int argc, char **argv)
 	game.vars.win = mlx_new_window(game.vars.mlx, width, height,
 								   "Cub 3D");
 	game.image.img = mlx_new_image(game.vars.mlx, width, height);
-	printf("%d %d %d %d\n", game.player.east, game.player.north,
-		   game.player.west, game.player.south);
+    printf("%f %f\n", game.player.posx, game.player.posy);
 	game.image.addr = mlx_get_data_addr(
 			game.image.img, &game.image.bits_per_pixel, &game.image.line_length, &game.image.endian);
 	mlx_put_image_to_window(game.vars.mlx, game.vars.win, game.image.img, 
 							0, 0); // use win buffer ?
 	game.map.scale = 8;
-	//mlx_key_hook(game.vars.win, key_pressed, &game);
-	mlx_hook(game.vars.win, X_EVENT_KEY_PRESS, 0, &key_pressed, &game); // draw
+    mlx_key_hook(game.vars.win, key_pressed, &game);
+	//mlx_hook(game.vars.win, X_EVENT_KEY_PRESS, 0, &key_pressed, &game); //
+    // draw
 	// path
 	mlx_loop(game.vars.mlx);
 	return 0;
