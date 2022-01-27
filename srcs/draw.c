@@ -1,33 +1,37 @@
 #include "cub3D.h"
 
-void	my_mlx_pixel_put(t_img *img, int x, int y, int color)
+void	my_mlx_pixel_put(t_img *image, int x, int y, int color)
 {
 	char	*dst;
 
 	int ERR = 0;
-	if (x <0)	ERR = 1 ;
-	if (y <0)	ERR = 1 ;
-	if (x >= 800)	ERR = 1 ;
-	if (y >= 600)	ERR = 1 ;
+	if (x < 0)	ERR = 1 ;
+	if (y < 0)	ERR = 1 ;
+	if (x >= image->screen_w)	ERR = 1 ;
+	if (y >= image->screen_h)	ERR = 1 ;
 	if (ERR)
 	{
 		printf("Error - trying to write to mem: x =%d y = %d\n", x ,y);
 		return ;
 	}
-	dst = img->addr + (y * img->line_length + x * (img->bits_per_pixel / 8));
+	dst = image->addr + (y * image->line_length + x *
+			(image->bits_per_pixel /
+			8));
 	*(unsigned int*)dst = color;
 }
 
 void	my_clear_window(t_game *game)
 {
 	int i = 0; int j = 0;
-	while (i < game->screen_w)
+	while (i < game->image.screen_w)
 	{
 		j = 0;
-		while (j < game->screen_h)
+		while (j < game->image.screen_h)
 		{
-			my_mlx_pixel_put(&game->image, i, j, GRAY);	j++;
-		}	i++;
+			my_mlx_pixel_put(&game->image, i, j, GRAY);
+			j++;
+		}
+		i++;
 	}
 }
 
@@ -56,19 +60,19 @@ void	draw_minimap(t_game *game)
 
 	while (posy < game->map.height)
 	{
-		posx = 0;
-		while (posx < game->map.width)
+		posx = -1;
+		while (++posx < game->map.width)
 		{
-			if (posy < 8 && posx < 8)
-			{
+//			if (posy < 8 && posx < 8)
+//			{
 				if (game->map.size[posy][posx] == '1')
 					draw_quad(game, posx * size + 1, posy * size + 1, (posx + 1)
 					* size, (posy + 1) * size, WHITE);
 				else
 					draw_quad(game, posx * size + 1, posy * size + 1, (posx + 1)
 					* size, (posy + 1) * size, BLACK);
-			}
-			posx++;
+//			}
+//			posx++;
 		}
 		posy++;
 	}

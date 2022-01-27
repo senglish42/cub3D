@@ -32,22 +32,12 @@ int	if_invalid(int argc, char **argv)
 int main(int argc, char **argv)
 {
 	t_game	game;
-	int width;
-	int height;
 
 	init_param(&game);
 	parse(&game, if_invalid(argc, argv));
-	width = 800;
-	height = 600;
-	game.vars.mlx = mlx_init(); // return NULL if init is failed
-	game.vars.win = mlx_new_window(game.vars.mlx, width, height,
-								   "Cub 3D");
-	game.image.img = mlx_new_image(game.vars.mlx, width, height);
-    printf("%f %f\n", game.player.posx, game.player.posy);
-	game.image.addr = mlx_get_data_addr(
-			game.image.img, &game.image.bits_per_pixel, &game.image.line_length, &game.image.endian);
-	mlx_put_image_to_window(game.vars.mlx, game.vars.win, game.image.img, 
-							0, 0); // use win buffer ?
+	init_image(&game.map, &game.image, &game.vars, &game.player);
+//	mlx_put_image_to_window(game.vars.mlx, game.vars.win, game.image.img,
+//							0, 0); // use win buffer ?
 	game.map.scale = 8;
     mlx_key_hook(game.vars.win, key_pressed, &game);
 	//mlx_hook(game.vars.win, X_EVENT_KEY_PRESS, 0, &key_pressed, &game); //

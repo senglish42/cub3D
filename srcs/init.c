@@ -12,10 +12,18 @@
 
 #include "cub3D.h"
 
-void 	init_screen(t_game *game)
+void 	init_image(t_map *map, t_img *image, t_vars *vars, t_player *player)
 {
-	game->screen_w = 500;
-	game->screen_h = 500;
+	image->screen_w = map->width * 50;
+	image->screen_h = map->height * 50;
+	vars->mlx = mlx_init(); // return NULL if init is failed
+	vars->win = mlx_new_window(vars->mlx, image->screen_w, image->screen_h,
+								   "Cub 3D");
+	image->img = mlx_new_image(vars->mlx, image->screen_w,
+									image->screen_h);
+	printf("%f %f\n", player->posx, player->posy);
+	image->addr = mlx_get_data_addr(
+			image->img, &image->bits_per_pixel, &image->line_length, &image->endian);
 }
 
 void    init_player(t_game *game)
@@ -59,10 +67,7 @@ void init_ident(t_ident *ident)
 
 void init_param(t_game *game)
 {
-	game->screen_w = 800;
-	game->screen_h = 600;
     init_ident(&game->ident);
     init_map(game);
     init_player(game);
-	init_screen(game);
 }

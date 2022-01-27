@@ -15,8 +15,8 @@
 # include "libft.h"
 //# include "/usr/local/include/mlx.h"
 # include "../mlx/mlx.h"
-//# include "keys_macos.h"
-# include "keys.h"
+# include "keys_macos.h"
+//# include "keys.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <math.h>
@@ -63,6 +63,8 @@ typedef struct	s_img
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
+	int		screen_w;
+	int		screen_h;
 }				t_img;
 
 typedef struct s_ident
@@ -103,8 +105,6 @@ typedef struct s_game
 	t_ident     ident;
     t_player    player;
 	char        **parse;
-	int			screen_w;
-	int			screen_h;
 }				t_game;
 
 typedef struct s_vec
@@ -118,7 +118,7 @@ typedef struct s_vec
 //void	draw_debug_map(t_game *game);
 
 //	draw.c	//
-void	my_mlx_pixel_put(t_img *img, int x, int y, int color);
+void	my_mlx_pixel_put(t_img *image, int x, int y, int color);
 void	my_clear_window(t_game *game);
 void	draw_quad(t_game *game, int x, int y, int x0, int y0, int color);
 void	draw_minimap(t_game *game);
@@ -139,6 +139,7 @@ void 	init_param(t_game *game);
 void 	init_ident(t_ident  *ident);
 void 	init_map(t_game *game);
 void 	init_player(t_game *game);
+void 	init_image(t_map *map, t_img *image, t_vars *vars, t_player *player);
 
 //	ident.c	//
 void    compare_ident(const char *str1, const char *str2, int errnum);
