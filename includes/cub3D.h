@@ -149,6 +149,7 @@ void    check_ident(t_game *game, short height, short width);
 short 	parse_ident(t_game *game);
 
 //	key_handler.c	//
+void	to_draw(int key, t_game *game);
 void	key_handler(int key, t_game *game);
 int		key_pressed(int key, t_game *game);
 

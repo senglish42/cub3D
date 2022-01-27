@@ -45,7 +45,7 @@ void    init_map(t_game *game)
 {
     game->map.height = 0;
     game->map.width = 0;
-	game->map.scale = 0;
+	game->map.scale = 8;
 	game->map.size = NULL;
 }
 

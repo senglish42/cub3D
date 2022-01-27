@@ -1,5 +1,36 @@
 #include "cub3D.h"
 
+void	to_draw(int key, t_game *game)
+{
+	t_vec	hor;
+	t_vec	ver;
+	t_vec	min;
+
+//	double hor_x = 0;
+//	double hor_y = 0;
+//	double ver_x = 0;
+//	double ver_y = 0;
+	(void)key;
+	find_intersection_horizontal(game, &hor.x, &hor.y); // GREEN
+	find_intersection_vertical(game, &ver.x, &ver.y);	// YELLOw
+	find_min_vec(hor, ver, &min);
+
+	my_clear_window(game);
+	draw_minimap(game);
+	draw_miniplayer(game, hor.x, hor.y);
+	draw_line(game, game->player.posx * 50, game->player.posy * 50,
+			  min.x * 50,
+			  min.y * 50, GREEN);
+	draw_scaled_point(game, min.x, min.y, GREEN);
+	/*
+	draw_line(game, game->player.posx * 50, game->player.posy * 50,
+				ver.x * 50,
+				ver.y * 50, YELLOW);
+	draw_scaled_point(game, ver.x, ver.y, YELLOW); */
+	mlx_put_image_to_window(game->vars.mlx, game->vars.win, game->image.img, 0,
+							0);
+}
+
 void	key_handler(int key, t_game *game)
 {
 	int ray_dist = 5;
@@ -16,7 +47,7 @@ void	key_handler(int key, t_game *game)
 	}
 	if (key == KEY_RIGHT)
 	{
-		game->player.da += 0.1;
+		game->player.da += 0.05;
 		if (game->player.da > 2 * PI)
 			game->player.da -= (2 * PI);
 		game->player.dx = cos(game->player.da) * ray_dist;
@@ -24,11 +55,12 @@ void	key_handler(int key, t_game *game)
 	}
 	else if (key == KEY_LEFT)
 	{
-		game->player.da -= 0.1;
+		game->player.da -= 0.05;
 		if (game->player.da < 0)
-			game->player.da += 2 * PI;
+			game->player.da += (2 * PI);
 		game->player.dx = cos(game->player.da) * ray_dist;
 		game->player.dy = sin(game->player.da) * ray_dist;
+		to_draw(key, game);
 	}
 	else if (key == KEY_UP)
 	{
@@ -93,7 +125,7 @@ void	key_handler(int key, t_game *game)
 //					(int)y][
 //					(int)x]);
 //		}
-//		else {
+//		else {d
 			printf("*x=%f *y=%f %c\n", x, y, game->map.size[(int)y][(int)x]);
 			if (x < 1)
 				game->player.posx = 1;
@@ -189,34 +221,34 @@ void	key_handler(int key, t_game *game)
 //		}
 		printf("*posx=%f *posy=%f\n", game->player.posx, game->player.posy);
 	}
-	
-	t_vec	hor;
-	t_vec	ver;
-	t_vec	min;
-
-	//double hor_x = 0;
-	//double hor_y = 0;
-	//double ver_x = 0;
-	//double ver_y = 0;
-
-	find_intersection_horizontal(game, &hor.x, &hor.y); // GREEN
-	find_intersection_vertical(game, &ver.x, &ver.y);	// YELLOw
-	find_min_vec(hor, ver, &min);
-
-	my_clear_window(game);
-	draw_minimap(game);
-	draw_miniplayer(game, hor.x, hor.y);
-		draw_line(game, game->player.posx * 50, game->player.posy * 50,
-				min.x * 50,
-				min.y * 50, GREEN);
-		draw_scaled_point(game, min.x, min.y, GREEN);
-	/*
-	draw_line(game, game->player.posx * 50, game->player.posy * 50, 
-				ver.x * 50, 
-				ver.y * 50, YELLOW);
-	draw_scaled_point(game, ver.x, ver.y, YELLOW); */
-	mlx_put_image_to_window(game->vars.mlx, game->vars.win, game->image.img, 0,
-							0);
+	to_draw(key, game);
+//	t_vec	hor;
+//	t_vec	ver;
+//	t_vec	min;
+//
+////	double hor_x = 0;
+////	double hor_y = 0;
+////	double ver_x = 0;
+////	double ver_y = 0;
+//
+//	find_intersection_horizontal(game, &hor.x, &hor.y); // GREEN
+//	find_intersection_vertical(game, &ver.x, &ver.y);	// YELLOw
+//	find_min_vec(hor, ver, &min);
+//
+//	my_clear_window(game);
+//	draw_minimap(game);
+//	draw_miniplayer(game, hor.x, hor.y);
+//		draw_line(game, game->player.posx * 50, game->player.posy * 50,
+//				min.x * 50,
+//				min.y * 50, GREEN);
+//		draw_scaled_point(game, min.x, min.y, GREEN);
+//	/*
+//	draw_line(game, game->player.posx * 50, game->player.posy * 50,
+//				ver.x * 50,
+//				ver.y * 50, YELLOW);
+//	draw_scaled_point(game, ver.x, ver.y, YELLOW); */
+//	mlx_put_image_to_window(game->vars.mlx, game->vars.win, game->image.img, 0,
+//							0);
 	
 	//draw_debug_map(game);
 	printf("player pos: %f %f\n", game->player.posx, game->player.posy);
