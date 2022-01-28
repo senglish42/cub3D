@@ -25,7 +25,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 23,
+				"line" : 28,
 				"parent" : 0
 			},
 			{
@@ -66,7 +66,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " -Imlx -lmlx -L/mlx/ -framework OpenGL\n-framework AppKit -g -gdwarf-3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14"
+					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14"
 				},
 				{
 					"fragment" : "-std=gnu99"
@@ -163,7 +163,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-Imlx -lmlx -L/mlx/ -framework OpenGL\n-framework AppKit -g -gdwarf-3",
+				"fragment" : "-g",
 				"role" : "flags"
 			},
 			{

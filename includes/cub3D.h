@@ -15,8 +15,8 @@
 # include "libft.h"
 //# include "/usr/local/include/mlx.h"
 # include "../mlx/mlx.h"
-# include "keys_macos.h"
-//# include "keys.h"
+//# include "keys_macos.h"
+# include "keys.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <math.h>
@@ -97,6 +97,20 @@ typedef struct s_map
 	short	scale;
 }				t_map;
 
+typedef struct s_ray
+{
+	int r;
+	int mx;
+	int my;
+	int mp;
+	int dof;
+	double rx;
+	double ry;
+	double ra;
+	double xo;
+	double yo;
+}	t_ray;
+
 typedef struct s_game
 {
 	t_img		image;
@@ -104,6 +118,7 @@ typedef struct s_game
 	t_map       map;
 	t_ident     ident;
     t_player    player;
+	t_ray		ray;
 	char        **parse;
 }				t_game;
 

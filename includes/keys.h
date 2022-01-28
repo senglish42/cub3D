@@ -13,6 +13,7 @@
 #ifndef KEYS_H
 # define KEYS_H
 
+# if __linux__
 # define KEY_ESC		65307
 # define KEY_UP			65362
 # define KEY_RIGHT		65363
@@ -24,5 +25,15 @@
 # define KEY_NUM_4		65430
 # define KEY_NUM_8		65431
 # define KEY_NUM_6		65432
+
+# else
+
+# define KEY_ESC		53
+# define KEY_UP			13
+# define KEY_RIGHT		2
+# define KEY_DOWN		1
+# define KEY_LEFT		0
+
+#endif
 
 #endif

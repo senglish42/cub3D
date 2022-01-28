@@ -21,32 +21,40 @@ void 	init_image(t_map *map, t_img *image, t_vars *vars, t_player *player)
 								   "Cub 3D");
 	image->img = mlx_new_image(vars->mlx, image->screen_w,
 									image->screen_h);
-	printf("%f %f\n", player->posx, player->posy);
+	printf("position %f %f\n", player->posx, player->posy);
 	image->addr = mlx_get_data_addr(
 			image->img, &image->bits_per_pixel, &image->line_length, &image->endian);
 }
 
 void    init_player(t_game *game)
 {
+	game->player.pos = NULL;
 	game->player.posx = -1;
 	game->player.posy = -1;
-	game->player.da = 0;
-	game->player.dx = cos(game->player.da) * 5;
-	game->player.dy = sin(game->player.da) * 5;
-	game->player.step = 0.5f;
-    game->player.pos = NULL;
-    game->player.north = 0;
-    game->player.south = 0;
-    game->player.east = 0;
-    game->player.west = 0;
+	game->player.da = -1;
+	game->player.dx = 0;
+	game->player.dy = 0;
 }
 
 void    init_map(t_game *game)
 {
-    game->map.height = 0;
+	game->map.height = 0;
     game->map.width = 0;
 	game->map.scale = 8;
 	game->map.size = NULL;
+}
+
+void	init_ray(t_game *game)
+{
+	game->ray.rx = 0;
+	game->ray.ry = 0;
+	game->ray.xo = 0;
+	game->ray.yo = 0;
+	game->ray.mp = 0;
+	game->ray.mx = 0;
+	game->ray.my = 0;
+	game->ray.dof = 0;
+	game->ray.r = 0;
 }
 
 void init_ident(t_ident *ident)
@@ -69,5 +77,6 @@ void init_param(t_game *game)
 {
     init_ident(&game->ident);
     init_map(game);
-    init_player(game);
+	init_player(game);
+	init_ray(game);
 }

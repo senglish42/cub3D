@@ -57,13 +57,13 @@ void check_player(t_game *game, short height, short width)
         else
             error(8);
         if (game->map.size[height][width] == 'N')
-            game->player.north = 1;
+            game->player.da = PI / 2;
         else if (game->map.size[height][width] == 'S')
-            game->player.south = 1;
+            game->player.da = 3 * PI / 2;
         else if (game->map.size[height][width] == 'W')
-            game->player.west = 1;
+            game->player.da = PI;
         else if (game->map.size[height][width] == 'E')
-            game->player.east = 1;
+            game->player.da = 0;
     }
 }
 
@@ -86,6 +86,8 @@ void check_map(t_game *game)
             }
         }
     }
+	if (game->player.da == -1)
+		error(8);
 }
 
 void fill_map(t_game *game, short num)

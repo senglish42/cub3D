@@ -72,6 +72,7 @@ bonus	:	$(BOBJS)
 
 $(NAME)	:	$(OBJS) $(LIB) $(MLX_NAME)
 	$(CC) $(CFLAGS) $(OBJS) $(LIB) ./libft/libft.a $(MLX_NAME) $(LFLAGS) -o $(NAME)
+	#./cub3D /Users/senglish/projects/cub3D/maps/map1.cub
 
 $(LIB)	:
 	$(MAKE) -C ./libft

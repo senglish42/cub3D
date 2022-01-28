@@ -1,4 +1,8 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/senglish/projects/cub3D
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/senglish/projects/cub3D/cmake-build-debug
+CMake Error at CMakeLists.txt:32 (target_link_libraries):
+  Cannot specify link libraries for target "cub3d" which is not built by this
+  project.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/senglish/projects/cub3D/cmake-build-debug/CMakeFiles/CMakeOutput.log".

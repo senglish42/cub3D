@@ -115,9 +115,11 @@ void	draw_miniplayer(t_game *game, double x, double y)
 		i++;
 	}
 	*/
+	printf("line %f %f %f %f\n", game->player.posx, game->player.posy,
+		   game->player.dx, game->player.dy);
 	draw_line(game, game->player.posx * 50, game->player.posy * 50,
-				(game->player.posx * 50) + game->player.dx * 10,
-				(game->player.posy * 50) + game->player.dy * 10, RED);
+				(game->player.posx * 50) + game->player.dx * 50,
+				(game->player.posy * 50) + game->player.dy * 50, RED);
 }
 
 int check_values(int x, int y, int x1, int y1)
@@ -139,20 +141,20 @@ void    draw_line(t_game *game, double x, double y, double x1, double y1, int co
 	}
 
 	double   deltax;
-    double   deltay;
-    int     max;
+	double   deltay;
+	int     max;
 //    int     z;
 //    int     z1;
 
-    deltax = x1 - x;
-    deltay = y1 - y;
+	deltax = x1 - x;
+	deltay = y1 - y;
 
-    max = MAX(ABS(deltax), ABS(deltay));
-    deltay /= max; deltax /= max;
-    while ((int)(x - x1) || (int)(y - y1))
-    {
-        my_mlx_pixel_put(&game->image, x, y, color);
-        x += deltax;
-        y += deltay;
-    }
+	max = MAX(ABS(deltax), ABS(deltay));
+	deltay /= max; deltax /= max;
+	while ((int)(x - x1) || (int)(y - y1))
+	{
+		my_mlx_pixel_put(&game->image, x, y, color);
+		x += deltax;
+		y += deltay;
+	}
 }

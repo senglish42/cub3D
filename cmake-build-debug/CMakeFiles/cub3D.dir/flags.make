@@ -6,6 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -I/Users/senglish/projects/cub3D/includes -I/Users/senglish/projects/cub3D/mlx -I/Users/senglish/projects/cub3D/libft -I/Users/senglish/projects/cub3D/srcs -I/Users/senglish/projects/cub3D/.obj
 
-C_FLAGS =  -Imlx -lmlx -L/mlx/ -framework OpenGL
--framework AppKit -g -gdwarf-3 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
+C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
 
