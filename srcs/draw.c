@@ -11,7 +11,8 @@ void	my_mlx_pixel_put(t_img *image, int x, int y, int color)
 	if (y >= image->screen_h)	ERR = 1 ;
 	if (ERR)
 	{
-		printf("Error - trying to write to mem: x =%d y = %d\n", x ,y);
+		printf("Error - trying to write to mem: x =%d y = %d %d %d\n", x ,y,
+			   image->screen_w, image->screen_h);
 		return ;
 	}
 	dst = image->addr + (y * image->line_length + x *
@@ -22,7 +23,9 @@ void	my_mlx_pixel_put(t_img *image, int x, int y, int color)
 
 void	my_clear_window(t_game *game)
 {
-	int i = 0; int j = 0;
+	int i = 0;
+	int j;
+
 	while (i < game->image.screen_w)
 	{
 		j = 0;
@@ -95,63 +98,82 @@ void draw_scaled_point(t_game *game, double x, double y, int color)
 	}
 }
 
-void	draw_miniplayer(t_game *game, double x, double y)
+static void	draw_white(t_game *game)
 {
-//	int i = 0; int j = 0;
+	int posx = 0;
+	int posy = 0;
+	int size = 50;
 
-	(void)x;
-	(void)y;
-	draw_scaled_point(game, game->player.posx, game->player.posy, RED);
-
-	/*
-	while (i < game->map.scale)
+	while (posy < game->map.height)
 	{
-		j = 0;
-		while (j < game->map.scale)
+		posx = -1;
+		while (++posx < game->map.width)
 		{
-			my_mlx_pixel_put(&game->image, 50 * x + i, 50 * y + j, GREEN);
-			j++;
+//			if (posy < 8 && posx < 8)
+//			{
+			if (game->map.size[posy][posx] == '1')
+				draw_quad(game, posx * size + 1, posy * size + 1, (posx + 1)
+																  * size, (posy + 1) * size, WHITE);
+//			}
+//			posx++;
 		}
-		i++;
+		posy++;
 	}
-	*/
-	printf("line %f %f %f %f\n", game->player.posx, game->player.posy,
-		   game->player.dx, game->player.dy);
-	draw_line(game, game->player.posx * 50, game->player.posy * 50,
-				(game->player.posx * 50) + game->player.dx * 50,
-				(game->player.posy * 50) + game->player.dy * 50, RED);
 }
 
-int check_values(int x, int y, int x1, int y1)
+
+void	draw_miniplayer(t_game *game)
 {
-	if (x >= 0 && x < 800 && y >= 0 && y < 600 && x1 >= 0 && x1 < 800 && y1
-    >= 0 && y1 < 600)
-		return 1;
-	return 0;
+	double x1;
+	double y1;
+	double num;
+	double dx;
+	double dy;
+
+	if (game->player.da == 2 * PI)
+		game->player.da -= 2 * PI;
+	num = -PI;
+	while (num < 4 * PI)
+	{
+		if ((num > game->player.da - PI /4 && num < game->player.da +
+		PI /4))
+		{
+			dx = cos(num);
+			dy = sin(num);
+			x1 = game->player.posx * 50;
+			y1 = game->player.posy * 50;
+			while (x1 >= 0 && x1 < (double) game->image.screen_w && y1 >= 0 &&
+				   y1 < (double) game->image
+						   .screen_h &&
+				   game->map.size[(int) (y1 / 50)][(int) (x1 / 50)] != '1')
+			{
+				x1 = x1 + dx * 5;
+				y1 = y1 + dy * 5;
+			}
+			draw_line(game, game->player.posx * 50, game->player.posy * 50, x1,
+					  y1,
+					  RED);
+		}
+		num += 0.005;
+	}
+	draw_scaled_point(game, game->player.posx, game->player.posy, YELLOW);
+	draw_white(game);
 }
 
 void    draw_line(t_game *game, double x, double y, double x1, double y1, int color)
 {
-	printf("\ndraw line from %f %f to %f %f", x, y, x1, y1);
-
-	if (check_values(x, y, x1, y1) == 0)
-	{
-		printf("\nTry to draw impossible line\n");
-		return ;
-	}
+	//printf("\ndraw line from %f %f to %f %f", x, y, x1, y1);
 
 	double   deltax;
 	double   deltay;
 	int     max;
-//    int     z;
-//    int     z1;
 
 	deltax = x1 - x;
 	deltay = y1 - y;
 
 	max = MAX(ABS(deltax), ABS(deltay));
 	deltay /= max; deltax /= max;
-	while ((int)(x - x1) || (int)(y - y1))
+	while ((int)(x1 - x) || (int)(y1 - y))
 	{
 		my_mlx_pixel_put(&game->image, x, y, color);
 		x += deltax;

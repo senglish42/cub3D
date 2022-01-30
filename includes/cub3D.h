@@ -138,7 +138,7 @@ void	my_clear_window(t_game *game);
 void	draw_quad(t_game *game, int x, int y, int x0, int y0, int color);
 void	draw_minimap(t_game *game);
 void 	draw_scaled_point(t_game *game, double x, double y, int color);
-void	draw_miniplayer(t_game *game, double x, double y);
+void	draw_miniplayer(t_game *game);
 int 	check_values(int x, int y, int x1, int y1);
 void    draw_line(t_game *game, double x, double y, double x1, double y1, int
 color);
@@ -154,7 +154,7 @@ void 	init_param(t_game *game);
 void 	init_ident(t_ident  *ident);
 void 	init_map(t_game *game);
 void 	init_player(t_game *game);
-void 	init_image(t_map *map, t_img *image, t_vars *vars, t_player *player);
+void 	init_image(t_map *map, t_img *image, t_vars *vars);
 
 //	ident.c	//
 void    compare_ident(const char *str1, const char *str2, int errnum);
@@ -164,12 +164,16 @@ void    check_ident(t_game *game, short height, short width);
 short 	parse_ident(t_game *game);
 
 //	key_handler.c	//
-void	to_draw(int key, t_game *game);
-void	key_handler(int key, t_game *game);
+void	key_up(t_game *game);
+void	key_down(t_game *game);
+void	key_left(t_game *game);
+void	key_right(t_game *game);
 int		key_pressed(int key, t_game *game);
+void	make_3d(t_game *game);
 
 //	main.c	//
 int		if_invalid(int argc, char **argv);
+void	to_draw(t_game *game);
 int		main(int argc, char **argv);
 
 //  map.c   //
@@ -182,6 +186,10 @@ void    parse_map(t_game *game, short num);
 //	parse.c	//
 void	read_line(t_game *game, int fd);
 void	parse(t_game *game, int fd);
+
+//	player.c	//
+void	move_player(t_game *game, int x, int y);
+void	show_map(t_game *game);
 
 //	ray.c	//
 int		is_valid(int x, int y);

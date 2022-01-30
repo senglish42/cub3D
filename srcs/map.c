@@ -50,20 +50,21 @@ void check_player(t_game *game, short height, short width)
         if (!game->player.pos)
         {
             game->player.pos = &game->map.size[height][width];
-            game->player.posx = (double)width;
-            game->player.posy = (double)height;
-            printf("***%f %f\n", game->player.posx, game->player.posy);
+            game->player.posx = (double)width + 0.5;
+            game->player.posy = (double)height + 0.5;
+            printf("***%f %f %f %f\n", game->player.posx, game->player.posy,
+				   game->player.dx, game->player.dy);
         }
         else
             error(8);
-        if (game->map.size[height][width] == 'N')
+        if (game->map.size[height][width] == 'S')
             game->player.da = PI / 2;
-        else if (game->map.size[height][width] == 'S')
+        else if (game->map.size[height][width] == 'N')
             game->player.da = 3 * PI / 2;
         else if (game->map.size[height][width] == 'W')
             game->player.da = PI;
         else if (game->map.size[height][width] == 'E')
-            game->player.da = 0;
+            game->player.da = 2 * PI;
     }
 }
 

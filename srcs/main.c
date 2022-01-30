@@ -29,6 +29,15 @@ int	if_invalid(int argc, char **argv)
 	return (fd);
 }
 
+void	to_draw(t_game *game)
+{
+	show_map(game);
+	my_clear_window(game);
+	draw_minimap(game);
+	draw_miniplayer(game);
+	printf(CLRSCR);
+}
+
 int main(int argc, char **argv)
 {
 	t_game	game;
@@ -38,19 +47,11 @@ int main(int argc, char **argv)
 	game.player.dx = cos(game.player.da);
 	game.player.dy = sin(game.player.da);
 	game.player.step = 0.5f;
-	init_image(&game.map, &game.image, &game.vars, &game.player);
-//	mlx_put_image_to_window(game.vars.mlx, game.vars.win, game.image.img,
-//							0, 0); // use win buffer ?
-//	my_clear_window(&game);
-//	draw_minimap(&game);
-//	draw_miniplayer(&game, 0, 0);
-//	printf("oka\n");
-//	mlx_key_hook(game.vars.win, key_pressed, &game);
+	init_image(&game.map, &game.image, &game.vars);
+	to_draw(&game);
 	mlx_hook(game.vars.win, X_EVENT_KEY_PRESS, 0, &key_pressed, &game);
 	mlx_put_image_to_window(game.vars.mlx, game.vars.win, game.image.img, 0,
 							0);
-	// draw
-	// path
 	mlx_loop(game.vars.mlx);
 	return 0;
 }

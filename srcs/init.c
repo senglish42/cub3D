@@ -12,7 +12,7 @@
 
 #include "cub3D.h"
 
-void 	init_image(t_map *map, t_img *image, t_vars *vars, t_player *player)
+void 	init_image(t_map *map, t_img *image, t_vars *vars)
 {
 	image->screen_w = map->width * 50;
 	image->screen_h = map->height * 50;
@@ -21,7 +21,6 @@ void 	init_image(t_map *map, t_img *image, t_vars *vars, t_player *player)
 								   "Cub 3D");
 	image->img = mlx_new_image(vars->mlx, image->screen_w,
 									image->screen_h);
-	printf("position %f %f\n", player->posx, player->posy);
 	image->addr = mlx_get_data_addr(
 			image->img, &image->bits_per_pixel, &image->line_length, &image->endian);
 }
@@ -40,7 +39,7 @@ void    init_map(t_game *game)
 {
 	game->map.height = 0;
     game->map.width = 0;
-	game->map.scale = 8;
+	game->map.scale = 3;
 	game->map.size = NULL;
 }
 
