@@ -98,66 +98,77 @@ void draw_scaled_point(t_game *game, double x, double y, int color)
 	}
 }
 
-static void	draw_white(t_game *game)
-{
-	int posx = 0;
-	int posy = 0;
-	int size = 50;
-
-	while (posy < game->map.height)
-	{
-		posx = -1;
-		while (++posx < game->map.width)
-		{
-//			if (posy < 8 && posx < 8)
-//			{
-			if (game->map.size[posy][posx] == '1')
-				draw_quad(game, posx * size + 1, posy * size + 1, (posx + 1)
-																  * size, (posy + 1) * size, WHITE);
-//			}
-//			posx++;
-		}
-		posy++;
-	}
-}
+//static void	draw_white(t_game *game)
+//{
+//	int posx = 0;
+//	int posy = 0;
+//	int size = 50;
+//
+//	while (posy < game->map.height)
+//	{
+//		posx = -1;
+//		while (++posx < game->map.width)
+//		{
+////			if (posy < 8 && posx < 8)
+////			{
+//			if (game->map.size[posy][posx] == '1')
+//				draw_quad(game, posx * size + 1, posy * size + 1, (posx + 1)
+//																  * size, (posy + 1) * size, WHITE);
+////			}
+////			posx++;
+//		}
+//		posy++;
+//	}
+//}
 
 
 void	draw_miniplayer(t_game *game)
 {
-	double x1;
-	double y1;
-	double num;
-	double dx;
-	double dy;
+	double	x1;
+	double	y1;
+	double	num;
+	double	dx;
+	double	dy;
+	int		count;
+	double	min;
+	double 	max;
 
-	if (game->player.da == 2 * PI)
-		game->player.da -= 2 * PI;
-	num = -PI;
-	while (num < 4 * PI)
+	count = -1;
+	min = game->player.da - PI / 4;
+	max = game->player.da + PI / 4;
+	num = - 45 * PI / 180;
+	while (++count != 450)
 	{
-		if ((num > game->player.da - PI /4 && num < game->player.da +
-		PI /4))
+		if ((num >= min && num <= max))
 		{
 			dx = cos(num);
 			dy = sin(num);
 			x1 = game->player.posx * 50;
 			y1 = game->player.posy * 50;
-			while (x1 >= 0 && x1 < (double) game->image.screen_w && y1 >= 0 &&
-				   y1 < (double) game->image
-						   .screen_h &&
-				   game->map.size[(int) (y1 / 50)][(int) (x1 / 50)] != '1')
+			while (game->map.size[(int) (y1 / 50)][(int) (x1 / 50)] != '1')
 			{
 				x1 = x1 + dx * 5;
 				y1 = y1 + dy * 5;
 			}
-			draw_line(game, game->player.posx * 50, game->player.posy * 50, x1,
-					  y1,
-					  RED);
+			if ((int)(num * 100) == (int)(game->player.da * 100))
+				draw_line(game, game->player.posx * 50, game->player.posy * 50,
+						  x1,
+						  y1,
+						  GREEN);
+			else
+				draw_line(game, game->player.posx * 50, game->player.posy *
+				50, x1,
+						  y1,
+						  RED);
+			if (count == 0)
+				game->player.mina = num;
+			else
+				game->player.maxa = num;
 		}
-		num += 0.005;
+		num += PI / 180;
 	}
 	draw_scaled_point(game, game->player.posx, game->player.posy, YELLOW);
-	draw_white(game);
+//	draw_white(game);
 }
 
 void    draw_line(t_game *game, double x, double y, double x1, double y1, int color)

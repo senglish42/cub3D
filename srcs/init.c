@@ -33,6 +33,8 @@ void    init_player(t_game *game)
 	game->player.da = -1;
 	game->player.dx = 0;
 	game->player.dy = 0;
+	game->player.maxa = -1;
+	game->player.mina = -1;
 }
 
 void    init_map(t_game *game)

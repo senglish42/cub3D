@@ -87,6 +87,8 @@ typedef struct s_player
 	double	dy;
 	double	da;
 	double	step;
+	double 	maxa;
+	double	mina;
 }				t_player;
 
 typedef struct s_map

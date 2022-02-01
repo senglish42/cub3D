@@ -30,9 +30,9 @@ void	key_down(t_game *game)
 	}
 }
 
-void	key_left(t_game *game)
+void	key_right(t_game *game)
 {
-	game->player.da = game->player.da - 0.1;
+	game->player.da = game->player.da - 5 * PI / 180;
 	if (game->player.da < 0)
 		game->player.da += 2 * PI;
 	game->player.dx = cos(game->player.da);
@@ -41,9 +41,9 @@ void	key_left(t_game *game)
 		move_player(game, (int) game->player.posx, (int)game->player.posy);
 }
 
-void	key_right(t_game *game)
+void	key_left(t_game *game)
 {
-	game->player.da = game->player.da + 0.1;
+	game->player.da = game->player.da + 5 * PI / 180;
 	if (game->player.da > 2 * PI)
 		game->player.da -= 2 * PI;
 	game->player.dx = cos(game->player.da);
@@ -69,8 +69,9 @@ int	key_pressed(int key, t_game *game)
 		key_right(game);
 	mlx_put_image_to_window(game->vars.mlx, game->vars.win, game->image.img,
 							0, 0);
-	to_draw(game);
-	//make_3d(game);
+//	to_draw(game);
+	make_3d(game);
+
 	return (0);
 }
 
@@ -90,7 +91,9 @@ void	make_3d(t_game *game)
 		double dist_to_wall = 0;
 		double ugol_obzora = PI / 2;
 		double ray_a = x * ugol_obzora / game->image.screen_w;
+
 		double ray_a_h = (game->player.da + ugol_obzora / 2) - ray_a;
+
 	//	double dif_a = game->player.da - ray_a;
 //		if (dif_a > 2 * PI)
 //			dif_a -= 2 * PI;
@@ -141,3 +144,57 @@ void	make_3d(t_game *game)
 		}
 	}
 }
+
+//void	make3d(t_game *game)
+//{
+//	int a;
+//	int dof;
+//	int side;
+//	int mx;
+//	int mp;
+//	int my;
+//	float disV;
+//	float Tan;
+//	float rx;
+//	float ry;
+//	float xo;
+//	float yo;
+//
+//	a = -1;
+//	while(++a < 90)
+//	{
+//		dof = 0;
+//		side = 0;
+//		disV = 100000;
+//		Tan = tan(game->player.da);
+//		if (cos(game->player.da) > 0.001)
+//		{
+//			rx = (((int)game->player.posx >> 6) << 6) + 64;
+//			ry = (game->player.posx - rx) * Tan + game->player.posy;
+//			xo = 64;
+//			yo = -xo * Tan;
+//		}
+//		else if (cos(game->player.da) < -0.001)
+//		{
+//			rx = (((int)game->player.posx >> 6) << 6) - 0.0001;
+//			ry = (game->player.posx - rx) * Tan + game->player.posy;
+//			xo = -64;
+//			yo = -xo * Tan;
+//		}
+//		else
+//		{
+//			rx = game->player.posx;
+//			ry = game->player.posy;
+//			dof = 8;
+//		}
+//		while (dof < 8)
+//		{
+//			mx=(int)(rx)>>6; my=(int)(ry)>>6; mp=my*game->map.width+mx;
+//			if(mp>0 && mp<game->map.width*game->map.height &&
+//			game->map.size[mp]=='1'){
+//				dof=8; disV=cos(game->player.da)*(rx-game->player.posx)-sin
+//						(game->player.da)*(ry-game->player.posy);}//hit
+//			else{ rx+=xo; ry+=yo; dof+=1;}
+//		}
+//	}
+//}
