@@ -69,8 +69,8 @@ int	key_pressed(int key, t_game *game)
 		key_right(game);
 	mlx_put_image_to_window(game->vars.mlx, game->vars.win, game->image.img,
 							0, 0);
-//	to_draw(game);
-	make_3d(game);
+	to_draw(game);
+//	make_3d(game);
 
 	return (0);
 }
