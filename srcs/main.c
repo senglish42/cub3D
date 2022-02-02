@@ -49,8 +49,8 @@ int main(int argc, char **argv)
 	game.player.step = 0.5f;
 	init_image(&game.map, &game.image, &game.vars);
 	to_draw(&game);
-	mlx_key_hook(game.vars.win, key_pressed, &game); //linux
-//	mlx_hook(game.vars.win, X_EVENT_KEY_PRESS, 0, &key_pressed, &game); //mac
+//	mlx_key_hook(game.vars.win, key_pressed, &game); //linux
+	mlx_hook(game.vars.win, X_EVENT_KEY_PRESS, 0, &key_pressed, &game); //mac
 	mlx_put_image_to_window(game.vars.mlx, game.vars.win, game.image.img, 0,
 							0);
 	mlx_loop(game.vars.mlx);

@@ -98,29 +98,10 @@ void draw_scaled_point(t_game *game, double x, double y, int color)
 	}
 }
 
-//static void	draw_white(t_game *game)
+//static void distance()
 //{
-//	int posx = 0;
-//	int posy = 0;
-//	int size = 50;
-//
-//	while (posy < game->map.height)
-//	{
-//		posx = -1;
-//		while (++posx < game->map.width)
-//		{
-////			if (posy < 8 && posx < 8)
-////			{
-//			if (game->map.size[posy][posx] == '1')
-//				draw_quad(game, posx * size + 1, posy * size + 1, (posx + 1)
-//																  * size, (posy + 1) * size, WHITE);
-////			}
-////			posx++;
-//		}
-//		posy++;
-//	}
+//	cos(degToRad(ang))*(bx-ax)-sin(degToRad(ang))*(by-ay)
 //}
-
 
 void	draw_miniplayer(t_game *game)
 {
@@ -132,7 +113,9 @@ void	draw_miniplayer(t_game *game)
 	int		count;
 	double	min;
 	double 	max;
+	int 	cnt;
 
+	cnt = 0;
 	count = -1;
 	min = game->player.da - PI / 4;
 	max = game->player.da + PI / 4;
@@ -143,32 +126,70 @@ void	draw_miniplayer(t_game *game)
 		{
 			dx = cos(num);
 			dy = sin(num);
+			game->player.disx[cnt] = 100000000;
 			x1 = game->player.posx * 50;
 			y1 = game->player.posy * 50;
-			while (game->map.size[(int) (y1 / 50)][(int) (x1 / 50)] != '1')
+			while (game->map.size[(int)
+			(y1 / 50)][(int)(x1/ 50)]!= '1')
 			{
-				x1 = x1 + dx * 5;
-				y1 = y1 + dy * 5;
+				x1 = x1 + dx;
+				y1 = y1 - dy;
 			}
+			if ((int)(x1 + 1) % 50 == 0)
+				x1 = (int)(x1 + 1);
+			else if ((int)(x1 - 1) % 50 == 0)
+				x1 = (int)(x1 - 1);
+			else
+				x1 = (int)x1;
+			if ((int)(y1 + 1) % 50 == 0)
+				y1 = (int)(y1 + 1);
+			else if ((int)(y1 - 1) % 50 == 0)
+				y1 = (int)(y1 - 1);
+			else
+				y1 = (int)y1;
 			if ((int)(num * 100) == (int)(game->player.da * 100))
 				draw_line(game, game->player.posx * 50, game->player.posy * 50,
-						  x1,
-						  y1,
-						  GREEN);
+						  x1,y1,GREEN);
 			else
 				draw_line(game, game->player.posx * 50, game->player.posy *
-				50, x1,
-						  y1,
-						  RED);
+														50, x1,y1,RED);
 			if (count == 0)
 				game->player.mina = num;
 			else
 				game->player.maxa = num;
+			game->player.ang[cnt] = num;
+			game->player.angx[cnt] = x1 / 50;
+			game->player.angy[cnt] = y1 / 50;
+			double x2;
+			double y2;
+//
+			if (game->player.posx >= game->player.angx[cnt])
+				x2 = game->player.angx[cnt] - game->player.posx;
+			else
+				x2 = game->player.posx - game->player.angx[cnt];
+			if (game->player.posy >= game->player.angy[cnt])
+				y2 = game->player.angy[cnt] - game->player.posy;
+			else
+				y2 = game->player.posy - game->player.angy[cnt];
+			game->player.disx[cnt] = sqrt((game->player.posx - game->player
+					.angx[cnt]) * (game->player.posx - game->player
+					.angx[cnt]) + (game->player.posy - game->player
+							.angy[cnt]) * (game->player.posy - game->player
+									.angy[cnt]));
+		//	printf("dist %f\n", game->player.disx[cnt]);
+			cnt++;
 		}
 		num += PI / 180;
 	}
+//	cnt = -1;
+//	while (++cnt < 90)
+//		printf("dist %f %f %f %f %f\n", cos(num) * (game->player
+//		.posx -
+//		game->player.angx[cnt]), sin(num) * (game->player
+//				.posy - game->player
+//		.angy[cnt]), game->player.angx[cnt], game->player.angy[cnt],
+//			   game->player.disx[cnt]);
 	draw_scaled_point(game, game->player.posx, game->player.posy, YELLOW);
-//	draw_white(game);
 }
 
 void    draw_line(t_game *game, double x, double y, double x1, double y1, int color)
