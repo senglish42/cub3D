@@ -32,9 +32,9 @@ int	if_invalid(int argc, char **argv)
 void	to_draw(t_game *game)
 {
 	show_map(game);
-	my_clear_window(game);
-	draw_minimap(game);
-	draw_miniplayer(game);
+//	my_clear_window(game);
+//	draw_minimap(game);
+//	draw_miniplayer(game);
 	printf(CLRSCR);
 }
 

@@ -120,6 +120,7 @@ void	draw_miniplayer(t_game *game)
 	min = game->player.da - PI / 4;
 	max = game->player.da + PI / 4;
 	num = - 45 * PI / 180;
+
 	while (++count != 450)
 	{
 		if ((num >= min && num <= max))
@@ -160,23 +161,11 @@ void	draw_miniplayer(t_game *game)
 			game->player.ang[cnt] = num;
 			game->player.angx[cnt] = x1 / 50;
 			game->player.angy[cnt] = y1 / 50;
-			double x2;
-			double y2;
-//
-			if (game->player.posx >= game->player.angx[cnt])
-				x2 = game->player.angx[cnt] - game->player.posx;
-			else
-				x2 = game->player.posx - game->player.angx[cnt];
-			if (game->player.posy >= game->player.angy[cnt])
-				y2 = game->player.angy[cnt] - game->player.posy;
-			else
-				y2 = game->player.posy - game->player.angy[cnt];
 			game->player.disx[cnt] = sqrt((game->player.posx - game->player
 					.angx[cnt]) * (game->player.posx - game->player
 					.angx[cnt]) + (game->player.posy - game->player
 							.angy[cnt]) * (game->player.posy - game->player
 									.angy[cnt]));
-		//	printf("dist %f\n", game->player.disx[cnt]);
 			cnt++;
 		}
 		num += PI / 180;
