@@ -17,6 +17,7 @@ void	path_ident(char *orient[6])
 	char 	*path;
 	int     count;
 
+
 	path = NULL;
 	count = -1;
 	while (++count < 4)

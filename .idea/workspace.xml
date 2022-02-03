@@ -16,18 +16,65 @@
   <component name="ChangeListManager">
     <list default="true" id="6099bb2f-26df-4dd1-9836-4ed65dd5a301" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/draw.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/draw.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/error.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/error.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/ident.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/ident.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/key_handler.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/key_handler.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/dbg.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/draw.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/error.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/ident.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/init.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/key_handler.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/map.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.obj/srcs/parse.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cub3D" beforeDir="false" afterPath="$PROJECT_DIR$/cub3D" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/player.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/ray.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/rgb.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/vectors.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cub3D" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/path_to_the_east_texture.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/path_to_the_north_texture.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/path_to_the_south_texture.xpm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/path_to_the_west_texture.xpm" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/cub3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/cub3D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_atoi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_bzero.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_calloc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_isalnum.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_isalpha.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_isascii.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_isdigit.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_isprint.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_itoa.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_memccpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_memchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_memcmp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_memcpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_memmove.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_memset.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_putchar_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_putcharlen_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_putendl_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_putnbr_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_putstr_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_putstrlen_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_split.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strdup.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strjoin.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strlcat.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strlcpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strlen.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strmapi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strncmp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strnstr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strrchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_strtrim.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_substr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_tolower.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/.obj/ft_toupper.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/libft.a" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/maps/map.cub" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map.cub" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maps/map1.cub" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map1.cub" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/draw.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/error.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/error.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/ident.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/ident.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/key_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/key_handler.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/main.c" afterDir="false" />
@@ -172,7 +219,8 @@
       <workItem from="1643532543510" duration="14045000" />
       <workItem from="1643717456664" duration="11378000" />
       <workItem from="1643870265281" duration="5891000" />
-      <workItem from="1643877986117" duration="1843000" />
+      <workItem from="1643877986117" duration="5487000" />
+      <workItem from="1643888275559" duration="15133000" />
     </task>
     <servers />
   </component>
@@ -210,7 +258,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/ident.c</url>
-          <line>82</line>
+          <line>83</line>
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -222,6 +270,11 @@
           <url>file://$PROJECT_DIR$/srcs/map.c</url>
           <line>46</line>
           <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/srcs/key_handler.c</url>
+          <line>42</line>
+          <option name="timeStamp" value="104" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

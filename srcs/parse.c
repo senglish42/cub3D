@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 #include "cub3D.h"
 
+
 short parse_ident(t_game *game)
 {
 	short   height;

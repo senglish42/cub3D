@@ -31,6 +31,7 @@
 # define MAX(A , B) ((A > B) ? A : B)
 
 # define PI		3.1415926
+# define VA		PI / 3
 
 # define TRUE	1
 # define FALSE	0
@@ -59,7 +60,7 @@ typedef struct s_vars
 typedef struct	s_img
 {
 	void	*img;
-	char	*addr;
+	char 	*addr;
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
@@ -67,11 +68,20 @@ typedef struct	s_img
 	int		screen_h;
 }				t_img;
 
+//typedef struct s_path
+//{
+//	t_img	*path[4];
+////	void	*img;
+////	int		img_width;
+////	int		img_height;
+//}				t_path;
+
 typedef struct s_ident
 {
     char    *orient[6];
 	int     f_rgb[3];
     int     c_rgb[3];
+//	t_path	path[4];
 }	t_ident;
 
 typedef struct s_player
@@ -126,8 +136,25 @@ typedef struct s_game
 	t_ident     ident;
     t_player    player;
 	t_ray		ray;
+	t_img		path[4];
 	char        **parse;
 }				t_game;
+
+typedef struct s_rend
+{
+	int		hit;
+	double	dist_to_wall;
+	double	ray_a;
+	double	ray_a_h;
+	double	dif_a;
+	double	y_dir;
+	double	x_dir;
+	double	x_dir_del;
+	double	y_dir_del;
+	double	size_wall;
+	double	ceil;
+	double	floor;
+}	t_rend;
 
 typedef struct s_vec
 {
