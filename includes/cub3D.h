@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:21:40 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/03 20:29:24 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/03 20:36:55 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -229,13 +229,6 @@ void	parse(t_game *game, int fd);
 //	player.c	//
 void	move_player(t_game *game, int x, int y);
 void	show_map(t_game *game);
-
-//	ray.c	//
-int		is_valid(int x, int y);
-int		get_yray_dir(t_game *game);
-int		get_xray_dir(t_game *game);
-void	find_intersection_horizontal(t_game *game, double *x, double *y);
-void	find_intersection_vertical(t_game *game, double *x, double *y);
 
 //	rgb.c	//
 char	*rgb_digit(char *str);
