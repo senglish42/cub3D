@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:14:36 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/03 20:21:42 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/03 20:28:12 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int main(int argc, char **argv)
 	game.player.dx = cos(game.player.da);
 	game.player.dy = sin(game.player.da);
 	game.player.step = 0.5f;
-	init_image(&game.map, &game.image, &game.vars);
+	init_image(&game.image, &game.vars);
 	xpm_to_image(&game);
 	to_draw(&game);
 	make_3d(&game);

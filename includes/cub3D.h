@@ -3,20 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   cub3D.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: senglish <senglish@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:21:40 by senglish          #+#    #+#             */
-/*   Updated: 2022/01/26 15:38:01 by senglish         ###   ########.fr       */
+/*   Updated: 2022/02/03 20:29:24 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef CUB3D_H
 # define CUB3D_H
 
 # include "libft.h"
-//# include "/usr/local/include/mlx.h"
-# include "../mlx/mlx.h"
-//# include "keys_macos.h"
-# include "keys.h"
+# include "/usr/local/include/mlx.h"
+//# include "../mlx/mlx.h"
+# include "keys_macos.h"
+//# include "keys.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <math.h>
@@ -26,6 +27,9 @@
 # include <sys/errno.h>
 
 # define CLRSCR	"\e[1;1H\e[2J"
+
+# define SCREEN_W	1024
+# define SCREEN_H	512
 
 # define ABS(X) (((X) < 0) ? (-(X)) : (X))
 # define MAX(A , B) ((A > B) ? A : B)
@@ -188,7 +192,7 @@ void 	init_param(t_game *game);
 void 	init_ident(t_ident  *ident);
 void 	init_map(t_game *game);
 void 	init_player(t_game *game);
-void 	init_image(t_map *map, t_img *image, t_vars *vars);
+void 	init_image(t_img *image, t_vars *vars);
 
 //	ident.c	//
 void	path_ident(char *orient[6]);

@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: senglish <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 16:24:00 by senglish          #+#    #+#             */
-/*   Updated: 2022/01/26 13:02:58 by senglish         ###   ########.fr       */
+/*   Updated: 2022/02/03 20:29:33 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3D.h"
 
-void 	init_image(t_map *map, t_img *image, t_vars *vars)
+void 	init_image(t_img *image, t_vars *vars)
 {
-	image->screen_w = map->width * 50;
-	image->screen_h = map->height * 50;
+	image->screen_w = SCREEN_W;
+	image->screen_h = SCREEN_H;
 	vars->mlx = mlx_init(); // return NULL if init is failed
 	vars->win = mlx_new_window(vars->mlx, image->screen_w, image->screen_h,
 								   "Cub 3D");
