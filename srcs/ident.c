@@ -11,7 +11,28 @@
 /* ************************************************************************** */
 #include "cub3D.h"
 
-void    compare_ident(const char *str1, const char *str2, int errnum)
+void	path_ident(char *orient[6])
+{
+	int 	fd[4];
+	char 	*path;
+	int     count;
+
+	path = NULL;
+	count = -1;
+	while (++count < 4)
+	{
+		path = ft_strjoin("./images", &orient[count][1]);
+		if (!path)
+			printf_error(NULL, strerror(errno), fd, count);
+		fd[count] = if_invalid(path, ".xpm");
+		orient[count] = path;
+	}
+	count = -1;
+	while (++count < 4)
+		close(fd[count]);
+}
+
+void    to_compare(const char *str1, const char *str2, int errnum)
 {
     size_t  len1;
     size_t  len2;
@@ -25,30 +46,20 @@ void    compare_ident(const char *str1, const char *str2, int errnum)
     }
 }
 
-void    while_ident(char *orient[6])
+void    compare_ident(char *orient[6])
 {
-//	int 	fd[4];
     int     num;
     int     count;
-//	char 	*path;
 
-//	path = NULL;
     count = -1;
     while (++count < 3)
     {
-//        path = ft_strjoin("../images", &orient[count][1]);
-//		if (!path)
-//			printf_error(NULL, strerror(errno), fd, count);
-//		fd[count] = open(path, O_RDONLY);
-//		if (fd[count] < 0)
-//			printf_error(path, strerror(errno), fd, count);
-//		free(path);
 		num = -1;
         while (++num <= 3)
         {
             if (num <= count)
                 continue;
-            compare_ident(orient[count], orient[num], 11);
+            to_compare(orient[count], orient[num], 11);
         }
     }
 }
@@ -79,7 +90,6 @@ void    check_ident(t_game *game, short height, short width)
     char        *str;
 
     str = &game->parse[height][width];
-    printf("***%c\n", str[0]);
     if (*str == 'N')
         fill_ident(&game->ident.orient[0], orient[0], str, 3);
     else if (*str == 'S')
@@ -94,25 +104,4 @@ void    check_ident(t_game *game, short height, short width)
         fill_ident(&game->ident.orient[5], orient[5], str, 2);
     else
         error(10);
-}
-
-short parse_ident(t_game *game)
-{
-    short   height;
-    short   width;
-
-    height = -1;
-    while (game->parse[++height])
-        printf("%s|\n", game->parse[height]);
-    height = -1;
-    while (game->parse[++height] && height < 6)
-    {
-        width = -1;
-        while (game->parse[height][++width] == ' ')
-            continue;
-        check_ident(game, height, width);
-    }
-    while_ident(game->ident.orient);
-    rgb_ident(&game->ident);
-	return (height);
 }

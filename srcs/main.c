@@ -11,21 +11,22 @@
 /* ************************************************************************** */
 #include "cub3D.h"
 
-int	if_invalid(int argc, char **argv)
+int	if_invalid(const char *str, const char *format)
 {
 	size_t	count;
 	int		fd;
 
-	if (argc != 2)
-		error(2);
-	count = ft_strlen(argv[1]);
-	if (open(argv[1], O_DIRECTORY) == 1)
+	count = ft_strlen(str);
+	if (open(str, O_DIRECTORY) == 1)
 		error(3);
-	if ((count <= 4 || ft_strncmp(&argv[1][count - 4], ".cub", 4)))
+	printf("1\n");
+	if ((count <= 4 || ft_strncmp(&str[count - 4], format, 4)))
 		error(3);
-	fd = open(argv[1], O_RDONLY);
-	if (fd < 0)
-		error(4);
+	fd = open(str, O_RDONLY);
+	if (fd < 0 && format[1] == 'c')
+		ft_putstr_fd("ERROR: can't read *.cub file.\n", 4);
+	else if (fd < 0 && format[1] == 'x')
+		ft_putstr_fd("ERROR: can't read *.xpm file.\n", 4);
 	return (fd);
 }
 
@@ -42,8 +43,10 @@ int main(int argc, char **argv)
 {
 	t_game	game;
 
+	if (argc != 2)
+		error(2);
 	init_param(&game);
-	parse(&game, if_invalid(argc, argv));
+	parse(&game, if_invalid(argv[1], ".cub"));
 	game.player.dx = cos(game.player.da);
 	game.player.dy = sin(game.player.da);
 	game.player.step = 0.5f;

@@ -11,6 +11,11 @@
 /* ************************************************************************** */
 #include "cub3D.h"
 
+//void	error_str(int num, char *str)
+//{
+//	ft_putstr_fd("Error: struct")
+//}
+
 void    error_identifier(int num)
 {
     if (num == 9)
@@ -38,8 +43,6 @@ void	error(int num)
 		ft_putstr_fd("ERROR: invalid number of argc.\n", num);
 	else if (num == 3)
 		ft_putstr_fd("ERROR: invalid format of an argument.\n", num);
-	else if (num == 4)
-		ft_putstr_fd("ERROR: can't read *.cub file.\n", num);
 	else if (num == 5)
 		ft_putstr_fd("ERROR: the given map is invalid.\n", num);
 	else if (num == 6)

@@ -164,11 +164,11 @@ void 	init_player(t_game *game);
 void 	init_image(t_map *map, t_img *image, t_vars *vars);
 
 //	ident.c	//
-void    compare_ident(const char *str1, const char *str2, int errnum);
-void    while_ident(char *orient[6]);
+void	path_ident(char *orient[6]);
+void    to_compare(const char *str1, const char *str2, int errnum);
+void    compare_ident(char *orient[6]);
 void 	fill_ident(char **turn, const char *orient, const char *str, int no);
 void    check_ident(t_game *game, short height, short width);
-short 	parse_ident(t_game *game);
 
 //	key_handler.c	//
 void	key_up(t_game *game);
@@ -179,7 +179,7 @@ int		key_pressed(int key, t_game *game);
 void	make_3d(t_game *game);
 
 //	main.c	//
-int		if_invalid(int argc, char **argv);
+int		if_invalid(const char *str, const char *format);
 void	to_draw(t_game *game);
 int		main(int argc, char **argv);
 
@@ -191,6 +191,7 @@ void    fill_map(t_game *game, short num);
 void    parse_map(t_game *game, short num);
 
 //	parse.c	//
+short 	parse_ident(t_game *game);
 void	read_line(t_game *game, int fd);
 void	parse(t_game *game, int fd);
 

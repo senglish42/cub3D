@@ -11,6 +11,28 @@
 /* ************************************************************************** */
 #include "cub3D.h"
 
+short parse_ident(t_game *game)
+{
+	short   height;
+	short   width;
+
+	height = -1;
+	while (game->parse[++height])
+		printf("%s|\n", game->parse[height]);
+	height = -1;
+	while (game->parse[++height] && height < 6)
+	{
+		width = -1;
+		while (game->parse[height][++width] == ' ')
+			continue;
+		check_ident(game, height, width);
+	}
+	compare_ident(game->ident.orient);
+	path_ident(game->ident.orient);
+	rgb_ident(&game->ident);
+	return (height);
+}
+
 void	read_line(t_game *game, int fd)
 {
 	char	ch;

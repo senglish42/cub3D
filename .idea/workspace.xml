@@ -17,12 +17,21 @@
     <list default="true" id="6099bb2f-26df-4dd1-9836-4ed65dd5a301" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.obj/srcs/draw.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/draw.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/error.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/error.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/ident.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/ident.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.obj/srcs/key_handler.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/key_handler.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.obj/srcs/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/parse.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cub3D" beforeDir="false" afterPath="$PROJECT_DIR$/cub3D" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/cub3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/cub3D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map.cub" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map.cub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/map1.cub" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map1.cub" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/draw.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/error.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/error.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/ident.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/ident.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/key_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/key_handler.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/parse.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/parse.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +77,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -79,14 +88,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/includes" />
       <recent name="$PROJECT_DIR$/srcs" />
-      <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/libft" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/srcs" />
       <recent name="$PROJECT_DIR$/maps" />
     </key>
@@ -95,11 +104,6 @@
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="cub3d" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/maps/map1.cub" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cub3D" TARGET_NAME="cub3d" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cub3D" RUN_TARGET_NAME="cub3d">
@@ -167,6 +171,8 @@
       <workItem from="1643456189786" duration="20521000" />
       <workItem from="1643532543510" duration="14045000" />
       <workItem from="1643717456664" duration="11378000" />
+      <workItem from="1643870265281" duration="5891000" />
+      <workItem from="1643877986117" duration="1843000" />
     </task>
     <servers />
   </component>
@@ -204,12 +210,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/ident.c</url>
-          <line>38</line>
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/srcs/ident.c</url>
-          <line>71</line>
+          <line>82</line>
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
