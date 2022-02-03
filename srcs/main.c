@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: senglish <senglish@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:14:36 by senglish          #+#    #+#             */
-/*   Updated: 2022/01/26 15:42:05 by senglish         ###   ########.fr       */
+/*   Updated: 2022/02/03 20:21:42 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "cub3D.h"
 
 void	xpm_to_image(t_game *game)
@@ -64,6 +65,11 @@ void	to_draw(t_game *game)
 	printf(CLRSCR);
 }
 
+int exit_func()
+{
+	exit (0);
+}
+
 int main(int argc, char **argv)
 {
 	t_game	game;
@@ -79,10 +85,9 @@ int main(int argc, char **argv)
 	xpm_to_image(&game);
 	to_draw(&game);
 	make_3d(&game);
-	mlx_put_image_to_window(game.vars.mlx, game.vars.win, game.image.img, 0,
-							0);
-//	mlx_key_hook(game.vars.win, key_pressed, &game); //linux
-	mlx_hook(game.vars.win, X_EVENT_KEY_PRESS, 0, &key_pressed, &game); //mac
+	mlx_put_image_to_window(game.vars.mlx, game.vars.win, game.image.img, 0, 0);
+	mlx_hook(game.vars.win, 17, 1L << 17, exit_func, &game);
+	mlx_hook(game.vars.win, X_EVENT_KEY_PRESS, 0, &key_pressed, &game);
 	mlx_loop(game.vars.mlx);
 	return 0;
 }
