@@ -29,7 +29,7 @@
 # define CLRSCR	"\e[1;1H\e[2J"
 
 # define SCREEN_W	1024
-# define SCREEN_H	512
+# define SCREEN_H	768
 
 # define ABS(X) (((X) < 0) ? (-(X)) : (X))
 # define MAX(A , B) ((A > B) ? A : B)
@@ -202,14 +202,14 @@ void 	fill_ident(char **turn, const char *orient, const char *str, int no);
 void    check_ident(t_game *game, short height, short width);
 
 //	key_handler.c	//
-void	key_up(t_game *game);
-void	key_down(t_game *game);
-void	key_left(t_game *game);
-void	key_right(t_game *game);
+unsigned int f_c(int rgb[3]);
+void	up_down(t_game *game, double cos, double sin);
+void	left_right(t_game *game, double turn);
 int		key_pressed(int key, t_game *game);
 void	make_3d(t_game *game);
 
 //	main.c	//
+int		exit_func();
 int		if_invalid(const char *str, const char *format);
 void	to_draw(t_game *game);
 int		main(int argc, char **argv);
@@ -229,6 +229,9 @@ void	parse(t_game *game, int fd);
 //	player.c	//
 void	move_player(t_game *game, int x, int y);
 void	show_map(t_game *game);
+
+//	rendering.c	//
+double	check_rad(double angle);
 
 //	rgb.c	//
 char	*rgb_digit(char *str);

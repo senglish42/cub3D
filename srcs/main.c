@@ -59,6 +59,9 @@ int	if_invalid(const char *str, const char *format)
 void	to_draw(t_game *game)
 {
 	show_map(game);
+	make_3d(game);
+	draw_minimap(game); //
+	draw_miniplayer(game); //
 //	my_clear_window(game);
 //	draw_minimap(game);
 //	draw_miniplayer(game);
@@ -67,6 +70,7 @@ void	to_draw(t_game *game)
 
 int exit_func()
 {
+	printf("You quit the game.\n");
 	exit (0);
 }
 
@@ -84,7 +88,6 @@ int main(int argc, char **argv)
 	init_image(&game.image, &game.vars);
 	xpm_to_image(&game);
 	to_draw(&game);
-	make_3d(&game);
 	mlx_put_image_to_window(game.vars.mlx, game.vars.win, game.image.img, 0, 0);
 	mlx_hook(game.vars.win, 17, 1L << 17, exit_func, &game);
 	mlx_hook(game.vars.win, X_EVENT_KEY_PRESS, 0, &key_pressed, &game);

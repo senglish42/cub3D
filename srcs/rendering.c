@@ -1,27 +1,9 @@
 #include "cub3D.h"
 
-//unsigned int	draw_walls(t_game *game, int num, int x)
-//{
-//	unsigned int color;
-//
-//	color = *(unsigned int *) (game->path[num].addr + ((int) j *
-//													 game->path[num].line_length
-//													 + x *
-//													   game->path[num]
-//													   .bits_per_pixel /
-//													   8));
-//	my_mlx_pixel_put(&game->image, x, (int) y, color);
-//	j += (double) game->path[0].screen_h / (double) size_wall;
-//	return (color);
-//}
-
 unsigned int wall(t_img *image, int j, int x)
 {
-	return(*(unsigned int *) (image->addr + (j *
-													image->line_length
-													+ x *
-													  image->bits_per_pixel /
-													  8)));
+	return (*(unsigned int *)(image->addr + (j * image->line_length + x * \
+	image->bits_per_pixel / 8)));
 }
 
 unsigned int f_c(int rgb[3])
@@ -29,7 +11,7 @@ unsigned int f_c(int rgb[3])
 	return(rgb[0] << 16 | rgb[1] << 8 | rgb[2]);
 }
 
-void	do_color(t_img *image, int x, int y, unsigned int color /*int rgb[3]*/)
+void	do_color(t_img *image, int x, int y, unsigned int color)
 {
 	my_mlx_pixel_put(image, x, y, color);
 }
@@ -52,12 +34,13 @@ void	find_ratio(t_game *game, t_rend *rend)
 	rend->floor = (rend->ceil + rend->size_wall);
 }
 
-void	check_rad(double angle)
+double	check_rad(double angle)
 {
 	if (angle > 2 * PI)
 		angle -= 2 * PI;
 	else if (angle < 0)
 		angle += 2 * PI;
+	return (angle);
 }
 
 void	init_rend(t_game *game, t_rend *rend, int x)
@@ -67,12 +50,14 @@ void	init_rend(t_game *game, t_rend *rend, int x)
 	rend->ray_a = x * VA / game->image.screen_w;
 	rend->ray_a_h = (game->player.da + VA / 2) - rend->ray_a;
 	rend->dif_a = game->player.da - rend->ray_a_h;
-	check_rad(rend->dif_a);
+	rend->dif_a = check_rad(rend->dif_a);
 	rend->y_dir = sin(rend->ray_a_h);
 	rend->x_dir = cos(rend->ray_a_h);
 	rend->x_dir_del = 0;
 	rend->y_dir_del = 0;
 }
+
+
 
 void	make_3d(t_game *game)
 {
@@ -89,8 +74,20 @@ void	make_3d(t_game *game)
 			do_color(&game->image, (int)x, (int)y, f_c(game->ident.c_rgb));
 		double j;
 		j = 0;
+		int a;
+		a = game->image.screen_h - (int)y;
 		while (y < rend.floor)
 		{
+//			if (j == 0)
+//				printf("%d %d\n", x + 1, (int)y);
+//				printf("%d %d\n", (int)((game->image.screen_h + 1) /
+//						(int)y), (int)
+//						(game->image
+//								 .screen_w / (x + 1)));
+//				printf("%c\n", game->map.size[((game->image.screen_h + 1) /
+//						(int)y)][(int)
+//						(game->image
+//								 .screen_w / x)]);
 			if (rend.ray_a_h >= PI / 4 && rend.ray_a_h < 3 * PI / 4)
 			{
 				do_color(&game->image, (int)x, (int)y++, \

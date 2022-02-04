@@ -68,10 +68,10 @@ void	draw_minimap(t_game *game)
 		{
 			if (game->map.size[posy][posx] == '1')
 				draw_quad(game, posx * size, posy * size, (posx + 1)
-				* size, (posy + 1) * size, WHITE);
-			else
-				draw_quad(game, posx * size, posy * size, (posx + 1)
 				* size, (posy + 1) * size, BLACK);
+//			else
+//				draw_quad(game, posx * size, posy * size, (posx + 1)
+//				* size, (posy + 1) * size, WHITE);
 		}
 		posy++;
 	}
@@ -115,7 +115,6 @@ void	draw_miniplayer(t_game *game)
 
 	while (++count != 450)
 	{
-		//if ((num >= min && num <= max))
 		if ((num >= min && num <= max))
 		{
 			dx = cos(num);
@@ -168,8 +167,6 @@ void	draw_miniplayer(t_game *game)
 
 void    draw_line(t_game *game, double x, double y, double x1, double y1, int color)
 {
-	//printf("\ndraw line from %f %f to %f %f", x, y, x1, y1);
-
 	double   deltax;
 	double   deltay;
 	int     max;
