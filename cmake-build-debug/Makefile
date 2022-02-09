@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/180/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /snap/clion/180/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/senglish/projects/cub3D
+CMAKE_SOURCE_DIR = /home/senglish/projects/cub3D
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/senglish/projects/cub3D/cmake-build-debug
+CMAKE_BINARY_DIR = /home/senglish/projects/cub3D/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/senglish/projects/cub3D/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/180/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/180/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/senglish/projects/cub3D/cmake-build-debug/CMakeFiles /Users/senglish/projects/cub3D/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/senglish/projects/cub3D/cmake-build-debug/CMakeFiles /home/senglish/projects/cub3D/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/senglish/projects/cub3D/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/senglish/projects/cub3D/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -993,30 +993,6 @@ libft/ft_toupper.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/libft/ft_toupper.c.s
 .PHONY : libft/ft_toupper.c.s
 
-srcs/dbg.o: srcs/dbg.c.o
-.PHONY : srcs/dbg.o
-
-# target to build an object file
-srcs/dbg.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/dbg.c.o
-.PHONY : srcs/dbg.c.o
-
-srcs/dbg.i: srcs/dbg.c.i
-.PHONY : srcs/dbg.i
-
-# target to preprocess a source file
-srcs/dbg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/dbg.c.i
-.PHONY : srcs/dbg.c.i
-
-srcs/dbg.s: srcs/dbg.c.s
-.PHONY : srcs/dbg.s
-
-# target to generate assembly for a file
-srcs/dbg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/dbg.c.s
-.PHONY : srcs/dbg.c.s
-
 srcs/draw.o: srcs/draw.c.o
 .PHONY : srcs/draw.o
 
@@ -1209,29 +1185,53 @@ srcs/parse.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/parse.c.s
 .PHONY : srcs/parse.c.s
 
-srcs/ray.o: srcs/ray.c.o
-.PHONY : srcs/ray.o
+srcs/player.o: srcs/player.c.o
+.PHONY : srcs/player.o
 
 # target to build an object file
-srcs/ray.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/ray.c.o
-.PHONY : srcs/ray.c.o
+srcs/player.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/player.c.o
+.PHONY : srcs/player.c.o
 
-srcs/ray.i: srcs/ray.c.i
-.PHONY : srcs/ray.i
+srcs/player.i: srcs/player.c.i
+.PHONY : srcs/player.i
 
 # target to preprocess a source file
-srcs/ray.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/ray.c.i
-.PHONY : srcs/ray.c.i
+srcs/player.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/player.c.i
+.PHONY : srcs/player.c.i
 
-srcs/ray.s: srcs/ray.c.s
-.PHONY : srcs/ray.s
+srcs/player.s: srcs/player.c.s
+.PHONY : srcs/player.s
 
 # target to generate assembly for a file
-srcs/ray.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/ray.c.s
-.PHONY : srcs/ray.c.s
+srcs/player.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/player.c.s
+.PHONY : srcs/player.c.s
+
+srcs/rendering.o: srcs/rendering.c.o
+.PHONY : srcs/rendering.o
+
+# target to build an object file
+srcs/rendering.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/rendering.c.o
+.PHONY : srcs/rendering.c.o
+
+srcs/rendering.i: srcs/rendering.c.i
+.PHONY : srcs/rendering.i
+
+# target to preprocess a source file
+srcs/rendering.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/rendering.c.i
+.PHONY : srcs/rendering.c.i
+
+srcs/rendering.s: srcs/rendering.c.s
+.PHONY : srcs/rendering.s
+
+# target to generate assembly for a file
+srcs/rendering.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cub3d.dir/build.make CMakeFiles/cub3d.dir/srcs/rendering.c.s
+.PHONY : srcs/rendering.c.s
 
 srcs/rgb.o: srcs/rgb.c.o
 .PHONY : srcs/rgb.o
@@ -1398,9 +1398,6 @@ help:
 	@echo "... libft/ft_toupper.o"
 	@echo "... libft/ft_toupper.i"
 	@echo "... libft/ft_toupper.s"
-	@echo "... srcs/dbg.o"
-	@echo "... srcs/dbg.i"
-	@echo "... srcs/dbg.s"
 	@echo "... srcs/draw.o"
 	@echo "... srcs/draw.i"
 	@echo "... srcs/draw.s"
@@ -1425,9 +1422,12 @@ help:
 	@echo "... srcs/parse.o"
 	@echo "... srcs/parse.i"
 	@echo "... srcs/parse.s"
-	@echo "... srcs/ray.o"
-	@echo "... srcs/ray.i"
-	@echo "... srcs/ray.s"
+	@echo "... srcs/player.o"
+	@echo "... srcs/player.i"
+	@echo "... srcs/player.s"
+	@echo "... srcs/rendering.o"
+	@echo "... srcs/rendering.i"
+	@echo "... srcs/rendering.s"
 	@echo "... srcs/rgb.o"
 	@echo "... srcs/rgb.i"
 	@echo "... srcs/rgb.s"

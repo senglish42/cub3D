@@ -16,8 +16,8 @@
 # include "libft.h"
 # include "/usr/local/include/mlx.h"
 //# include "../mlx/mlx.h"
-# include "keys_macos.h"
-//# include "keys.h"
+//# include "keys_macos.h"
+# include "keys.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <math.h>
@@ -158,6 +158,7 @@ typedef struct s_rend
 	double	size_wall;
 	double	ceil;
 	double	floor;
+    double  straight;
 }	t_rend;
 
 typedef struct s_vec
