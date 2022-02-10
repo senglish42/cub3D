@@ -10,8 +10,7 @@ void	move_player(t_game *game, int x, int y)
 	if (game->player.da >= PI / 4  && game->player.da < 3 * PI / 4)
 		game->map.size[(int) game->player.posy][(int) game->player.posx] = 'N';
 	else if (game->player.da >= 5 * PI / 4 && game->player.da < 7 * PI / 4)
-		game->map.size[(int) game->player.posy][(int) game->player
-				.posx] = 'S';
+		game->map.size[(int) game->player.posy][(int) game->player.posx] = 'S';
 	else if (game->player.da >= 3 * PI / 4 && game->player.da < 5 * PI / 4)
 		game->map.size[(int) game->player.posy][(int) game->player.posx] = 'W';
 	else if (game->player.da >= 7 * PI / 4 || game->player.da < PI / 4)

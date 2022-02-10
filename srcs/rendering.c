@@ -41,7 +41,7 @@ void	find_ratio(t_game *game, t_rend *rend)
 //    printf("%f %f %d %d\n", rend->x_dir_del, rend->y_dir_del,
 //           (int)(rend->y_dir_del
 //    - 0.05), (int)(rend->y_dir_del));
-    printf("before before %f %f\n", rend->x_dir_del, rend->y_dir_del);
+//    printf("before before %f %f\n", rend->x_dir_del, rend->y_dir_del);
     difx = fabs((rend->x_dir_del - (int)rend->x_dir_del));
     dif1 = fabs(rend->x_dir_del - (int)(rend->x_dir_del + 1));
     if (dif1 < difx)
@@ -51,28 +51,28 @@ void	find_ratio(t_game *game, t_rend *rend)
     if (dif1 < dify)
         dify = dif1;
 //    printf("%f %f\n", difx, dify);
-    if (difx < dify || difx + dify < 0.001)
-    {
-    if ((int) (rend->x_dir_del + 0.05) != (int) (rend->x_dir_del) &&
-        (int)(rend->x_dir_del + 0.05) <= game->map.width)
-            rend->x_dir_del = (int) (rend->x_dir_del + 0.05);
-    else if ((int) (rend->x_dir_del - 0.05) != (int) (rend->x_dir_del) &&
-                 (int) (rend->x_dir_del - 0.05) >= 0)
-            rend->x_dir_del = (int) (rend->x_dir_del);
-    else
-        rend->x_dir_del = (int)rend->x_dir_del;
-    }
-    if (difx > dify || difx + dify < 0.001)
-{
-       if ((int)(rend->y_dir_del + 0.05) != (int)(rend->y_dir_del) &&
-            (int)(rend->y_dir_del + 0.05) <= game->map.height)
-            rend->y_dir_del = (int)(rend->y_dir_del + 0.05);
-       else if ((int)(rend->y_dir_del - 0.05) != (int)(rend->y_dir_del)
-            && (int)(rend->y_dir_del - 0.05) >= 0)
-            rend->y_dir_del = (int)(rend->y_dir_del);
-       else
-           rend->y_dir_del = (int)rend->y_dir_del;
-    }
+//    if (difx < dify || difx + dify < 0.001)
+//    {
+//    if ((int) (rend->x_dir_del + 0.05) != (int) (rend->x_dir_del) &&
+//        (int)(rend->x_dir_del + 0.05) <= game->map.width)
+//            rend->x_dir_del = (int) (rend->x_dir_del);
+//    else if ((int) (rend->x_dir_del - 0.05) != (int) (rend->x_dir_del) &&
+//                 (int) (rend->x_dir_del - 0.05) >= 0)
+//            rend->x_dir_del = (int) (rend->x_dir_del);
+//    else
+//        rend->x_dir_del = (int)rend->x_dir_del;
+////    }
+////    if (difx > dify || difx + dify < 0.001)
+////{
+//       if ((int)(rend->y_dir_del + 0.05) != (int)(rend->y_dir_del) &&
+//            (int)(rend->y_dir_del + 0.05) <= game->map.height)
+//            rend->y_dir_del = (int)(rend->y_dir_del);
+//       else if ((int)(rend->y_dir_del - 0.05) != (int)(rend->y_dir_del)
+//            && (int)(rend->y_dir_del - 0.05) >= 0)
+//            rend->y_dir_del = (int)(rend->y_dir_del);
+//       else
+//           rend->y_dir_del = (int)rend->y_dir_del;
+//    }
 //    else
 //        rend->y_dir_del = (int) rend->y_dir_del;
 }
@@ -138,68 +138,64 @@ void	make_3d(t_game *game)
     {
         init_rend(game, &rend[x], x);
         find_ratio(game, &rend[x]);
-        printf(" before %f %f\n", rend[x].x_dir_del, rend[x]
-                .y_dir_del);
-        if (x > 0)
-        {
-            if ((int)rend[x].y_dir_del > (int)rend[x - 1].y_dir_del &&
-                    rend[x].x_dir_del == rend[x - 1].x_dir_del)
-            {
-                double d;
-                double e;
 
-                d = rend[x].y_dir_del - (int)rend[x].y_dir_del;
-                e = (int)rend[x - 1].y_dir_del + 1 - rend[x - 1].y_dir_del;
-                if (d > e)
-                    rend[x - 1].y_dir_del = rend[x - 1].y_dir_del + e;
-                else
-                    rend[x].y_dir_del = rend[x].y_dir_del - d;
-            }
-            else if ((int)rend[x].y_dir_del < (int)rend[x - 1].y_dir_del &&
-                rend[x].x_dir_del == rend[x - 1].x_dir_del)
-            {
-                double d;
-                double e;
+//        if (x > 0)
+//        {
+//            if ((int)rend[x].y_dir_del > (int)rend[x - 1].y_dir_del)
+//            {
+//                double d;
+//                double e;
+//
+//                d = rend[x].y_dir_del - (int)rend[x].y_dir_del;
+//                e = (int)rend[x - 1].y_dir_del + 1 - rend[x - 1].y_dir_del;
+//                if (d > e)
+//                    rend[x - 1].y_dir_del = rend[x - 1].y_dir_del + e;
+//                else
+//                    rend[x].y_dir_del = rend[x].y_dir_del - d;
+//            }
+//            else if ((int)rend[x].y_dir_del < (int)rend[x - 1].y_dir_del)
+//            {
+//                double d;
+//                double e;
+//
+//                d = rend[x - 1].y_dir_del - (int)rend[x - 1].y_dir_del;
+//                e = (int)rend[x].y_dir_del + 1 - rend[x].y_dir_del;
+//                if (d > e)
+//                    rend[x].y_dir_del = rend[x].y_dir_del + e;
+//                else
+//                    rend[x - 1].y_dir_del = rend[x - 1].y_dir_del - d;
+//            }
+//            if ((int)rend[x].x_dir_del > (int)rend[x - 1].x_dir_del)
+//            {
+//                double d;
+//                double e;
+//
+//                d = rend[x].x_dir_del - (int)rend[x].x_dir_del;
+//                e = (int)rend[x - 1].x_dir_del + 1 - rend[x - 1].x_dir_del;
+//                if (d > e)
+//                    rend[x - 1].x_dir_del = rend[x - 1].x_dir_del + e;
+//                else
+//                    rend[x].x_dir_del = rend[x].x_dir_del - d;
+//            }
+//            else if ((int)rend[x].x_dir_del < (int)rend[x - 1].x_dir_del)
+//            {
+//                double d;
+//                double e;
+//
+//                d = rend[x - 1].x_dir_del - (int)rend[x - 1].x_dir_del;
+//                e = (int)rend[x].x_dir_del + 1 - rend[x].x_dir_del;
+//                if (d > e)
+//                    rend[x].x_dir_del = rend[x].x_dir_del + e;
+//                else
+//                    rend[x - 1].x_dir_del = rend[x - 1].x_dir_del - d;
+//            }
+//                    printf(" after %f %f\n", rend[x].x_dir_del, rend[x]
+//        .y_dir_del);
 
-                d = rend[x - 1].y_dir_del - (int)rend[x - 1].y_dir_del;
-                e = (int)rend[x].y_dir_del + 1 - rend[x].y_dir_del;
-                if (d > e)
-                    rend[x].y_dir_del = rend[x].y_dir_del + e;
-                else
-                    rend[x - 1].y_dir_del = rend[x - 1].y_dir_del - d;
-            }
-            if ((int)rend[x].x_dir_del > (int)rend[x - 1].x_dir_del &&
-                rend[x].y_dir_del == rend[x - 1].y_dir_del)
-            {
-                double d;
-                double e;
-
-                d = rend[x].x_dir_del - (int)rend[x].x_dir_del;
-                e = (int)rend[x - 1].x_dir_del + 1 - rend[x - 1].x_dir_del;
-                if (d > e)
-                    rend[x - 1].x_dir_del = rend[x - 1].x_dir_del + e;
-                else
-                    rend[x].x_dir_del = rend[x].x_dir_del - d;
-            }
-            else if ((int)rend[x].x_dir_del < (int)rend[x - 1].x_dir_del &&
-                     rend[x].y_dir_del == rend[x - 1].y_dir_del)
-            {
-                double d;
-                double e;
-
-                d = rend[x - 1].x_dir_del - (int)rend[x - 1].x_dir_del;
-                e = (int)rend[x].x_dir_del + 1 - rend[x].x_dir_del;
-                if (d > e)
-                    rend[x].x_dir_del = rend[x].x_dir_del + e;
-                else
-                    rend[x - 1].x_dir_del = rend[x - 1].x_dir_del - d;
-            }
-                    printf(" after %f %f\n", rend[x].x_dir_del, rend[x]
-        .y_dir_del);
-
-        }
+//        }
     }
     x = -1;
+    c = -1;
     while(++x < game->image.screen_w)
     {
         cnt = 0;
@@ -207,59 +203,163 @@ void	make_3d(t_game *game)
 		while (++y < rend[x].ceil)
 			do_color(&game->image, (int)x, (int)y, f_c(game->ident.c_rgb));
 		double j;
-		j = 0;
-//        printf(" after %f %f\n", rend[x].x_dir_del, rend[x]
+        int flagx;
+        int flagy;
+        int maxx;
+        int maxy;
+        double difx;
+        double dify;
+
+        maxx = 4;
+        maxy = 4;
+        flagx = 0;
+        flagy = 0;
+        j = 0;
+//        printf(" before %f %f\n", rend[x].x_dir_del, rend[x]
 //        .y_dir_del);
+        if (x + 1 <= game->image.screen_w && rend[x].x_dir_del / (int)rend[x]
+        .x_dir_del != 1 && rend[x].y_dir_del / (int)rend[x]
+                .y_dir_del != 1)
+        {
+            int num;
+
+            num = -1;
+            if (game->image.screen_w - x  - 2 <= maxx)
+                maxx = game->image.screen_w - x - 2;
+            while (maxx && num != maxx && x + ++num + 1 < game->image
+            .screen_w)
+            {
+//                printf("%f %f\n", rend[x + num].x_dir_del, rend[x + num + 1]
+//                        .x_dir_del);
+                difx = fabs(rend[x].x_dir_del - rend[x + num].x_dir_del);
+                if (fabs(rend[x + num].x_dir_del - rend[x + num + 1]
+                .x_dir_del) > 0.5)
+                {
+                    maxx = num - 1;
+                    if (x - 1 >= 0 && !difx)
+                        difx = fabs(rend[x].x_dir_del - rend[x - 1].x_dir_del);
+                    printf("%f\n", difx);
+                    break ;
+                }
+                if (rend[x + num].x_dir_del > rend[x + num + 1].x_dir_del)
+                    flagx += 1;
+                else
+                    flagx -= 1;
+            }
+        }
+//            printf("abs x %d %d\n", abs(flagx), maxx + 1);
+        if (x + 1 <= game->image.screen_w && rend[x].y_dir_del / (int)rend[x]
+                .y_dir_del != 1 && rend[x].x_dir_del / (int)rend[x]
+                .x_dir_del != 1) {
+            int num;
+
+            num = -1;
+            if (game->image.screen_w - x - 2 < maxy)
+                maxy = game->image.screen_w - x - 2;
+            while (maxy && num != maxy && x + ++num + 1 < game->image
+            .screen_w) {
+//                printf("%f %f\n", rend[x + num].y_dir_del, rend[x + num + 1]
+//                        .y_dir_del);
+                dify = fabs(rend[x].y_dir_del - rend[x + num].y_dir_del);
+                if (fabs(rend[x + num].y_dir_del - rend[x + num + 1]
+                        .y_dir_del) > 0.5)
+                {
+                    maxy = num - 1;
+                    if (x - 1 >= 0 && !difx)
+                        difx = fabs(rend[x].y_dir_del - rend[x - 1].y_dir_del);
+//                    printf("%f\n", dify);
+                    break ;
+                }
+                if (rend[x + num].y_dir_del > rend[x + num + 1].y_dir_del)
+                    flagy += 1;
+                else
+                    flagy -= 1;
+            }
+//            printf("abs y %d %d\n", abs(flagy), maxy + 1);
+            if ((abs(flagx) != maxx + 1) || difx < dify)
+            {
+//                num = -1;
+//                while(num != 4 && x + ++num <= game->image.screen_w)
+                double more;
+                double less;
+                double mid;
+
+                more = fabs((int)rend[x].x_dir_del + 1 - rend[x].x_dir_del);
+                mid = fabs((int)rend[x].x_dir_del - rend[x].x_dir_del);
+                less = fabs((int)rend[x].x_dir_del - 1 - rend[x].x_dir_del);
+//                printf("absx %f %f %f\n", more, mid, less);
+                if (more < mid && more < less)
+                    rend[x].x_dir_del = (int)rend[x].x_dir_del + 1;
+                else if (mid < more && mid < less)
+                    rend[x].x_dir_del = (int)rend[x].x_dir_del;
+                else if (less < more && less < mid)
+                    rend[x].x_dir_del = (int)rend[x].x_dir_del - 1;
+//                rend[x].x_dir_del = (int)rend[x].x_dir_del + 1;
+//                    rend[x + 1].x_dir_del = (int)rend[x + 1].x_dir_del;
+            }
+            else if ((abs(flagy) != maxy + 1) || dify < difx)
+            {
+//                num = -1;
+  //              while(num != 4 && x + ++num <= game->image.screen_w)
+                    //rend[x].y_dir_del = (int)rend[x].y_dir_del + 1;
+//                rend[x + 1].y_dir_del = (int)rend[x + 1].y_dir_del;
+                double more;
+                double less;
+                double mid;
+
+                more = fabs((int)rend[x].y_dir_del + 1 - rend[x].y_dir_del);
+                mid = fabs((int)rend[x].y_dir_del - rend[x].y_dir_del);
+                less = fabs((int)rend[x].y_dir_del - 1 - rend[x].y_dir_del);
+//                printf("absy %f %f %f\n", more, mid, less);
+                if (more < mid && more < less)
+                    rend[x].y_dir_del = (int)rend[x].y_dir_del + 1;
+                else if (mid < more && mid < less)
+                    rend[x].y_dir_del = (int)rend[x].y_dir_del;
+                else if (less < more && less < mid)
+                    rend[x].y_dir_del = (int)rend[x].y_dir_del - 1;
+            }
+        }
+//        printf(" after %f %f\n", rend[x].x_dir_del, rend[x]
+//                .y_dir_del);
         if (rend[x].x_dir_del / (int) rend[x].x_dir_del != 1)
             cnt = 1;
         if (rend[x].y_dir_del / (int) rend[x].y_dir_del != 1)
             cnt = 2;
-//        if (cnt == 3)
-//            cnt = 0;
-//        printf("lets go %d %f %f\n", cnt, rend[x].x_dir_del, rend[x].ray_a);
-//        if (cnt == 2)
-//            printf("wtf\n");
+//        printf(" now %f %f\n", rend[x].x_dir_del, rend[x]
+//        .y_dir_del);
 		while (y < rend[x].floor)
 		{
-            if (*game->player.pos == 'W') {
-//                if (rend[x].x_dir_del / (int) rend[x].x_dir_del == 1 &&
-//                    rend[x].y_dir_del / (int) rend[x].y_dir_del == 1) {
-//                    do_color(&game->image, (int) x, (int) y++, WHITE);
-//                    continue;
-//                }
-                if (cnt != 1) {
-                    do_color(&game->image, (int) x, (int) y++, \
-                        wall(&game->path[0], (int) j, (int) x));
-                    j += (double) game->path[0].screen_h /
-                         (double) rend[x].size_wall;
-                }
-                if (cnt == 1 && rend[x].ray_a <= PI / 6) {
+                if (cnt == 1 && (x == 0 || (x - 1 >= 0 && rend[x].x_dir_del >
+                rend[x - 1].x_dir_del)))
+                {
                     do_color(&game->image, (int) x, (int) y++, \
                         wall(&game->path[3], (int) j, (int) x));
                     j += (double) game->path[3].screen_h /
                          (double) rend[x].size_wall;
                 }
-                if (cnt == 1 && rend[x].ray_a > PI / 6)
+                else if (cnt == 1 && (x == 0 || (x - 1 >= 0 && rend[x].x_dir_del < rend[x - 1].x_dir_del)))
                 {
                     do_color(&game->image, (int) x, (int) y++, \
                         wall(&game->path[2], (int) j, (int) x));
                     j += (double) game->path[2].screen_h /
                          (double) rend[x].size_wall;
                 }
-//                else
-//                    y++;
-            }
-//            if (*game->player.pos == 'N')
-//            {
-//                if (rend[x].y_dir_del / (int) rend[x]
-//                        .y_dir_del == 1 && cnt == 1)
-//                {
-//                    do_color(&game->image, (int) x, (int) y++, \
-//                        wall(&game->path[3], (int) j, (int) x));
-//                    j += (double) game->path[3].screen_h /
-//                         (double) rend[x].size_wall;
-//                }
-//            }
+                if (cnt == 2 && (x == 0 || (x - 1 >= 0 && rend[x].y_dir_del <
+                    rend[x - 1].y_dir_del)))
+                {
+                do_color(&game->image, (int) x, (int) y++, \
+                        wall(&game->path[0], (int) j, (int) x));
+                j += (double) game->path[0].screen_h /
+                     (double) rend[x].size_wall;
+                }
+                if (cnt == 2 && (x == 0 || (x - 1 >= 0 && rend[x].y_dir_del >
+                    rend[x - 1].y_dir_del)))
+                {
+                    do_color(&game->image, (int) x, (int) y++, \
+                            wall(&game->path[1], (int) j, (int) x));
+                    j += (double) game->path[1].screen_h /
+                         (double) rend[x].size_wall;
+                }
         }
         while (y < game->image.screen_h)
 			do_color(&game->image, (int)x, (int)y++, f_c(game->ident.f_rgb));

@@ -66,6 +66,7 @@ void	to_draw(t_game *game)
 //	draw_minimap(game);
 //	draw_miniplayer(game);
 	printf(CLRSCR);
+    printf("%f %f\n", game->player.posx, game->player.posy);
 }
 
 int exit_func()
