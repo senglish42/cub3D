@@ -58,14 +58,18 @@ int	if_invalid(const char *str, const char *format)
 
 void	to_draw(t_game *game)
 {
+	t_rend	rend[SCREEN_W];
+	t_wall	wall[SCREEN_W];
+
 	show_map(game);
-	make_3d(game);
+	round_value(game, rend, wall);
+	make_3d(game, rend, wall);
 	draw_minimap(game); //
 	draw_miniplayer(game); //
 //	my_clear_window(game);
 //	draw_minimap(game);
 //	draw_miniplayer(game);
-	printf(CLRSCR);
+//	printf(CLRSCR);
     printf("%f %f\n", game->player.posx, game->player.posy);
 }
 
@@ -90,9 +94,9 @@ int main(int argc, char **argv)
 	xpm_to_image(&game);
 	to_draw(&game);
 	mlx_put_image_to_window(game.vars.mlx, game.vars.win, game.image.img, 0, 0);
-    mlx_key_hook(game.vars.win, key_pressed, &game); //linux
+//    mlx_key_hook(game.vars.win, key_pressed, &game); //linux
     mlx_hook(game.vars.win, 17, 1L << 17, exit_func, &game);
-//	mlx_hook(game.vars.win, X_EVENT_KEY_PRESS, 0, &key_pressed, &game); //nac
+	mlx_hook(game.vars.win, X_EVENT_KEY_PRESS, 0, &key_pressed, &game); //nac
 	mlx_loop(game.vars.mlx);
 	return 0;
 }

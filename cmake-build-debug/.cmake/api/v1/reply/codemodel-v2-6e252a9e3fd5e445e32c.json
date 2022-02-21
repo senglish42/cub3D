@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "cub3d::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-cub3d-Debug-7fff886083a24ba264f7.json",
+					"jsonFile" : "target-cub3d-Debug-63cbe707f5c27c6045d2.json",
 					"name" : "cub3d",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/senglish/projects/cub3D/cmake-build-debug",
-		"source" : "/home/senglish/projects/cub3D"
+		"build" : "/Users/senglish/cub_black/cmake-build-debug",
+		"source" : "/Users/senglish/cub_black"
 	},
 	"version" : 
 	{

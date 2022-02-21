@@ -66,30 +66,30 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/senglish/projects/cub3D/includes"
+					"path" : "/Users/senglish/cub_black/includes"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/home/senglish/projects/cub3D/minilibx_linux"
+					"path" : "/Users/senglish/cub_black/minilibx_linux"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/senglish/projects/cub3D/libft"
+					"path" : "/Users/senglish/cub_black/libft"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "/home/senglish/projects/cub3D/srcs"
+					"path" : "/Users/senglish/cub_black/srcs"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "/home/senglish/projects/cub3D/.obj"
+					"path" : "/Users/senglish/cub_black/.obj"
 				}
 			],
 			"language" : "C",

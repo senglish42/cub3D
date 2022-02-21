@@ -144,6 +144,31 @@ typedef struct s_game
 	char        **parse;
 }				t_game;
 
+typedef struct s_side
+{
+	int flag;
+	int max;
+	double val;
+	double dif;
+}	t_side;
+
+typedef struct s_wall
+{
+	t_side	side[2];
+	int *flag;
+	int flagx;
+	int flagy;
+	int *max;
+	int maxx;
+	int maxy;
+	double j;
+	double *dif;
+	double difx;
+	double dify;
+	double y;
+	int window;
+} t_wall;
+
 typedef struct s_rend
 {
 	int		hit;
@@ -207,7 +232,7 @@ unsigned int f_c(int rgb[3]);
 void	up_down(t_game *game, double cos, double sin);
 void	left_right(t_game *game, double turn);
 int		key_pressed(int key, t_game *game);
-void	make_3d(t_game *game);
+void	make_3d(t_game *game, t_rend *rend, t_wall *wall);
 
 //	main.c	//
 int		exit_func();
@@ -233,6 +258,7 @@ void	show_map(t_game *game);
 
 //	rendering.c	//
 double	check_rad(double angle);
+void round_value(t_game *game, t_rend *rend, t_wall *wall);
 
 //	rgb.c	//
 char	*rgb_digit(char *str);
