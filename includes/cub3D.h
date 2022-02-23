@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:21:40 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/03 20:36:55 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/23 19:26:58 by senglish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,9 +193,6 @@ typedef struct s_vec
 	double	z;
 }	t_vec;
 
-////	dbg.c	//
-//void	draw_debug_map(t_game *game);
-
 //	draw.c	//
 void	my_mlx_pixel_put(t_img *image, int x, int y, int color);
 void	my_clear_window(t_game *game);
@@ -235,6 +232,7 @@ int		key_pressed(int key, t_game *game);
 void	make_3d(t_game *game, t_rend *rend, t_wall *wall);
 
 //	main.c	//
+void	xpm_to_image(t_game *game);
 int		exit_func();
 int		if_invalid(const char *str, const char *format);
 void	to_draw(t_game *game);

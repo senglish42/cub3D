@@ -11,8 +11,8 @@ void	my_mlx_pixel_put(t_img *image, int x, int y, int color)
 	if (y >= image->screen_h)	ERR = 1 ;
 	if (ERR)
 	{
-		printf("Error - trying to write to mem: x =%d y = %d %d %d\n", x ,y,
-			   image->screen_w, image->screen_h);
+//		printf("Error - trying to write to mem: x =%d y = %d %d %d\n", x ,y,
+//			   image->screen_w, image->screen_h);
 		return ;
 	}
 	dst = image->addr + (y * image->line_length + x *
@@ -69,9 +69,6 @@ void	draw_minimap(t_game *game)
 			if (game->map.size[posy][posx] == '1')
 				draw_quad(game, posx * size, posy * size, (posx + 1)
 				* size, (posy + 1) * size, BLACK);
-//			else
-//				draw_quad(game, posx * size, posy * size, (posx + 1)
-//				* size, (posy + 1) * size, WHITE);
 		}
 		posy++;
 	}

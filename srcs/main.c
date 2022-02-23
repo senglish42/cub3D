@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:14:36 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/03 20:44:56 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/23 20:58:04 by senglish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,22 @@ void	xpm_to_image(t_game *game)
 	//game->path[4] = malloc(sizeof(t_img) * 4);
 	while (++count < 4)
 	{
-		game->path[count].screen_h = game->image.screen_h / 50;
-		game->path[count].screen_w = game->image.screen_w;
-		printf("hii %d %d\n", game->path[count].screen_h, game->path[count]
-				.screen_w);
+		game->path[count].screen_h = 100;
+		game->path[count].screen_w = 100;
+
 		game->path[count].img = mlx_xpm_file_to_image(game->vars.mlx,
 													  game->ident.orient[count],
-													  &game->path[count].screen_w,
+													  &game->path[count]
+													  .screen_w,
 													  &game->path[count]
 													  .screen_h);
 		game->path[count].addr = mlx_get_data_addr(game->path[count].img, \
 		&game->path[count].bits_per_pixel, &game->path[count].line_length,
 														  &game->path[count]
 														  .endian);
-		free(game->ident.orient[count]);
+		printf("hii %d %d\n", game->path[count].screen_h, game->path[count]
+		.screen_w);
+	//	free(game->ident.orient[count]);
 	}
 }
 

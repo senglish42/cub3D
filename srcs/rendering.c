@@ -2,6 +2,7 @@
 
 unsigned int side(t_img *image, int j, int x)
 {
+//	printf("length %d %d\n", x, image->line_length);
 	return (*(unsigned int *)(image->addr + (j * image->line_length + x * \
 	image->bits_per_pixel / 8)));
 }
@@ -18,22 +19,22 @@ void	do_color(t_img *image, int x, int y, unsigned int color)
 
 void	find_ratio(t_game *game, t_rend *rend)
 {
-	while (rend->hit == 0 && rend->dist_to_wall < 10)
+	while (rend->hit == 0 && rend->dist_to_wall < 20)
 	{
-		rend->x_dir_del = (game->player.posx + rend->x_dir * rend->dist_to_wall);
-		rend->y_dir_del = (game->player.posy - rend->y_dir * rend->dist_to_wall);
+		rend->x_dir_del = (game->player.posx + rend->x_dir *
+				rend->dist_to_wall);
+		rend->y_dir_del = (game->player.posy - rend->y_dir *
+				rend->dist_to_wall);
 		if (game->map.size[(int) rend->y_dir_del][(int) rend->x_dir_del] == '1')
 			rend->hit = 1;
 		else
 			rend->dist_to_wall += 0.0005;
 	}
-    rend->size_wall = game->image.screen_h / rend->dist_to_wall / cos(rend->dif_a);
-    if (rend->size_wall > game->image.screen_h)
-        rend->size_wall = game->image.screen_h;
-    rend->ceil = (game->image.screen_h - rend->size_wall) / 2;
-    rend->floor = (rend->ceil + rend->size_wall);
-    if (!rend->dif_a)
-        rend->straight = rend->dist_to_wall;
+	rend->size_wall = game->image.screen_h / rend->dist_to_wall / cos(rend->dif_a);
+	rend->ceil = (game->image.screen_h - rend->size_wall) / 2;
+	rend->floor = (rend->ceil + rend->size_wall);
+	if (!rend->dif_a)
+		rend->straight = rend->dist_to_wall;
 }
 
 double	check_rad(double angle)
@@ -52,8 +53,9 @@ void	init_rend(t_game *game, t_rend *rend, int x)
 	rend->straight = -1;
 	rend->ray_a = x * VA / SCREEN_W;
 	rend->ray_a_h = (game->player.da + VA / 2) - rend->ray_a;
-	rend->dif_a = game->player.da - rend->ray_a_h;
-	rend->dif_a = check_rad(rend->dif_a);
+	rend->dif_a = fabs(game->player.da - rend->ray_a_h);
+//	rend->dif_a = check_rad(rend->dif_a);
+//	printf("check %d %f\n", x, rend->dif_a);
 	rend->y_dir = sin(rend->ray_a_h);
 	rend->x_dir = cos(rend->ray_a_h);
 	rend->x_dir_del = 0;
@@ -156,29 +158,45 @@ void	check_borders(t_rend *rend, t_wall *wall, int x)
 void	color_walls(t_game *game, t_rend *rend, t_wall *wall, int x)
 {
 	int cnt;
+	double add;
+	t_img *path;
 
+	path = NULL;
 	check_borders(rend, wall, x);
+	add = rend[x].ceil;
 	cnt = hor_ver(rend[x].x_dir_del, rend[x].y_dir_del);
-	while (wall[x].y < rend[x].floor)
+	if (cnt == 1 && (x == 0 || (x - 1 >= 0 && rend[x].x_dir_del >
+	rend[x - 1].x_dir_del)))
+		path = &game->path[3];
+	if (cnt == 1 && (x == 0 || (x - 1 >= 0 && rend[x].x_dir_del < rend[x - 1]
+	.x_dir_del)))
+		path = &game->path[2];
+	if (cnt == 2 && (x == 0 || (x - 1 >= 0 && rend[x].y_dir_del <
+	rend[x - 1].y_dir_del)))
+		path = &game->path[0];
+	if (cnt == 2 && (x == 0 || (x - 1 >= 0 && rend[x].y_dir_del >
+	rend[x - 1].y_dir_del)))
+		path = &game->path[1];
+	while (add++ < 0)
+		wall[x].y--;
+	while (wall[x].y < rend[x].floor && wall[x].y < SCREEN_W)
 	{
-		t_img *path;
-
-		path = NULL;
-		if (cnt == 1 && (x == 0 || (x - 1 >= 0 && rend[x].x_dir_del >
-												  rend[x - 1].x_dir_del)))
-			path = &game->path[3];
-		else if (cnt == 1 && (x == 0 || (x - 1 >= 0 && rend[x].x_dir_del < rend[x - 1].x_dir_del)))
-			path = &game->path[2];
-		if (cnt == 2 && (x == 0 || (x - 1 >= 0 && rend[x].y_dir_del <
-												  rend[x - 1].y_dir_del)))
-			path = &game->path[0];
-		if (cnt == 2 && (x == 0 || (x - 1 >= 0 && rend[x].y_dir_del >
-												  rend[x - 1].y_dir_del)))
-			path = &game->path[1];
-		do_color(&game->image, (int) x, (int) wall[x].y++, \
-                            side(path, (int) wall[x].j, (int) x));
-		wall[x].j += (double) path->screen_h /
-					 (double) rend[x].size_wall;
+		if (cnt == 1 && (int)rend[x].x_dir_del != (int)rend[x - 1].x_dir_del)
+		{
+			do_color(&game->image, x, (int) wall[x].y++, BLACK);
+//			xpm_to_image(game);
+		}
+		else if (cnt == 2 && (int)rend[x].y_dir_del != (int)rend[x - 1]
+		.y_dir_del)
+		{
+			do_color(&game->image, x, (int) wall[x].y++, BLACK);
+//			xpm_to_image(game);
+		}
+		else
+			do_color(&game->image, x, (int) wall[x].y++, \
+                           side(path, (int) wall[x].j, x));
+					 wall[x].j += (double)(path->screen_h) /
+				 (double)(rend[x].size_wall);
 	}
 }
 
@@ -189,11 +207,11 @@ void	make_3d(t_game *game, t_rend *rend, t_wall *wall)
 	x = -1;
     while(++x < SCREEN_W)
     {
-		while (++wall[x].y < rend[x].ceil)
+		while (++wall[x].y < rend[x].ceil && rend[x].ceil > 0)
 			do_color(&game->image, (int)x, (int)wall[x].y, f_c(game->ident
 			.c_rgb));
 		color_walls(game, rend, wall, x);
-        while (wall[x].y < game->image.screen_h)
+        while (rend[x].floor < SCREEN_H && wall[x].y < SCREEN_H)
 			do_color(&game->image, (int)x, (int)wall[x].y++, f_c(game->ident
 			.f_rgb));
 	}
@@ -212,4 +230,5 @@ void round_value(t_game *game, t_rend *rend, t_wall *wall)
 	x = -1;
 	while (++x < SCREEN_W)
 		init_wall(&wall[x], &rend[x], x);
+	printf("pos %f %f\n", rend[x].x_dir_del, rend[x].y_dir_del);
 }
