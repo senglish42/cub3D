@@ -27,6 +27,7 @@ void 	init_image(t_img *image, t_vars *vars)
 
 void    init_player(t_game *game)
 {
+	game->last_key = -1;
 	game->player.pos = NULL;
 	game->player.posx = -1;
 	game->player.posy = -1;
@@ -76,7 +77,7 @@ void init_ident(t_ident *ident)
 
 void init_param(t_game *game)
 {
-    init_ident(&game->ident);
+	init_ident(&game->ident);
     init_map(game);
 	init_player(game);
 	init_ray(game);

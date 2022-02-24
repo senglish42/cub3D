@@ -17,33 +17,21 @@
     <list default="true" id="6099bb2f-26df-4dd1-9836-4ed65dd5a301" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.obj/srcs/draw.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/draw.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/ident.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/ident.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/init.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/init.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/key_handler.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.obj/srcs/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/map.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/map.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/parse.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/parse.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/player.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/player.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.obj/srcs/rendering.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/rendering.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-67af9fc3d9ffa74da6a4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-e7d431e1cf9509ee1f9a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-6e252a9e3fd5e445e32c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-02-21T10-55-08-0480.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/vectors.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/vectors.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cub3D" beforeDir="false" afterPath="$PROJECT_DIR$/cub3D" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/path_to_the_east_texture.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/path_to_the_north_texture.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/path_to_the_south_texture.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/path_to_the_west_texture.xpm" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/cub3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/cub3D.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maps/map.cub" beforeDir="false" afterPath="$PROJECT_DIR$/maps/map.cub" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/draw.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/init.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/key_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/key_handler.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/rendering.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/rendering.c" afterDir="false" />
     </list>
@@ -92,7 +80,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -116,16 +104,6 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.cub3d">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="cub3d" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/maps/map1.cub" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cub3d" TARGET_NAME="cub3d" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cub3d" RUN_TARGET_NAME="cub3d">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -211,7 +189,9 @@
       <workItem from="1645511973115" duration="1075000" />
       <workItem from="1645515828485" duration="2309000" />
       <workItem from="1645520778980" duration="15029000" />
-      <workItem from="1645623257288" duration="14806000" />
+      <workItem from="1645623257288" duration="14948000" />
+      <workItem from="1645692039300" duration="7737000" />
+      <workItem from="1645707281845" duration="12717000" />
     </task>
     <servers />
   </component>
@@ -228,7 +208,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -260,7 +239,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/key_handler.c</url>
-          <line>28</line>
+          <line>82</line>
           <option name="timeStamp" value="104" />
         </line-breakpoint>
       </breakpoints>

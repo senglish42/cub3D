@@ -29,7 +29,8 @@ void	xpm_to_image(t_game *game)
 													  .screen_w,
 													  &game->path[count]
 													  .screen_h);
-		game->path[count].addr = mlx_get_data_addr(game->path[count].img, \
+		game->path[count].addr = mlx_get_data_addr(game->path[count]
+				.img, \
 		&game->path[count].bits_per_pixel, &game->path[count].line_length,
 														  &game->path[count]
 														  .endian);
@@ -60,19 +61,16 @@ int	if_invalid(const char *str, const char *format)
 
 void	to_draw(t_game *game)
 {
-	t_rend	rend[SCREEN_W];
-	t_wall	wall[SCREEN_W];
-
 	show_map(game);
-	round_value(game, rend, wall);
-	make_3d(game, rend, wall);
+	round_value(game, game->rend, game->wall);
+	make_3d(game, game->rend, game->wall);
 	draw_minimap(game); //
 	draw_miniplayer(game); //
+	printf("dist %f\n", game->rend->dist_to_wall);
 //	my_clear_window(game);
 //	draw_minimap(game);
 //	draw_miniplayer(game);
 //	printf(CLRSCR);
-    printf("%f %f\n", game->player.posx, game->player.posy);
 }
 
 int exit_func()
@@ -88,6 +86,7 @@ int main(int argc, char **argv)
 	if (argc != 2)
 		error(2);
 	init_param(&game);
+	game.rend->dist_to_wall = 0.5;
 	parse(&game, if_invalid(argv[1], ".cub"));
 	game.player.dx = cos(game.player.da);
 	game.player.dy = sin(game.player.da);

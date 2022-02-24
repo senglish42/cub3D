@@ -28,8 +28,8 @@
 
 # define CLRSCR	"\e[1;1H\e[2J"
 
-# define SCREEN_W	1024
-# define SCREEN_H	768
+# define SCREEN_W	600
+# define SCREEN_H	600
 
 # define ABS(X) (((X) < 0) ? (-(X)) : (X))
 # define MAX(A , B) ((A > B) ? A : B)
@@ -132,17 +132,16 @@ typedef struct s_ray
 	double yo;
 }	t_ray;
 
-typedef struct s_game
+typedef struct s_text
 {
-	t_img		image;
-	t_vars		vars;
-	t_map       map;
-	t_ident     ident;
-    t_player    player;
-	t_ray		ray;
-	t_img		path[4];
-	char        **parse;
-}				t_game;
+	void	*img;
+	int 	*addr;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
+	int		screen_w;
+	int		screen_h;
+}	t_text;
 
 typedef struct s_side
 {
@@ -193,6 +192,21 @@ typedef struct s_vec
 	double	z;
 }	t_vec;
 
+typedef struct s_game
+{
+	t_img 		xpm[SCREEN_W];
+	int 		last_key;
+	t_img		image;
+	t_vars		vars;
+	t_map       map;
+	t_ident     ident;
+	t_player    player;
+	t_ray		ray;
+	t_img		path[4];
+	t_rend		rend[SCREEN_W];
+	t_wall		wall[SCREEN_W];
+	char        **parse;
+}				t_game;
 //	draw.c	//
 void	my_mlx_pixel_put(t_img *image, int x, int y, int color);
 void	my_clear_window(t_game *game);

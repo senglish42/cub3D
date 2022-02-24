@@ -15,7 +15,7 @@ void	my_mlx_pixel_put(t_img *image, int x, int y, int color)
 //			   image->screen_w, image->screen_h);
 		return ;
 	}
-	dst = image->addr + (y * image->line_length + x *
+	dst = (char *)image->addr + (y * image->line_length + x *
 			(image->bits_per_pixel /
 			8));
 	*(unsigned int*)dst = color;
