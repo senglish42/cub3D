@@ -6,26 +6,33 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 16:24:00 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/03 20:29:33 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/25 19:39:51 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3D.h"
 
-void 	init_image(t_img *image, t_vars *vars)
+void	init_image(t_img *image, t_vars *vars)
 {
 	image->screen_w = SCREEN_W;
 	image->screen_h = SCREEN_H;
-	vars->mlx = mlx_init(); // return NULL if init is failed
-	vars->win = mlx_new_window(vars->mlx, image->screen_w, image->screen_h,
-								   "Cub 3D");
-	image->img = mlx_new_image(vars->mlx, image->screen_w,
-									image->screen_h);
-	image->addr = mlx_get_data_addr(
-			image->img, &image->bits_per_pixel, &image->line_length, &image->endian);
+	vars->mlx = mlx_init();
+	if (vars->mlx == NULL)
+		return (error(17));
+	vars->win = mlx_new_window(vars->mlx, \
+	image->screen_w, image->screen_h, "Cub 3D");
+	if (vars->win == NULL)
+		return (error(18));
+	image->img = mlx_new_image(vars->mlx, image->screen_w, image->screen_h);
+	if (image->img == NULL)
+		return (error(19));
+	image->addr = mlx_get_data_addr(image->img, \
+	&image->bits_per_pixel, &image->line_length, &image->endian);
+	if (image->addr == NULL)
+		return (error(20));
 }
 
-void    init_player(t_game *game)
+void	init_player(t_game *game)
 {
 	game->last_key = -1;
 	game->player.pos = NULL;
@@ -36,14 +43,6 @@ void    init_player(t_game *game)
 	game->player.dy = 0;
 	game->player.maxa = -1;
 	game->player.mina = -1;
-}
-
-void    init_map(t_game *game)
-{
-	game->map.height = 0;
-    game->map.width = 0;
-	game->map.scale = 3;
-	game->map.size = NULL;
 }
 
 void	init_ray(t_game *game)
@@ -59,14 +58,14 @@ void	init_ray(t_game *game)
 	game->ray.r = 0;
 }
 
-void init_ident(t_ident *ident)
+void	init_ident(t_ident *ident)
 {
-    ident->orient[0] = NULL;
-    ident->orient[1] = NULL;
-    ident->orient[2] = NULL;
-    ident->orient[3] = NULL;
-    ident->orient[4] = NULL;
-    ident->orient[5] = NULL;
+	ident->orient[0] = NULL;
+	ident->orient[1] = NULL;
+	ident->orient[2] = NULL;
+	ident->orient[3] = NULL;
+	ident->orient[4] = NULL;
+	ident->orient[5] = NULL;
 	ident->f_rgb[0] = -1;
 	ident->f_rgb[1] = -1;
 	ident->f_rgb[2] = -1;
@@ -75,10 +74,13 @@ void init_ident(t_ident *ident)
 	ident->c_rgb[2] = -1;
 }
 
-void init_param(t_game *game)
+void	init_param(t_game *game)
 {
 	init_ident(&game->ident);
-    init_map(game);
+	game->map.height = 0;
+	game->map.width = 0;
+	game->map.scale = 3;
+	game->map.size = NULL;
 	init_player(game);
 	init_ray(game);
 }
