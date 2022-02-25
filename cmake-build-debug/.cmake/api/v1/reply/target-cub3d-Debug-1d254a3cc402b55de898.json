@@ -73,23 +73,23 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/senglish/cub_black/includes"
+					"path" : "/Users/senglish/black/includes"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/Users/senglish/cub_black/minilibx_linux"
+					"path" : "/Users/senglish/black/minilibx_linux"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/Users/senglish/cub_black/libft"
+					"path" : "/Users/senglish/black/libft"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "/Users/senglish/cub_black/srcs"
+					"path" : "/Users/senglish/black/srcs"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "/Users/senglish/cub_black/.obj"
+					"path" : "/Users/senglish/black/.obj"
 				}
 			],
 			"language" : "C",

@@ -6,6 +6,7 @@
 			[
 				{
 					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
@@ -38,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "cub3d::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-cub3d-Debug-63cbe707f5c27c6045d2.json",
+					"jsonFile" : "target-cub3d-Debug-1d254a3cc402b55de898.json",
 					"name" : "cub3d",
 					"projectIndex" : 0
 				}
@@ -48,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/senglish/cub_black/cmake-build-debug",
-		"source" : "/Users/senglish/cub_black"
+		"build" : "/Users/senglish/black/cmake-build-debug",
+		"source" : "/Users/senglish/black"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 2
+		"minor" : 3
 	}
 }

@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/senglish/cub_black/cmake-build-debug"
+			"value" : "/Users/senglish/black/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "20"
+			"value" : "21"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "2"
+			"value" : "1"
 		},
 		{
 			"name" : "CMAKE_CODEBLOCKS_COMPILER_ID",
@@ -194,7 +194,7 @@
 					"value" : "C compiler"
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc"
 		},
 		{
@@ -276,18 +276,6 @@
 			],
 			"type" : "STRING",
 			"value" : "-O2 -g -DNDEBUG"
-		},
-		{
-			"name" : "CMAKE_DEPENDS_USE_COMPILER",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : "FALSE"
 		},
 		{
 			"name" : "CMAKE_DLLTOOL",
@@ -507,7 +495,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/senglish/cub_black"
+			"value" : "/Users/senglish/black"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -835,7 +823,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.20"
+			"value" : "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1099,7 +1087,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/senglish/cub_black/cmake-build-debug"
+			"value" : "/Users/senglish/black/cmake-build-debug"
 		},
 		{
 			"name" : "cub3d_IS_TOP_LEVEL",
@@ -1123,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/senglish/cub_black"
+			"value" : "/Users/senglish/black"
 		}
 	],
 	"kind" : "cache",

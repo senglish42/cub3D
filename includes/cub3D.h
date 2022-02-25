@@ -28,8 +28,8 @@
 
 # define CLRSCR	"\e[1;1H\e[2J"
 
-# define SCREEN_W	600
-# define SCREEN_H	600
+# define SCREEN_W	1200
+# define SCREEN_H	800
 
 # define ABS(X) (((X) < 0) ? (-(X)) : (X))
 # define MAX(A , B) ((A > B) ? A : B)
