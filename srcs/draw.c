@@ -51,19 +51,18 @@ void	my_clear_window(t_game *game)
 	}
 }
 
-void	draw_quad(t_game *game, int x, int y, int x0, int y0, int color)
+void	draw_quad(t_game *game, int x, int y, int x0, int y0)
 {
 	int	i;
 	int	j;
 
 	i = y;
-	j = x;
 	while (i < y0)
 	{
 		j = x;
 		while (j < x0)
 		{
-			my_mlx_pixel_put(&game->image, j, i, color);
+			my_mlx_pixel_put(&game->image, j, i, BLACK);
 			j++;
 		}
 		i++;
@@ -83,7 +82,6 @@ void	draw_minimap(t_game *game)
 	int	posy;
 	int	size;
 
-	posx = 0;
 	posy = 0;
 	size = 8;
 	while (posy < game->map.height)
@@ -93,7 +91,7 @@ void	draw_minimap(t_game *game)
 		{
 			if (player_or_space(game->map.size[posy][posx]))
 				draw_quad(game, posx * size, posy * size, \
-				(posx + 1) * size, (posy + 1) * size, BLACK);
+				(posx + 1) * size, (posy + 1) * size);
 		}
 		posy++;
 	}
@@ -105,7 +103,6 @@ void	draw_scaled_point(t_game *game, double x, double y, int color)
 	int	j;
 
 	i = 0;
-	j = 0;
 	while (i < game->map.scale)
 	{
 		j = 0;

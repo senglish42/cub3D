@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 #include "cub3D.h"
 
-void 	check_rgb(t_ident *ident)
+void	check_rgb(t_ident *ident)
 {
-	short count;
-	short flag;
+	short	count;
+	short	flag;
 
 	count = -1;
 	flag = 0;
@@ -33,7 +33,7 @@ void 	check_rgb(t_ident *ident)
 		error(12);
 }
 
-char 	*rgb_sep(char *str, char sep, int count)
+char	*rgb_sep(char *str, char sep, int count)
 {
 	if (*str && count < 2 && sep != *str++)
 		error(13);
@@ -47,12 +47,12 @@ char	*rgb_digit(char *str)
 	return (str);
 }
 
-void    rgb_ident(t_ident *ident)
+void	rgb_ident(t_ident *ident)
 {
-	int 	count;
+	int		count;
 	char	sep;
-	char    *floor;
-	char    *ceiling;
+	char	*floor;
+	char	*ceiling;
 
 	count = -1;
 	floor = ident->orient[4];

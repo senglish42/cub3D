@@ -12,10 +12,11 @@ LIB		=	./libft/libft.a
 
 SRCS_DIR=	srcs
 
-SRCS	=	$(SRCS_DIR)/draw.c		$(SRCS_DIR)/error.c			$(SRCS_DIR)/ident.c\
-			$(SRCS_DIR)/init.c		$(SRCS_DIR)/key_handler.c	$(SRCS_DIR)/main.c\
-			$(SRCS_DIR)/map.c		$(SRCS_DIR)/parse.c			$(SRCS_DIR)/player.c\
-			$(SRCS_DIR)/rendering.c	$(SRCS_DIR)/rgb.c			$(SRCS_DIR)/vectors.c\
+SRCS	=	$(SRCS_DIR)/draw.c		$(SRCS_DIR)/border.c	$(SRCS_DIR)/error.c\
+			$(SRCS_DIR)/ident.c		$(SRCS_DIR)/init.c		$(SRCS_DIR)/key_handler.c\
+			$(SRCS_DIR)/main.c		$(SRCS_DIR)/map.c		$(SRCS_DIR)/parse.c\
+			$(SRCS_DIR)/player.c	$(SRCS_DIR)/rendering.c	$(SRCS_DIR)/rgb.c\
+			$(SRCS_DIR)/value.c		$(SRCS_DIR)/wall.c\
 
 #B_DIR	=	$(B_DIR)/
 #

@@ -207,10 +207,16 @@ typedef struct s_game
 	t_wall		wall[SCREEN_W];
 	char        **parse;
 }				t_game;
+
+//	border.c	//
+void	check_borders(t_rend *rend, t_wall *wall, int x);
+void	set_flag(t_wall *wall, int x, int vec);
+double	fix_border(double current);
+
 //	draw.c	//
 void	my_mlx_pixel_put(t_img *image, int x, int y, int color);
 void	my_clear_window(t_game *game);
-void	draw_quad(t_game *game, int x, int y, int x0, int y0, int color);
+void	draw_quad(t_game *game, int x, int y, int x0, int y0);
 void	draw_minimap(t_game *game);
 void 	draw_scaled_point(t_game *game, double x, double y, int color);
 void	draw_miniplayer(t_game *game);
@@ -256,7 +262,7 @@ int		main(int argc, char **argv);
 void    check_walls(t_game *game, short height, short width);
 void    check_player(t_game *game, short height, short width);
 void    check_map(t_game *game);
-void    fill_map(t_game *game, short num);
+void    fill_map(t_game *game, short num, short flag);
 void    parse_map(t_game *game, short num);
 
 //	parse.c	//
@@ -269,8 +275,9 @@ void	move_player(t_game *game, int x, int y);
 void	show_map(t_game *game);
 
 //	rendering.c	//
-double	check_rad(double angle);
-void round_value(t_game *game, t_rend *rend, t_wall *wall);
+//double	check_rad(double angle);
+void	round_value(t_game *game, t_rend *rend, t_wall *wall);
+void	dist_to_wall(t_game *game, int x);
 
 //	rgb.c	//
 char	*rgb_digit(char *str);
@@ -278,13 +285,16 @@ char 	*rgb_sep(char *str, char sep, int count);
 void 	check_rgb(t_ident *ident);
 void    rgb_ident(t_ident *ident);
 
-//	vectors.c	//
-t_vec	add_vec(t_vec a, t_vec b);
-double	vec_length(t_vec vec);
-t_vec	normilize_vec(t_vec vec);
-t_vec	multipleByScalar(t_vec vec, double value);
-double	round_down(double x);
-double	round_up(double x);
-void	find_min_vec(t_vec a, t_vec b, t_vec *res);
+//	value.c	//
+void	round_value(t_game *game, t_rend *rend, t_wall *wall);
+void	init_rend(t_game *game, t_rend *rend, int x);
+void	find_ratio(t_game *game, t_rend *rend, int x);
+void	init_wall(t_wall *wall, t_rend *rend, int x);
+
+//	wall.c	//
+int		side_h(t_game *game, t_rend	*rend, int x);
+int		side_w(t_game *game, t_rend	*rend, int x);
+void	cmpx_cmpy(t_rend *rend, int x);
+int		hor_ver(double x, double y);
 
 #endif

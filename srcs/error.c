@@ -49,7 +49,9 @@ void	error_identifier(int num)
 
 void	error(int num)
 {
-	if (num == 2)
+	if (num == 1)
+		ft_putstr_fd("ERROR: memory can not be allocated.\n", num);
+	else if (num == 2)
 		ft_putstr_fd("ERROR: invalid number of argc.\n", num);
 	else if (num == 3)
 		ft_putstr_fd("ERROR: invalid format of an argument.\n", num);

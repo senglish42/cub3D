@@ -26,48 +26,20 @@
       <change beforePath="$PROJECT_DIR$/.obj/srcs/parse.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/parse.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.obj/srcs/player.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/player.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.obj/srcs/rendering.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/rendering.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/rgb.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/rgb.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/vectors.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/vectors.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-c33179d978ea6a4988be.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-65fce364225f89926b2f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-3c191857005b1b09f702.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-02-23T13-34-17-0290.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-cub3d-Debug-63cbe707f5c27c6045d2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cub3d.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cub3d.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cub3d.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/vectors.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cub3D" beforeDir="false" afterPath="$PROJECT_DIR$/cub3D" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/m_706001269_w640_h640_kirpich-roben-keramicheskijaarhus-_1_.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/m_706001269_w640_h640_kirpich-roben-keramicheskijaarhus-_2_.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/path_to_the_east_texture.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/images/path_to_the_east_texture.xpm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/path_to_the_east_texture1.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/path_to_the_north_texture.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/images/path_to_the_north_texture.xpm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/path_to_the_north_texture1.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/path_to_the_south_texture.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/images/path_to_the_south_texture.xpm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/path_to_the_south_texture1.xpm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/path_to_the_west_texture.xpm" beforeDir="false" afterPath="$PROJECT_DIR$/images/path_to_the_west_texture.xpm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/path_to_the_west_texture1.xpm" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/cub3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/cub3D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/draw.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/error.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/error.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/key_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/key_handler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/map.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/map.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/parse.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/parse.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/player.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/player.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/rendering.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/rendering.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/rgb.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/rgb.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +92,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="structure.view.defaults.are.configured" value="true" />
   </component>
   <component name="RecentsManager">
@@ -231,7 +203,7 @@
       <workItem from="1645623257288" duration="14948000" />
       <workItem from="1645692039300" duration="7737000" />
       <workItem from="1645707281845" duration="12717000" />
-      <workItem from="1645801040815" duration="2334000" />
+      <workItem from="1645801040815" duration="21410000" />
     </task>
     <servers />
   </component>
@@ -254,17 +226,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/map.c</url>
-          <line>74</line>
+          <line>72</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/map.c</url>
-          <line>116</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/srcs/map.c</url>
-          <line>107</line>
+          <line>114</line>
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -279,7 +246,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/key_handler.c</url>
-          <line>28</line>
+          <line>37</line>
           <option name="timeStamp" value="104" />
         </line-breakpoint>
       </breakpoints>
