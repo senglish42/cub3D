@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   rgb.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: senglish <senglish@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 16:05:25 by senglish          #+#    #+#             */
-/*   Updated: 2022/01/25 16:05:25 by senglish         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:21:41 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "cub3D.h"
 
-void	check_rgb(t_ident *ident)
+static void	check_rgb(t_ident *ident)
 {
 	short	count;
 	short	flag;
@@ -33,14 +34,14 @@ void	check_rgb(t_ident *ident)
 		error(12);
 }
 
-char	*rgb_sep(char *str, char sep, int count)
+static char	*rgb_sep(char *str, char sep, int count)
 {
 	if (*str && count < 2 && sep != *str++)
 		error(13);
 	return (str);
 }
 
-char	*rgb_digit(char *str)
+static char	*rgb_digit(char *str)
 {
 	while (ft_isdigit(*str))
 		str++;

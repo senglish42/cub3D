@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 19:48:57 by svirgil           #+#    #+#             */
-/*   Updated: 2022/02/26 12:04:46 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/26 14:51:56 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,10 @@ void	my_mlx_pixel_put(t_img *image, int x, int y, int color)
 	*(unsigned int *)dst = color;
 }
 
-void	my_clear_window(t_game *game)
+unsigned int	side(t_img *image, int j, int x)
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	while (i < game->image.screen_w)
-	{
-		j = 0;
-		while (j < game->image.screen_h)
-		{
-			my_mlx_pixel_put(&game->image, i, j, GRAY);
-			j++;
-		}
-		i++;
-	}
+	return (*(unsigned int *)(image->addr + (j * image->line_length + x * \
+	image->bits_per_pixel / 8)));
 }
 
 void	draw_quad(t_game *game, t_point from, t_point to, int scale)

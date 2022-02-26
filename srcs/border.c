@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   border.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: senglish <senglish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 01:35:16 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/26 01:35:17 by senglish         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:03:21 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3D.h"
 
-double	fix_border(double current)
+static double	fix_border(double current)
 {
 	double	more;
 	double	less;
@@ -30,7 +30,7 @@ double	fix_border(double current)
 	return (current);
 }
 
-void	set_flag(t_wall *wall, int x, int vec)
+static void	set_flag(t_wall *wall, int x, int vec)
 {
 	int	num;
 

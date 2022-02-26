@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 10:59:45 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/25 19:48:00 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/26 15:09:34 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	compare_ident(char *orient[6])
 	}
 }
 
-void	fill_ident(char **turn, const char *orient, const char *str, int no)
+static void	fill_ident(char **turn, const char *orient, const char *str, int no)
 {
 	int	a;
 

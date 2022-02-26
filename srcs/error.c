@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 10:59:59 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/25 19:36:28 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/26 15:04:06 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	error_mlx(int num)
 		ft_putstr_fd("ERROR: Failed to get image address", num);
 }
 
-void	error_identifier(int num)
+static void	error_identifier(int num)
 {
 	if (num == 9)
 		ft_putstr_fd("ERROR: structure identification is already set\n", num);

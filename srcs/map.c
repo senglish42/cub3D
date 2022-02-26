@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   map.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: senglish <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 14:42:00 by senglish          #+#    #+#             */
-/*   Updated: 2022/01/25 14:15:01 by senglish         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:13:39 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "cub3D.h"
 
-void	check_walls(t_game *game, short height, short width)
+static void	check_walls(t_game *game, short height, short width)
 {
 	if (!height || (height == game->map.height - 1))
 		error(7);
@@ -40,7 +41,7 @@ void	check_walls(t_game *game, short height, short width)
 		error(7);
 }
 
-void	check_player(t_game *game, short height, short width)
+static void	check_player(t_game *game, short height, short width)
 {
 	const char	player[5] = "NSWE\0";
 
@@ -88,7 +89,7 @@ void	check_map(t_game *game)
 		error(8);
 }
 
-void	malloc_error(t_game *game, int num)
+static void	malloc_error(t_game *game, int num)
 {
 	if (num == 0)
 	{

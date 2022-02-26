@@ -6,21 +6,15 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 01:35:57 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/26 14:00:21 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/26 15:16:12 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3D.h"
 
-unsigned int	f_c(int rgb[3])
+static unsigned int	f_c(int rgb[3])
 {
 	return (rgb[0] << 16 | rgb[1] << 8 | rgb[2]);
-}
-
-unsigned int	side(t_img *image, int j, int x)
-{
-	return (*(unsigned int *)(image->addr + (j * image->line_length + x * \
-	image->bits_per_pixel / 8)));
 }
 
 void	do_color(t_img *image, int x, int y, unsigned int color)
@@ -28,7 +22,7 @@ void	do_color(t_img *image, int x, int y, unsigned int color)
 	my_mlx_pixel_put(image, x, y, color);
 }
 
-void	color_walls(t_game *game, t_rend *rend, t_wall *wall, int x)
+static void	color_walls(t_game *game, t_rend *rend, t_wall *wall, int x)
 {
 	int		cnt;
 	double	add;
@@ -56,6 +50,15 @@ void	color_walls(t_game *game, t_rend *rend, t_wall *wall, int x)
 	}
 }
 
+static void	color_floor(t_game *game, t_rend *rend, t_wall *wall, int x)
+{
+	while (rend[x].floor < SCREEN_H && wall[x].y < SCREEN_H)
+	{
+		do_color(&game->image, (int)x, (int)wall[x].y++,
+			f_c(game->ident.f_rgb));
+	}
+}
+
 void	make_3d(t_game *game, t_rend *rend, t_wall *wall)
 {
 	int	x;
@@ -67,8 +70,6 @@ void	make_3d(t_game *game, t_rend *rend, t_wall *wall)
 			do_color(&game->image, (int)x, (int)wall[x].y,
 				f_c(game->ident.c_rgb));
 		color_walls(game, rend, wall, x);
-		while (rend[x].floor < SCREEN_H && wall[x].y < SCREEN_H)
-			do_color(&game->image, (int)x, (int)wall[x].y++,
-				f_c(game->ident.f_rgb));
+		color_floor(game, rend, wall, x);
 	}
 }

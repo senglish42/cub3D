@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   value.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: senglish <senglish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 01:36:02 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/26 01:36:03 by senglish         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:20:18 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3D.h"
 
-void	init_wall(t_wall *wall, t_rend *rend, int x)
+static void	init_wall(t_wall *wall, t_rend *rend, int x)
 {
 	int	num;
 
@@ -31,7 +31,7 @@ void	init_wall(t_wall *wall, t_rend *rend, int x)
 	wall->y = -1;
 }
 
-void	find_ratio(t_game *game, t_rend *rend, int x)
+static void	find_ratio(t_game *game, t_rend *rend, int x)
 {
 	dist_to_wall(game, x);
 	rend->size_wall = game->image.screen_h / rend->dist_to_wall
@@ -42,7 +42,7 @@ void	find_ratio(t_game *game, t_rend *rend, int x)
 		rend->straight = rend->dist_to_wall;
 }
 
-void	init_rend(t_game *game, t_rend *rend, int x)
+static void	init_rend(t_game *game, t_rend *rend, int x)
 {
 	rend->hit = 0;
 	rend->dist_to_wall = 0;

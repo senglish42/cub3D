@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 16:24:00 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/25 19:39:51 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/26 15:06:40 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	init_image(t_img *image, t_vars *vars)
 		return (error(20));
 }
 
-void	init_player(t_game *game)
+static void	init_player(t_game *game)
 {
 	game->last_key = -1;
 	game->player.pos = NULL;
@@ -45,7 +45,7 @@ void	init_player(t_game *game)
 	game->player.mina = -1;
 }
 
-void	init_ray(t_game *game)
+static void	init_ray(t_game *game)
 {
 	game->ray.rx = 0;
 	game->ray.ry = 0;
@@ -58,7 +58,7 @@ void	init_ray(t_game *game)
 	game->ray.r = 0;
 }
 
-void	init_ident(t_ident *ident)
+static void	init_ident(t_ident *ident)
 {
 	ident->orient[0] = NULL;
 	ident->orient[1] = NULL;

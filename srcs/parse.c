@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: senglish <senglish@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 10:59:49 by senglish          #+#    #+#             */
-/*   Updated: 2022/01/22 20:28:22 by senglish         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:15:06 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "cub3D.h"
 
 int	if_invalid(const char *str, const char *format)
@@ -29,7 +30,7 @@ int	if_invalid(const char *str, const char *format)
 	return (fd);
 }
 
-void	parse_map(t_game *game, short num)
+static void	parse_map(t_game *game, short num)
 {
 	const char	valid[7] = " 01NSWE";
 	short		height;
@@ -75,7 +76,7 @@ short	parse_ident(t_game *game)
 	return (height);
 }
 
-void	read_line(t_game *game, int fd)
+static void	read_line(t_game *game, int fd)
 {
 	char	ch;
 	char	*str;

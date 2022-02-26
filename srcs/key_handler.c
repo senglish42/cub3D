@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   key_handler.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: senglish <senglish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 01:35:46 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/26 01:35:48 by senglish         ###   ########.fr       */
+/*   Updated: 2022/02/26 15:08:23 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3D.h"
 
-double	check_rad(double angle)
+static double	check_rad(double angle)
 {
 	if (angle > 2 * PI)
 		angle -= 2 * PI;
@@ -21,7 +21,7 @@ double	check_rad(double angle)
 	return (angle);
 }
 
-void	up_down(t_game *game, double cos, double sin)
+static void	up_down(t_game *game, double cos, double sin)
 {
 	double	x;
 	double	y;
@@ -48,7 +48,7 @@ void	up_down(t_game *game, double cos, double sin)
 	game->player.posy = y;
 }
 
-void	left_right(t_game *game, double turn)
+static void	left_right(t_game *game, double turn)
 {
 	game->player.da = game->player.da + turn;
 	game->player.da = check_rad(game->player.da);
@@ -58,7 +58,7 @@ void	left_right(t_game *game, double turn)
 		move_player(game, (int) game->player.posx, (int)game->player.posy);
 }
 
-void	move_updowm(t_game *game, int key)
+static void	move_updown(t_game *game, int key)
 {
 	dist_to_wall(game, SCREEN_W / 2);
 	dist_to_wall(game, SCREEN_W / 2 - 2);
@@ -84,7 +84,7 @@ int	key_pressed(int key, t_game *game)
 		exit_func();
 	}
 	else if (key == KEY_UP || key == KEY_DOWN)
-		move_updowm(game, key);
+		move_updown(game, key);
 	else if (key == KEY_LEFT)
 		left_right(game, 5 * PI / 180);
 	else if (key == KEY_RIGHT)
