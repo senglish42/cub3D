@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 19:48:57 by svirgil           #+#    #+#             */
-/*   Updated: 2022/02/25 20:35:31 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/26 12:04:46 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,49 +51,21 @@ void	my_clear_window(t_game *game)
 	}
 }
 
-void	draw_quad(t_game *game, int x, int y, int x0, int y0)
+void	draw_quad(t_game *game, t_point from, t_point to, int scale)
 {
 	int	i;
 	int	j;
 
-	i = y;
-	while (i < y0)
+	i = from.y * scale;
+	while (i < to.y * scale)
 	{
-		j = x;
-		while (j < x0)
+		j = from.x * scale;
+		while (j < to.x * scale)
 		{
 			my_mlx_pixel_put(&game->image, j, i, BLACK);
 			j++;
 		}
 		i++;
-	}
-}
-
-static int	player_or_space(char c)
-{
-	if (c == '0' || c == 'N' || c == 'W' || c == 'E' || c == 'S')
-		return (TRUE);
-	return (FALSE);
-}
-
-void	draw_minimap(t_game *game)
-{
-	int	posx;
-	int	posy;
-	int	size;
-
-	posy = 0;
-	size = 8;
-	while (posy < game->map.height)
-	{
-		posx = -1;
-		while (++posx < game->map.width)
-		{
-			if (player_or_space(game->map.size[posy][posx]))
-				draw_quad(game, posx * size, posy * size, \
-				(posx + 1) * size, (posy + 1) * size);
-		}
-		posy++;
 	}
 }
 
@@ -112,29 +84,5 @@ void	draw_scaled_point(t_game *game, double x, double y, int color)
 			j++;
 		}
 		i++;
-	}
-}
-
-void	draw_miniplayer(t_game *game)
-{
-	draw_scaled_point(game, game->player.posx, game->player.posy, YELLOW);
-}
-
-void	draw_line(t_game *game, double x, double y, double x1, double y1, int color)
-{
-	double	deltax;
-	double	deltay;
-	int		max;
-
-	deltax = x1 - x;
-	deltay = y1 - y;
-	max = MAX(ABS(deltax), ABS(deltay));
-	deltay /= max;
-	deltax /= max;
-	while ((int)(x1 - x) || (int)(y1 - y))
-	{
-		my_mlx_pixel_put(&game->image, x, y, color);
-		x += deltax;
-		y += deltay;
 	}
 }
