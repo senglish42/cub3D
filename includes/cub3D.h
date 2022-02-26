@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:21:40 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/26 15:21:53 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/26 16:49:38 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,6 +169,7 @@ typedef struct s_rend
 	double	ceil;
 	double	floor;
 	double	straight;
+	double	shadow_zone; //
 }	t_rend;
 
 typedef struct s_vec
@@ -237,7 +238,7 @@ void			check_ident(t_game *game, short height, short width);
 
 //	main.c	//
 void			xpm_to_image(t_game *game);
-int				exit_func(void);
+int				exit_func(t_game *game);
 int				if_invalid(const char *str, const char *format);
 void			to_draw(t_game *game);
 int				main(int argc, char **argv);

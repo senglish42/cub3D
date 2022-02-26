@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 01:35:46 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/26 15:08:23 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/26 16:05:51 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int	key_pressed(int key, t_game *game)
 	if (key == KEY_ESC)
 	{
 		free(game->map.size);
-		exit_func();
+		exit_func(game);
 	}
 	else if (key == KEY_UP || key == KEY_DOWN)
 		move_updown(game, key);
