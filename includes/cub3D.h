@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:21:40 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/26 16:49:38 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/26 17:35:08 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,7 +169,7 @@ typedef struct s_rend
 	double	ceil;
 	double	floor;
 	double	straight;
-	double	shadow_zone; //
+	double	shadow_zone;
 }	t_rend;
 
 typedef struct s_vec

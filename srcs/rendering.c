@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 01:35:57 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/26 17:20:27 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/26 17:34:36 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static void	color_floor(t_game *game, t_rend *rend, t_wall *wall, int x)
 {
 	while (rend[x].floor < SCREEN_H && wall[x].y < SCREEN_H)
 	{
-		if ( (int)wall[x].y > rend->shadow_zone)
+		if ((int)wall[x].y > rend->shadow_zone)
 			do_color(&game->image, (int)x, (int)wall[x].y++,
 				f_c(game->ident.f_rgb));
 		else
@@ -74,7 +74,6 @@ void	make_3d(t_game *game, t_rend *rend, t_wall *wall)
 			do_color(&game->image, (int)x, (int)wall[x].y,
 				f_c(game->ident.c_rgb));
 		color_walls(game, rend, wall, x);
-		//color_floor(game, rend, wall, x);
 	}
 	x = -1;
 	while (++x < SCREEN_W)

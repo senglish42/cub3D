@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:14:36 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/26 17:31:17 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/26 17:34:03 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ void	to_draw(t_game *game)
 int	exit_func(t_game *game)
 {
 	game->map.height = game->map.height;
-	
 	free(game->map.size[0]);
 	free(game->map.size[1]);
 	free(game->map.size[2]);
