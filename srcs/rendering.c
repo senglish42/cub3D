@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rendering.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: senglish <senglish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 01:35:57 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/26 01:35:58 by senglish         ###   ########.fr       */
+/*   Updated: 2022/02/26 14:00:21 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	color_walls(t_game *game, t_rend *rend, t_wall *wall, int x)
 	int		cnt;
 	double	add;
 	int		a;
+	t_point	helper;
 
 	if (x != SCREEN_W / 2 || x != SCREEN_W / 2 - 2)
 		check_borders(rend, wall, x);
@@ -48,10 +49,10 @@ void	color_walls(t_game *game, t_rend *rend, t_wall *wall, int x)
 		do_color(&game->image, x, (int) wall[x].y++, BLACK);
 	while (x > 0 && wall[x].y < rend[x].floor && wall[x].y < SCREEN_H)
 	{
-		do_color(&game->image, x, (int) wall[x].y++, \
-		side(&game->xpm[x], (int) wall[x].j, a));
-		wall[x].j += (double)(game->xpm[x].screen_h)
-			/ (double)(rend[x].size_wall);
+		helper.x = x;
+		helper.y = a;
+		shadow_walls(game, rend, wall, helper);
+		wall[x].y++;
 	}
 }
 

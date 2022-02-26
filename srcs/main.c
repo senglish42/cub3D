@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 20:14:36 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/23 20:58:04 by senglish         ###   ########.fr       */
+/*   Updated: 2022/02/26 14:31:58 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,12 @@ void	dist_to_wall(t_game *game, int x)
 			game->rend[x].x_dir_del] == '1')
 			game->rend[x].hit = 1;
 		else
-			game->rend[x].dist_to_wall += 0.0005;
+		{
+			if (game->rend[x].dist_to_wall < 3)
+				game->rend[x].dist_to_wall += 0.0005;
+			else
+				game->rend[x].dist_to_wall += 0.005;
+		}
 	}
 }
 

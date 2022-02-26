@@ -15,7 +15,7 @@ SRCS	=	$(SRCS_DIR)/draw.c		$(SRCS_DIR)/border.c	$(SRCS_DIR)/error.c\
 			$(SRCS_DIR)/main.c		$(SRCS_DIR)/map.c		$(SRCS_DIR)/parse.c\
 			$(SRCS_DIR)/player.c	$(SRCS_DIR)/rendering.c	$(SRCS_DIR)/rgb.c\
 			$(SRCS_DIR)/value.c		$(SRCS_DIR)/wall.c		$(SRCS_DIR)/draw_minimap.c\
-			$(SRCS_DIR)/minimath.c\
+			$(SRCS_DIR)/minimath.c	$(SRCS_DIR)/shadow.c\
 
 OBJS	= 	$(addprefix $(OBJ_DIR)/,$(SRCS:.c=.o))
 

@@ -6,7 +6,7 @@
 /*   By: svirgil <svirgil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 15:21:40 by senglish          #+#    #+#             */
-/*   Updated: 2022/02/26 12:38:20 by svirgil          ###   ########.fr       */
+/*   Updated: 2022/02/26 14:08:02 by svirgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,6 +199,11 @@ typedef struct s_game
 	t_wall		wall[SCREEN_W];
 	char		**parse;
 }	t_game;
+
+void			do_color(t_img *image, int x, int y, unsigned int color);
+unsigned int	side(t_img *image, int j, int x);
+void			shadow_walls(\
+				t_game *game, t_rend *rend, t_wall *wall, t_point p);
 
 //	key_handler.c	//
 unsigned int	f_c(int rgb[3]);
