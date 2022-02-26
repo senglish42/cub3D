@@ -238,7 +238,7 @@ void			check_ident(t_game *game, short height, short width);
 
 //	main.c	//
 void			xpm_to_image(t_game *game);
-int				exit_func(t_game *game);
+int				exit_func(void);
 int				if_invalid(const char *str, const char *format);
 void			to_draw(t_game *game);
 int				main(int argc, char **argv);

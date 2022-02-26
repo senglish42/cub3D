@@ -79,10 +79,7 @@ static void	move_updown(t_game *game, int key)
 int	key_pressed(int key, t_game *game)
 {
 	if (key == KEY_ESC)
-	{
-		free(game->map.size);
-		exit_func(game);
-	}
+		exit_func();
 	else if (key == KEY_UP || key == KEY_DOWN)
 		move_updown(game, key);
 	else if (key == KEY_LEFT)

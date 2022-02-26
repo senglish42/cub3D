@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated>
-      <config projectName="cub3d" targetName="cub3d" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
@@ -16,6 +14,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6099bb2f-26df-4dd1-9836-4ed65dd5a301" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/border.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/border.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.obj/srcs/draw.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/draw.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.obj/srcs/error.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/error.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.obj/srcs/ident.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/ident.o" afterDir="false" />
@@ -26,20 +25,19 @@
       <change beforePath="$PROJECT_DIR$/.obj/srcs/parse.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/parse.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.obj/srcs/player.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/player.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.obj/srcs/rendering.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/rendering.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.obj/srcs/vectors.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/rgb.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/rgb.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/value.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/value.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.obj/srcs/wall.o" beforeDir="false" afterPath="$PROJECT_DIR$/.obj/srcs/wall.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cub3D" beforeDir="false" afterPath="$PROJECT_DIR$/cub3D" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/cub3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/cub3D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/keys_macos.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/keys_macos.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_putstr_fd.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_putstr_fd.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libft/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/draw.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/error.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/error.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/key_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/key_handler.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/map.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/map.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/parse.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/parse.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/srcs/player.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/player.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/rendering.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/rendering.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/rgb.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/rgb.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -110,12 +107,12 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.cub3d">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="cub3d" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/maps/map1.cub" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cub3d" TARGET_NAME="cub3d" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cub3d" RUN_TARGET_NAME="cub3d">
+    <configuration name="cub3d" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/maps/map1.cub" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="cub3d" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="cub3d">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -203,7 +200,8 @@
       <workItem from="1645623257288" duration="14948000" />
       <workItem from="1645692039300" duration="7737000" />
       <workItem from="1645707281845" duration="12717000" />
-      <workItem from="1645801040815" duration="21410000" />
+      <workItem from="1645801040815" duration="22086000" />
+      <workItem from="1645886231491" duration="3695000" />
     </task>
     <servers />
   </component>
@@ -226,12 +224,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/map.c</url>
-          <line>72</line>
+          <line>73</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/map.c</url>
-          <line>114</line>
+          <line>115</line>
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -241,12 +239,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/map.c</url>
-          <line>46</line>
+          <line>47</line>
           <option name="timeStamp" value="103" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/key_handler.c</url>
-          <line>37</line>
+          <line>49</line>
           <option name="timeStamp" value="104" />
         </line-breakpoint>
       </breakpoints>

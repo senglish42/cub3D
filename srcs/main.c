@@ -42,12 +42,8 @@ void	to_draw(t_game *game)
 	printf(CLRSCR);
 }
 
-int	exit_func(t_game *game)
+int	exit_func(void)
 {
-	game->map.height = game->map.height;
-	free(game->map.size[0]);
-	free(game->map.size[1]);
-	free(game->map.size[2]);
 	printf("You quit the game.\n");
 	exit (0);
 }
