@@ -12,15 +12,6 @@
 
 #include "cub3D.h"
 
-static double	check_rad(double angle)
-{
-	if (angle > 2 * PI)
-		angle -= 2 * PI;
-	else if (angle < 0)
-		angle += 2 * PI;
-	return (angle);
-}
-
 static void	up_down(t_game *game, double cos, double sin)
 {
 	double	x;
@@ -51,11 +42,40 @@ static void	up_down(t_game *game, double cos, double sin)
 static void	left_right(t_game *game, double turn)
 {
 	game->player.da = game->player.da + turn;
-	game->player.da = check_rad(game->player.da);
+	if (game->player.da > 2 * PI)
+		game->player.da -= 2 * PI;
+	else if (game->player.da < 0)
+		game->player.da += 2 * PI;
 	game->player.dx = cos(game->player.da);
 	game->player.dy = sin(game->player.da);
 	if (game->map.size[(int)game->player.posy][(int)game->player.posx] != '1')
 		move_player(game, (int) game->player.posx, (int)game->player.posy);
+}
+
+static void	move_leftright(t_game *game, int key)
+{
+	if (key == KEY_LEFT)
+	{
+		if (*game->player.pos == 'N')
+			up_down(game, -0.7, 0);
+		if (*game->player.pos == 'S')
+			up_down(game, 0.7, 0);
+		if (*game->player.pos == 'W')
+			up_down(game, 0, 0.7);
+		if (*game->player.pos == 'E')
+			up_down(game, 0, -0.7);
+	}
+	else
+	{
+		if (*game->player.pos == 'N')
+			up_down(game, 0.7, 0);
+		if (*game->player.pos == 'S')
+			up_down(game, -0.7, 0);
+		if (*game->player.pos == 'W')
+			up_down(game, 0, -0.7);
+		if (*game->player.pos == 'E')
+			up_down(game, 0, 0.7);
+	}
 }
 
 static void	move_updown(t_game *game, int key)
@@ -82,9 +102,11 @@ int	key_pressed(int key, t_game *game)
 		exit_func();
 	else if (key == KEY_UP || key == KEY_DOWN)
 		move_updown(game, key);
-	else if (key == KEY_LEFT)
+	else if (key == KEY_LEFT || key == KEY_RIGHT)
+		move_leftright(game, key);
+	else if (key == KEY_TURN_LEFT)
 		left_right(game, 5 * PI / 180);
-	else if (key == KEY_RIGHT)
+	else if (key == KEY_TURN_RIGHT)
 		left_right(game, -5 * PI / 180);
 	to_draw(game);
 	mlx_put_image_to_window(game->vars.mlx, game->vars.win, game->image.img,

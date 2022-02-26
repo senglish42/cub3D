@@ -254,7 +254,6 @@ void			compare_ident(char *orient[6]);
 
 //	player.c	//
 void			move_player(t_game *game, int x, int y);
-void			show_map(t_game *game);
 
 //	rendering.c	//
 void			round_value(t_game *game, t_rend *rend, t_wall *wall);

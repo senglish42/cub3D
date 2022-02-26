@@ -30,13 +30,3 @@ void	move_player(t_game *game, int x, int y)
 	game->player.pos = &game->map.size[(int)game->player.posy] \
 		[(int)game->player.posx];
 }
-
-void	show_map(t_game *game)
-{
-	int	a;
-
-	a = -1;
-	while (++a < game->map.height)
-		printf("%s\n", game->map.size[a]);
-	printf(" \n");
-}

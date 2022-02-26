@@ -34,7 +34,6 @@ void	xpm_to_image(t_game *game)
 
 void	to_draw(t_game *game)
 {
-	show_map(game);
 	round_value(game, game->rend, game->wall);
 	make_3d(game, game->rend, game->wall);
 	draw_minimap(game);
